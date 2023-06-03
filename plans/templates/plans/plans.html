@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {{ plans }}
+            </div>
+            <!-- context from all_plans view, we have a template variable available to us called plans-->
+        </div>
+    </div>
+{% endblock %}
+
