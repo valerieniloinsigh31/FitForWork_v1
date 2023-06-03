@@ -33,14 +33,14 @@
     {% block extra_corejs %}
     {% endblock %}
 
-    <title>Fit For Work {% block extra_title %} {% endblock %}</title>
+    <title>Fit <i>For</i> Work {% block extra_title %} {% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{ url 'home'}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">Fit For <strong>Work</strong></h2>
+                <a href="{ url 'ffw'}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-black my-0"><strong>Fit</strong> For <strong>Work</strong></h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -63,7 +63,7 @@
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div> <!--font awesome user icon-->
-                                <p class="my-0">My Profile</p>
+                                <p class="my-0">My Account</p>
                             </div>
                         </a>
                         <!--anchor element is parent menu. Data toggle links to Bootstrap javascript and opens the dropdown
@@ -108,6 +108,24 @@
             variable used to determine which classes to apply to the element. If there is something in the bag, the font will be bold
             and a different colour.
         -->
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            
+                <!--using includes template we added. By using includes, it keeps the base.html template clean and
+                individual html files isolated in case we want to make changes-->
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-black text-teal">
+                <h4 class="logo-font my-1">Free PT intro call on orders over ${{ free_shipping_threshold }}!</h4>                
+            </div>            
+        </div>
+    </header>
     </header>
 
     {% if messages %}
