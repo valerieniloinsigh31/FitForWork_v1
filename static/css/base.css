@@ -1,0 +1,114 @@
+
+
+html {
+    height:100%;
+}
+
+/* Allows our vertical centering and h100 classes to work */
+
+body {
+    background: url('/media/home_image.jpg') no-repeat center center fixed;
+    background-size:cover;
+    height: calc(100vh -170px);
+    color: #76a49d;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+/* Add background image to body element. Ensures stays put in center of page. Height calc added-170px will be eventual 
+height of top header
+Add default font color...how did I choose font color...sharp energetic but business like..used color mind-color palettes
+font-family...how did I choose font family...google fonts...Sofia Sans Condensed
+ */
+
+
+/* from Bulma 
+Bulma is a framework similar to Bootstrap
+*/
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/*
+ensures font awesome icons stay perfectly centered and have a consistent size unless manually changed
+*/
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+/* used throughout site to maintain consistency with uppercase font of logo 
+whenever we want to call attention to something */
+
+.main-logo-link {
+    width: fit-content;
+}
+/*
+ensures logo only takes up as much space as the text requires
+*/
+
+.buy-plan-button {
+    background: #a5a946;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-green {
+    background: #a5a946;
+    color: white;
+}
+
+.buy-plan-button:hover,
+.buy-plan-button:active,
+.buy-plan-button:focus,
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
+    background: #a5a946;
+    color: white;
+}
+
+/*
+Styling used consistently throughout site for buttons so they match the theme of the buy-plans button on the homepage
+*/
+
+.text-green {
+    color: #68aa75 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/*
+text-black and border-black classes similar to Bootstraps color-helper classes
+like text_success, text_info etc. Allows us to have primary and secondary call-to-action styling on all site buttons
+gives users consistent user experience
+*/
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
