@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Plan, Occupation, Technique, Type, Goal
+from .models import Plan, Occupation, Technique, Type, Goal, Level 
 
 # Register your models here.
 
@@ -10,9 +10,9 @@ class PlanAdmin(admin.ModelAdmin):
     'technique',
     'type',
     'price',
-    'level',
     'image',
     'goal',
+    'level'
     )
 
     ordering = ('level',) #since it has to order on multiple columns, has to be a tuple even though it's only one field
@@ -46,9 +46,16 @@ class TypeAdmin(admin.ModelAdmin):
 
 class GoalAdmin(admin.ModelAdmin):
     list_display = (
-        '',
-        '',
+        'friendly_name',
+        'name',
         'goal',
+    )
+
+class LevelAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+        'level',
     )
 
 
@@ -57,4 +64,5 @@ admin.site.register(Occupation)
 admin.site.register(Technique)
 admin.site.register(Type)
 admin.site.register(Goal)
+admin.site.register(Level)
 

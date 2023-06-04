@@ -15,6 +15,7 @@ class Plan(models.Model):
     technique = models.ForeignKey('Technique', null="True", blank="True", on_delete=models.SET_NULL)
     type = models.ForeignKey('Type', null="True", blank="True", on_delete=models.SET_NULL)
     goal = models.ForeignKey('Goal', null="True", blank="True", on_delete=models.SET_NULL)
+    level = models.ForeignKey('Level',null="True", blank="True", on_delete=models.SET_NULL)
     name = models.CharField(max_length=300)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -59,6 +60,16 @@ class Type(models.Model):
 class Goal(models.Model):
     name = models.CharField(max_length=500)
     goal = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.get_friendly_name
+
+class Level(models.Model):
+    name = models.CharField(max_length=200)
+    level = models.TextField()
 
     def __str__(self):
         return self.name
