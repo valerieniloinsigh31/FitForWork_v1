@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Plan, Occupation, Technique
+from .models import Plan, Occupation, Technique, Type
 
 # Register your models here.
 
@@ -34,6 +34,16 @@ class TechniqueAdmin(admin.ModelAdmin):
     )
 #extends the builtin ModelAdmin class
 
+class TypeAdmin(admin.ModelAdmin):
+    list_display = ( #attribute that is a tuple that will tell the admin which fields to display
+    'friendly_name',
+    'name',
+    'type',
+    )
+#extends the builtin ModelAdmin class
+
+
 admin.site.register(Plan)
 admin.site.register(Occupation)
 admin.site.register(Technique)
+admin.site.register(Type)
