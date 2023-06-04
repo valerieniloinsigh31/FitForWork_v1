@@ -26,11 +26,11 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
                             {% if plan.image %}
-                                <a href="">
+                                <a href="{% url 'plan_detail' plan.id %}">
                                     <img class="card-img-top img-fluid" src="{{ plan.image.url }}" alt="{{ plan.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'plan_detail' plan.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ plan.name }}">
                                 </a>
                                 {% endif %}
@@ -42,16 +42,11 @@
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ plan.price }}</p>
                                             {% if plan.level %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ plan.level }} / 5</small>
+                                                <small class="text-muted"><i class="fa-solid fa-medal mr-1"></i>{{ plan.level }}</small>
                                             {% else %}
                                                 <small class="text-muted">No level specified</small>
                                             {% endif %}
                                             <!-- consider adding if else for goals-->
-                                            {% if plan.goal %}
-                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ plan.goal }} / 5</small>
-                                            {% else %}
-                                            <small class="text-muted">No goal specified</small>
-                                             {% endif %}
                                         </div>
                                     </div>
                                 </div>

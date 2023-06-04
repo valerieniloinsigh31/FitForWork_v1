@@ -9,7 +9,6 @@ class PlanAdmin(admin.ModelAdmin):
     'occupation',
     'technique',
     'type',
-    'goal',
     'price',
     'level',
     'image',
@@ -49,3 +48,4 @@ admin.site.register(Plan)
 admin.site.register(Occupation)
 admin.site.register(Technique)
 admin.site.register(Type)
+

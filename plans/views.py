@@ -1,7 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Plan
-
-# Create your views here.
 
 def all_plans(request):
     """ A view to show all plans, including sorting and search queries """
@@ -10,7 +8,17 @@ def all_plans(request):
 
     context = {
         'plans': plans,
-    } #context added so that plans are available in the template...we can use this template vairbale in the html template
+    } #context added so that plans are available in the template...we can use this template variable in the html template
 
-    return render(request, 'plans/plans.html', context) #Yet to build template for plans, needs a context as we need to send
-    #things back to the template
+    return render(request, 'plans/plans.html', context) #We need to send things back to the template
+
+def plan_detail(request, plan_id):
+    """ A view to show individual plan details """
+
+    plan = get_object_or_404(Plan, pk=plan_id)
+
+    context = {
+        'plan': plan,
+    } #add plan_id as parameter and consider singular plan as opposed to plans
+
+    return render(request, 'plans/plan_detail.html', context) #We need to send things back to the template

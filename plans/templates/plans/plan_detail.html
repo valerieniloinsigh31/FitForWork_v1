@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+<!-- cover up background page and give this page a white background-->
+    <div class="container-fluid">
+<!--Main content--> 
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2"> <!--offset by 2 to push to middle of screen-->
+                <div class="image-container my-5">
+                    {% if plan.image %}
+                        <a href="{{ plan.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ plan.image.url }}" alt="{{ plan.name }}">
+                        </a>
+                    {% else %}
+                        <a href="{{ plan.image.url }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL}}noimage.png" alt="{{ plan.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!--1st column contains plan image. Copied from plans template. On plan page, it is linked to plan details, here it is linked to image in new window-->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div>
+                <p class="mb-0">{{ plan.name }}</p> <!--sets bottom margin/padding-->
+                <p class="lead mb-0 text-left font-weight-bold">{{ plan.price }}</p>
+                    {% if plan.level %} <!--level not rating (beginner, intermediate, advanced)-->
+                        <small class="text-muted"><i class="fa-solid fa-medal mr-1"></i>{{ plan.level }}</small>
+                    {% else %}
+                        <small class="text-muted">No level provided</small>
+                    {% endif %}
+                     <p class="mt-3">{{ plan.description }}</p>  
+            </div>
+        </div>
+     </div>
+     <!--second column contains plan details and eventually buttons to select goal (and technique) and adding to plan bag-->
+{% endblock %}
+
