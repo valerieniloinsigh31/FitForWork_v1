@@ -7,9 +7,11 @@ class PlanAdmin(admin.ModelAdmin):
     list_display = ( #attribute that is a tuple that will tell the admin which fields to display
     'name',
     'occupation',
+    'technique',
+    'type',
+    'goal',
     'price',
     'level',
-    'goal',
     'image',
     )
 
