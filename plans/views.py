@@ -1,8 +1,7 @@
-from django.shortcuts import render, get_object_or_404
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.contrib import messages 
+from django.contrib import messages
 from django.db.models import Q
-from .models import Plan
+from .models import Plan, Technique
 
 def all_plans(request):
     """ A view to show all plans, including sorting and search queries """
@@ -10,15 +9,26 @@ def all_plans(request):
     plans = Plan.objects.all()
     query = None
     #start with query as 'None' so we don't get error when loading plans page without search term
+    techniques = None
 
     if request.GET:
+        if 'technique' in request.GET:
+            techniques = request.GET['technique'].split(',')
+            plans = plans.filter(technique__name__in=techniques)
+            techniques = Technique.objects.filter(name__in=techniques)
+
+        #techniques filtered down to list of ones whose name are in the url...converting list of techniques strings into list of technique objects
+        #as we can access fields in template for objects...must return to context to use in template later on
+        #can do this because plans and techniques are related with a foreign key
+        #__ syntax allows us to drill into related model - models related by a foreign key
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('plans'))
 
-                queries = Q(name_icontains=query) | Q(description_icontains=query)
+                queries = Q(name__icontains=query) | Q(description__icontains=query)
                 #use of pipe | allows OR logic...i makes queries case insensitive
                 plans = plans.filter(queries)
 
@@ -32,8 +42,11 @@ def all_plans(request):
     context = {
         'plans': plans,
         'search_term': query, 
-    } #context added so that plans are available in the template...we can use this template variable in the html template
+     #context added so that plans are available in the template...we can use this template variable in the html template
     #added query to context
+        'current_techniques': techniques,
+        }
+        #list of technique objects-returned to context so we can use in template later on
     return render(request, 'plans/plans.html', context) #We need to send things back to the template
 
 def plan_detail(request, plan_id):

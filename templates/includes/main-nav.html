@@ -25,18 +25,19 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="technique-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Techniques
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Ikigai</a>
-                <a href="" class="dropdown-item">Kaizen</a>
-                <a href="" class="dropdown-item">Pomodoro</a>
-                <a href="" class="dropdown-item">Hara Hachi Bu</a>
-                <a href="" class="dropdown-item">Shoshin</a>
-                <a href="" class="dropdown-item">Wabi-sabi</a>
-                <a href="" class="dropdown-item">Forest bathing</a>
-                <a href="" class="dropdown-item">Kakeibo</a>
+            <div class="dropdown-menu border-0" aria-labelledby="technique-link">
+                <a href="{% url 'plans' %}?technique=ikagai" class="dropdown-item">Ikigai</a>
+                <a href="{% url 'plans' %}?technique=kaizen" class="dropdown-item">Kaizen</a>
+                <a href="{% url 'plans' %}?technique=pomodoro" class="dropdown-item">Pomodoro</a>
+                <a href="{% url 'plans' %}?technique=harahachibu" class="dropdown-item">Hara Hachi Bu</a>
+                <a href="{% url 'plans' %}?technique=shoshin" class="dropdown-item">Shoshin</a>
+                <a href="{% url 'plans' %}?technique=wabi-sabi" class="dropdown-item">Wabi-sabi</a>
+                <a href="{% url 'plans' %}?technique=forestbathing" class="dropdown-item">Forest bathing</a>
+                <a href="{% url 'plans' %}?technique=kakeibo" class="dropdown-item">Kakeibo</a>
+                <a href="{% url 'plans' %}?technique=ikagai,kaizen,pomodoro,harahachibu,shoshin,wabi-sabi,forestbathing,kakeibo" class="dropdown-item">All Techniques</a>
                 
             </div>
         </li>
