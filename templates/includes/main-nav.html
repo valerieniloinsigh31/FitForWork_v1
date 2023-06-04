@@ -6,25 +6,26 @@
                 All Plans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Level</a>
-                <a href="" class="dropdown-item ">By Goal (Weight loss, Muscle gain, Keep fit)</a>
-                <a href="{% url 'plans' %}" class="dropdown-item">All Plans</a>
+                <a href="{% url 'plans' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'plans' %}?sort=level" class="dropdown-item ">By Level (Beginner, Intermediate, Advanced)</a>
+                <a href="{% url 'plans' %}?sort=goal" class="dropdown-item ">By Goal (Weight loss, Muscle gain, Keep fit)</a>
+                <a href="{% url 'plans' %}?" class="dropdown-item">All Plans</a>
             </div>
         </li>
+        <!--I don't think direction applies to level and goal sorting as they are not numerical-->
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="job-type-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Job type
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="">
-                <a href="{% url 'plans' %}?type=Work from home" class="dropdown-item">Work from fome</a>
-                <a href="{% url 'plans' %}?type=Sedentary - access to gome equipment" class="dropdown-item">Sedentary - access to home equipment</a>
-                <a href="{% url 'plans' %}?type=Sedentary - no access to gym & equipment" class="dropdown-item">Sedentary - no access to gym & equipment</a>
-                <a href="{% url 'plans' %}?type=Sedentary - -access to gym & equipment" class="dropdown-item">Sedentary - access to gym & equipment</a>
-                <a href="{% url 'plans' %}?type=Mobile - access to home equipment" class="dropdown-item">Mobile - access to home equipment</a>
-                <a href="{% url 'plans' %}?type=Mobile - access to gym & equipment" class="dropdown-item">Mobile - access to gym & equipment </a>
-                <a href="{% url 'plans' %}?type=Mobile - no access to gym & equipment" class="dropdown-item">Mobile - no access to gym & equipment</a>
+            <div class="dropdown-menu border-0" aria-labelledby="job-type-link">
+                <a href="{% url 'plans' %}?type=work_from_home" class="dropdown-item">Work from home</a>
+                <a href="{% url 'plans' %}?type=sedentary_-_access_to_home_equipment" class="dropdown-item">Sedentary - access to home equipment</a>
+                <a href="{% url 'plans' %}?type=sedentary_-_no_access_to_gym_&_equipment" class="dropdown-item">Sedentary - no access to gym & equipment</a>
+                <a href="{% url 'plans' %}?type=sedentary_-_access_to_gym_&_equipment" class="dropdown-item">Sedentary - access to gym & equipment</a>
+                <a href="{% url 'plans' %}?type=mobile_-_access_to_home_equipment" class="dropdown-item">Mobile - access to home equipment</a>
+                <a href="{% url 'plans' %}?type=mobile_-_access_to_gym_&_equipment" class="dropdown-item">Mobile - access to gym & equipment </a>
+                <a href="{% url 'plans' %}?type=mobile_-_no_access_to_gym_&_equipment" class="dropdown-item">Mobile - no access to gym & equipment</a>
             </div>
         </li>
         <!--name is used here (programmatic name not friendly_name)...will there be an issue here?-->
@@ -37,12 +38,12 @@
                 <a href="{% url 'plans' %}?technique=ikagai" class="dropdown-item">Ikigai</a>
                 <a href="{% url 'plans' %}?technique=kaizen" class="dropdown-item">Kaizen</a>
                 <a href="{% url 'plans' %}?technique=pomodoro" class="dropdown-item">Pomodoro</a>
-                <a href="{% url 'plans' %}?technique=harahachibu" class="dropdown-item">Hara Hachi Bu</a>
+                <a href="{% url 'plans' %}?technique=hara_hachi_bu" class="dropdown-item">Hara Hachi Bu</a>
                 <a href="{% url 'plans' %}?technique=shoshin" class="dropdown-item">Shoshin</a>
                 <a href="{% url 'plans' %}?technique=wabi-sabi" class="dropdown-item">Wabi-sabi</a>
-                <a href="{% url 'plans' %}?technique=forestbathing" class="dropdown-item">Forest bathing</a>
+                <a href="{% url 'plans' %}?technique=forest_bathing" class="dropdown-item">Forest bathing</a>
                 <a href="{% url 'plans' %}?technique=kakeibo" class="dropdown-item">Kakeibo</a>
-                <a href="{% url 'plans' %}?technique=ikagai,kaizen,pomodoro,harahachibu,shoshin,wabi-sabi,forestbathing,kakeibo" class="dropdown-item">All Techniques</a>
+                <a href="{% url 'plans' %}?technique=ikagai,kaizen,pomodoro,hara_hachi_bu,shoshin,wabi-sabi,forest_bathing,kakeibo" class="dropdown-item">All Techniques</a>
                 
             </div>
         </li>

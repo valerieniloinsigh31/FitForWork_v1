@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Plan, Technique, Type, Level 
+from .models import Plan, Technique, Type
 
 def all_plans(request):
     """ A view to show all plans, including sorting and search queries """
@@ -10,8 +10,28 @@ def all_plans(request):
     query = None
     #start with query as 'None' so we don't get error when loading plans page without search term
     techniques = None
+    types = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET('sort')
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                plans = plans.annotate(lower_name =Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f-{sortkey}
+            #if descending, add minus in front of sortkey with string formatting, which reverses order
+            plans = plans.order_by(sortkey)
+
+
+
+
         if 'technique' in request.GET:
             techniques = request.GET['technique'].split(',')
             plans = plans.filter(technique__name__in=techniques)
@@ -21,6 +41,13 @@ def all_plans(request):
         #as we can access fields in template for objects...must return to context to use in template later on
         #can do this because plans and techniques are related with a foreign key
         #__ syntax allows us to drill into related model - models related by a foreign key
+
+        if 'type' in request.GET:
+            types = request.GET['type'].split(',')
+            plans = plans.filter(type__name__in=types)
+            types = Type.objects.filter(name__in=types)
+
+         #Type and Plan models related by a ForeignKey so should be able to filter   
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -39,12 +66,18 @@ def all_plans(request):
     #in django (product.objects.filter) everything is anded together...for queries this means to match term needs to be in 
     #name and description...but we want either...accomplish OR logic, use Q-read through queries portion of Django docs
     
+
+    current_sorting = f'{sort}_{direction}'
+    #return sorting methodology to template...using string both sort and direction variable stored-easy to do with string formatting
+
     context = {
         'plans': plans,
         'search_term': query, 
      #context added so that plans are available in the template...we can use this template variable in the html template
     #added query to context
         'current_techniques': techniques,
+        'current_types': types,
+        'current_sorting': current_sorting,
         }
         #list of technique objects-returned to context so we can use in template later on
     return render(request, 'plans/plans.html', context) #We need to send things back to the template
