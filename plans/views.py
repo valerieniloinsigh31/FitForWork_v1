@@ -36,7 +36,7 @@ def all_plans(request):
     #if query is blank, no returned results, use django messages framework to attach error msg and redirect to plans url 
     #import messages, redirect, reverse, get_object_or_404
     #query not blank...object...use Q (special object from django.db.models) to generate search query
-    #in django (produc.tobjects.filter) everything is anded together...for queries this means to match term needs to be in 
+    #in django (product.objects.filter) everything is anded together...for queries this means to match term needs to be in 
     #name and description...but we want either...accomplish OR logic, use Q-read through queries portion of Django docs
     
     context = {
