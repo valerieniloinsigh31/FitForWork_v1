@@ -27,6 +27,9 @@ class Plan(models.Model):
     def __str__(self):
         return self.name #just returns name of plan
 
+    def get_friendly_name(self):
+        return self.friendly_name
+
 
 class Technique(models.Model):
     name = models.CharField(max_length=300)
@@ -36,6 +39,9 @@ class Technique(models.Model):
     def __str__(self):
         return self.name #just returns name of technique
 
+    def get_friendly_name(self):
+        return self.friendly_name
+
 class Type(models.Model):
     name = models.CharField(max_length=300)
     type = models.TextField()
@@ -43,6 +49,9 @@ class Type(models.Model):
     #Not blank=true, null=true, each plan requires a name, description, price, everything else is optional
     def __str__(self):
         return self.name #just returns name of type
+
+    def get_friendly_name(self):
+        return self.friendly_name
 
 #Consider adding a model for Goal and a model for level
 #Consider nutrition newsletter and supplementary info on supplements
@@ -53,3 +62,6 @@ class Goal(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_friendly_name(self):
+        return self.get_friendly_name
