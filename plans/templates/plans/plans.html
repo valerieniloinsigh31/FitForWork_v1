@@ -40,13 +40,24 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ plan.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">€{{ plan.price }}</p>
                                             {% if plan.level %}
                                                 <small class="text-muted"><i class="fa-solid fa-medal mr-1"></i>{{ plan.level }}</small>
                                             {% else %}
                                                 <small class="text-muted">No level specified</small>
                                             {% endif %}
-                                            <!-- consider adding if else for goals-->
+                                            <!-- to display level and wreath on card-->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold"></p>
+                                            {% if plan.goal %}
+                                                <small class="text-muted"><i class="fa-solid fa-bullseye mr-1"></i>{{ plan.goal }}</small>
+                                            {% else %}
+                                                <small class="text-muted">No goal specified</small>
+                                            {% endif %}
+                                            <!-- to display goal and icon on card-->
                                         </div>
                                     </div>
                                 </div>
