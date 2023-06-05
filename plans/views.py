@@ -13,7 +13,8 @@ def all_plans(request):
     types = None
     sort = None
     direction = None
-
+    #N.B. direction for filtering level is alphabetical (Advanced/Beginner/Intermediate-not ideal. Would be better as 
+    # Beginner/Intermediate/Advanced...how to do this-ordering?)
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -28,8 +29,6 @@ def all_plans(request):
                     sortkey = f-{sortkey}
             #if descending, add minus in front of sortkey with string formatting, which reverses order
             plans = plans.order_by(sortkey)
-
-
 
 
         if 'technique' in request.GET:
@@ -47,7 +46,7 @@ def all_plans(request):
             plans = plans.filter(type__name__in=types)
             types = Type.objects.filter(name__in=types)
 
-         #Type and Plan models related by a ForeignKey so should be able to filter   
+         #Type and Plan models related by a ForeignKey so should be able to filter...   
 
         if 'q' in request.GET:
             query = request.GET['q']
