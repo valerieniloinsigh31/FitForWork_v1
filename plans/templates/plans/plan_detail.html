@@ -59,7 +59,35 @@
                             <!-- to display goal and icon on card-->
                         </div>
                     </div>
-                     <p class="mt-3">{{ plan.description }}</p>  
+                     <p class="mt-3">{{ plan.description }}</p> 
+                     <form class="form" action="{% url 'add_to_bag' plan.id %}" method="POST"> 
+                        <!-- POST method used as information about plan to be sent to server..csrf token used due to POST-->
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Number:</strong></p>
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ plan.id }}" id="id_qty_{{ plan.id }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- quantity may not be needed...but tailored..no plan is exactly the same-->
+                            <!-- submit button below, more plans button redirects back to plans page and hidden
+                            input that uses request.path attribute to submit a field named redirect url that
+                        contains the current url -->
+                            <div class="col-12">
+                                <a href="{% url 'plans' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Try out more plans</span>
+                                </a>
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form> 
             </div>
         </div>
      </div>
