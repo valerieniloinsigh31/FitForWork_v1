@@ -35,13 +35,13 @@
                 <p class="mb-0">{{ plan.name }}</p> <!--sets bottom margin/padding-->
                 <p class="lead mb-0 text-left font-weight-bold">{{ plan.price }}</p>
                 <!--adds detail on occupation to first drop down-->
-                {% if plan.occupation %}
+                <!--{% if plan.occupation %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'plans' %}?occupation{{ plan.occupation.name }}">
                             <i class="fa-solid fa-certificate mr-1"></i>{{ plan.occupation.friendly_name }}
                         </a>
                     </p>
-                    {% endif %}
+                    {% endif %}-->
                 <!--level not rating (beginner, intermediate, advanced)-->
                     {% if plan.level %} 
                         <small class="text-muted"><i class="fa-solid fa-medal mr-1"></i>{{ plan.level }}</small>

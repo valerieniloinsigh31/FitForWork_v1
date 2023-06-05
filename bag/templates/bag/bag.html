@@ -51,7 +51,35 @@
                                         <p class="my-0">€{{ item.plan.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        <form class="form update-form" method="POST" action="">
+                                            {% csrf_token %} 
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="update-link text-info"><small>Update</small></a> <!--Update quantity which will submit form-->
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a> <!--Remove item from bag...data attribute, discern which specific item customer wants to remove-->
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.plan.price }}</p> <!--subtotal-to be fixed later-->
@@ -98,4 +126,30 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript"> //new js script to handle two anchor elements (update item and remove item)
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form'); //on click event, use previous method to find most recently seen update form in DOM, store form in variable
+        form.submit(); //calls form's submit method
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) { //
+        var csrfToken = "{{ csrf_token }}"; //csrf token stored as strong...template variable no %
+        var itemId = $(this).attr('id').split('remove_')[1]; //item id removed
+        var size = $(this).data('size'); //item removed..size pulled using data attribute...but no sizes for ffw
+        var url = `/bag/remove/${itemId}`; //template literal-url made in future
+        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size}; //data variable object used to send data to server. data variable contains special ssrf key and size
+        //csrf middleware token will match field django expects to see in request.post when psted to server
+        $.post(url, data) //post data to url which will be created later...post method from jquery
+         .done(function() {
+             location.reload(); //once response back from server, reload page to updated bag...execute function ro reload page
+         });
+    })
+</script>
 {% endblock %}
