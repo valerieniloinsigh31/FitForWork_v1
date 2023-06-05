@@ -109,10 +109,27 @@ for styling of free intro PT call
 /*
 for styling of occupation badgers when hovering over them-invert colours
 */
-a.occupation-badge > span.badge:hover {
+a.technique-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
+
+
+/*
+CSS for back-top-top button
+*/
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 
 /*
 overlay styling on plans page...z index of minus one ensures it sits BEHIND content...in base.css as we will reuse in other

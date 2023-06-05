@@ -15,9 +15,11 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Plans</h2>
-                {% for c in current_occupations %}
-                    <a class="occupation-badge text-decoration-none" href="{% url 'plans' %}?occupation={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                <!--Trying to slot in buttons for techniques...used name not friendly name as no friendly_name for techniques
+                on admin interface-->
+                {% for c in current_techniques %}
+                    <a class="technique-badge text-decoration-none" href="{% url 'plans' %}?technique={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.Name }}</span>
                     </a>
                 {% endfor %}
                         <!--occupation-badge css class for styling-ensure corresponding css class is updated-->
@@ -131,13 +133,48 @@
                         <hr>
                     </div>
                 {% endif %}
-            {% endfor %}
-            <!-- for loop is to adjust horizontal rule to screen size-->
-            </div>
-            <!-- django for loop to iterate through products variable-->
-
+            {% endfor%}-->
         </div>
-        <!-- row for products-->
     </div>
+</div>
+</div>
+<!--useful scroll to top button-->
+<div class="btt-button shadow-sm rounded-0 border border-black">
+<a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+</a>	
+</div>
+{% endblock %}
+{% block postloadjs %} <!--wrapped inside postloadjs block from template-->
+    {{ block.super }} <!--using block.super will ensure we append code to anything already in block -->
+    <script type="text/javascript">
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+          })
+    </script><!--javascript for back to top button -->
+    <script type="text/javascript">
+        $('#sort-selector').change(function(){ //capture change event from sort-selector itself
+            var selector = $(this) //variable for selector
+    
+            var currentUrl = new URL(window.location); //variable for current url=new url object that considers current window's location
+            //ability to replace current get parameters to update sorting methodology
+
+            var selectVal = selector.val(); //this value refers to value attribute from selected option element in selector box 
+            if (selectedVal != "reset"){ //need if statement to determine if selected value is reset to default from plans page
+                var sort = selectedVal.split("_")[0]//if not get sort and direction by splitting selected value at underscore
+                var direction = selectedVal.split("_")[1]; //first item of split item we are sorting on and second will be direction 
+                //either ascending or descending...indexation
+
+                currentUrl.searchParams.set("sort", sort); //replace GET parameters in URL using searchParams.set method from the URL object
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);  //with new URL constructed, replace current location using window.location.replace
+                } else {                                //with the updated current URL. Replacing location also causes page to reload, resorting plans accordingly
+                    currentUrl.searchParams.delete("sort"); //else if the user has selected the reset option, DELETE sort and direction parameters and replace location
+                    currentUrl.searchParams.delete("direction");
+
+                    window.location.replace(currentUrl); 
+            }})
+    </script>
 {% endblock %}
 

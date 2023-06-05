@@ -39,12 +39,12 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{ url 'ffw'}" class="nav-link main-logo-link">
+                <a href="{% url 'ffw' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0"><strong>Fit</strong> For <strong>Work</strong></h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{ url 'plans' }">
+                <form method="GET" action="{% url 'plans' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Have a peek">
                         <div class="input-group-append">
@@ -85,7 +85,7 @@
                         if person authenticated to be superuser, can access plan management system (Adding, updating and 
                         deleting plans)-->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <!-- Font Awesome link-->
@@ -122,7 +122,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-blue">
-                <h4 class="logo-font my-1">Free Nutrition plan if you refer a friend {{ free_PT_threshold }}!</h4>                
+                <h4 class="logo-font my-1">Free PT consultation if you order more than {{ free_intro_threshold }}!</h4>                
             </div>            
         </div>
     </header>
