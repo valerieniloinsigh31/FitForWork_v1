@@ -24,7 +24,67 @@
         <div class="col">
             {% if bag_items %}
                 <div class="table-responsive rounded">
-                    {{ bag_items }}
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Plan Info</th>
+                                <th scope="col"></th> <!--Plan info will span two columns-->
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        {% for item in bag_items %} <!--Iterate through each plan, with a row for each one
+                        column 1=plan image. column 2=Plan's name...was sku maybe description or technique?
+                        3rd column=price 4th= 5th=subtotal
+                    -->
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="{{ item.plan.image.url }}">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0"><strong>{{ item.plan.name }}</strong></p>
+                                        <p class="my-0 small text-muted">Technique: {{ item.plan.technique|upper }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.plan.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        <p class="my-0">{{ item.quantity }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.plan.price }}</p> <!--subtotal-to be fixed later-->
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.plan.level }}</p> <!--added may not work-->
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.plan.goal }}</p> <!--added may not work-->
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6> <!--should just be normal total, walkthrough adj for delivery-->
+                            </tr>           <!--consider adding summary of costs-->
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'plans' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Check out more plans</span> <!--Go back to view plans-->
+                                    </a>
+                                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                                        <span class="text-uppercase">Secure Checkout</span> <!--Take to checkout page once created-->
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                 </div>
             {% else %}
                 <p class="lead mb-5">You picked no plans.</p>

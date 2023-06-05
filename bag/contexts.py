@@ -38,7 +38,7 @@ def bag_contents(request):
         'bag_items':bag_items,
         'total': total,
         'plan_count': plan_count,
-        #ß'free_pt_delta': free_pt_delta,
+        #'free_pt_delta': free_pt_delta,
         'free_pt_threshold': settings.FREE_PT_THRESHOLD,
         'grand_total': grand_total,
     } #function returns dictionary called 'context'...add items to context so available in templates across the site
