@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Plan, Technique, Type
+from .models import Plan, Technique, Type, Occupation
 
 def all_plans(request):
     """ A view to show all plans, including sorting and search queries """
@@ -51,12 +51,13 @@ def all_plans(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria")
+                messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('plans'))
 
-                queries = Q(name__icontains=query) | Q(description__icontains=query)
-                #use of pipe | allows OR logic...i makes queries case insensitive
-                plans = plans.filter(queries)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            #use of pipe | allows OR logic...i makes queries case insensitive
+            plans = plans.filter(queries)
+
 
     #Search action, text input named in form q, if q in request.get, set to query. 
     #if query is blank, no returned results, use django messages framework to attach error msg and redirect to plans url 
