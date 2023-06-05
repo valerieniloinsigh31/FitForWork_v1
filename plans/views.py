@@ -14,8 +14,10 @@ def all_plans(request):
     sort = None
     direction = None
     occupations = None
+    
     #N.B. direction for filtering level is alphabetical (Advanced/Beginner/Intermediate-not ideal. Would be better as 
     # Beginner/Intermediate/Advanced...how to do this-ordering?)
+    
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -23,7 +25,10 @@ def all_plans(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 plans = plans.annotate(lower_name =Lower('name'))
-
+#add conditional, if the sort-key is equal to occupation, adjust to tack on __name , to sort occupations by name, not ids. __ allows 
+# us to drill into a related model...changing to plans.order_by occupation__name:
+            if sortkey == 'occupation':
+                sortkey = 'occupation__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -31,6 +36,12 @@ def all_plans(request):
             #if descending, add minus in front of sortkey with string formatting, which reverses order...need to alter for goals, can't be alphabetical
             plans = plans.order_by(sortkey)
 
+        if 'occupation' in request.GET:
+            occupations = request.GET['occupation'].split(',')
+            plans = plans.filter(occupation__name__in=occupations)
+            occupations =  Occupation.objects.filter(name__in=occupations) 
+        
+        #Occupation added-more filtering functionality
 
         if 'technique' in request.GET:
             techniques = request.GET['technique'].split(',')
@@ -48,13 +59,6 @@ def all_plans(request):
             types = Type.objects.filter(name__in=types)
 
          #Type and Plan models related by a ForeignKey so should be able to filter...  
-
-        if 'occupation' in request.GET:
-            occupations = request.GET['occupation'].split(',')
-            plans = plans.filter(occupation__name__in=occupations)
-            occupations =  Occupation.objects.filter(name__in=occupations) 
-        
-        #Occupation added-more filtering functionality
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -93,7 +97,7 @@ def all_plans(request):
 
 def plan_detail(request, plan_id):
     """ A view to show individual plan details """
-
+    print('plan_id: ', plan_id)
     plan = get_object_or_404(Plan, pk=plan_id)
 
     context = {
@@ -101,3 +105,4 @@ def plan_detail(request, plan_id):
     } #add plan_id as parameter and consider singular plan as opposed to plans
 
     return render(request, 'plans/plan_detail.html', context) #We need to send things back to the template
+
