@@ -48,25 +48,25 @@
                                         <p class="my-0 small text-muted">Technique: {{ item.plan.technique|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.plan.price }}</p>
+                                        <p class="my-0">€{{ item.plan.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.plan.price }}</p> <!--subtotal-to be fixed later-->
+                                        <p class="my-0">€{{ item.plan.price }}</p> <!--subtotal-to be fixed later-->
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.plan.level }}</p> <!--added may not work-->
+                                        <p class="my-0">{{ item.plan.level }}</p> <!--added may not work-->
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.plan.goal }}</p> <!--added may not work-->
+                                        <p class="my-0">{{ item.plan.goal }}</p> <!--added may not work-->
                                     </td>
                                 </tr>
-                            {% endfor %}
+                            {% endfor %}´
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6> <!--should just be normal total, walkthrough adj for delivery-->
+                                    <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6> <!--should just be normal total, walkthrough adj for delivery-->
                             </tr>           <!--consider adding summary of costs-->
                             <tr>
                                 <td colspan="5" class="text-right">

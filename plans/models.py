@@ -45,14 +45,14 @@ class Technique(models.Model):
 
 class Type(models.Model):
     name = models.CharField(max_length=300)
-    type = models.TextField()
-    
-    #Not blank=true, null=true, each plan requires a name, description, price, everything else is optional
-    def __str__(self):
-        return self.name #just returns name of type
+type = models.TextField()
 
-    def get_friendly_name(self):
-        return self.friendly_name
+#Not blank=true, null=true, each plan requires a name, description, price, everything else is optional
+def __str__(self):
+    return self.name #just returns name of type
+
+def get_friendly_name(self):
+    return self.friendly_name
 
 #Consider adding a model for Goal and a model for level
 #Consider nutrition newsletter and supplementary info on supplements

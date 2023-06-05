@@ -91,7 +91,7 @@
                                 <!-- context processor creates grand_total variable-->
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        €{{ grand_total|floatformat:2 }}
                                     {% else %}
                                         €0.00
                                     {% endif %} 
@@ -122,7 +122,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-blue">
-                <h4 class="logo-font my-1">Free PT consultation if you order more than 100e!</h4>                
+                <h4 class="logo-font my-1">Free PT consultation if you order more than one plan!</h4>                
             </div>            
         </div>
     </header>
