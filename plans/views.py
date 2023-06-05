@@ -13,6 +13,7 @@ def all_plans(request):
     types = None
     sort = None
     direction = None
+    occupations = None
     #N.B. direction for filtering level is alphabetical (Advanced/Beginner/Intermediate-not ideal. Would be better as 
     # Beginner/Intermediate/Advanced...how to do this-ordering?)
     if request.GET:
@@ -27,7 +28,7 @@ def all_plans(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f-{sortkey}
-            #if descending, add minus in front of sortkey with string formatting, which reverses order
+            #if descending, add minus in front of sortkey with string formatting, which reverses order...need to alter for goals, can't be alphabetical
             plans = plans.order_by(sortkey)
 
 
@@ -46,7 +47,14 @@ def all_plans(request):
             plans = plans.filter(type__name__in=types)
             types = Type.objects.filter(name__in=types)
 
-         #Type and Plan models related by a ForeignKey so should be able to filter...   
+         #Type and Plan models related by a ForeignKey so should be able to filter...  
+
+        if 'occupation' in request.GET:
+            occupations = request.GET['occupation'].split(',')
+            plans = plans.filter(occupation__name__in=occupations)
+            occupations =  Occupation.objects.filter(name__in=occupations) 
+        
+        #Occupation added-more filtering functionality
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -78,6 +86,7 @@ def all_plans(request):
         'current_techniques': techniques,
         'current_types': types,
         'current_sorting': current_sorting,
+        'current_occupations': occupations,
         }
         #list of technique objects-returned to context so we can use in template later on
     return render(request, 'plans/plans.html', context) #We need to send things back to the template

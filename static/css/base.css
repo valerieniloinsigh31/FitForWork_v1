@@ -93,7 +93,7 @@ gives users consistent user experience
 }
 
 /*
-for threshold styling-free intro PT call
+for styling of free intro PT call
 */
 
 .overlay {
@@ -105,6 +105,15 @@ for threshold styling-free intro PT call
 	background: white;
 	z-index: -1;
 }
+
+/*
+for styling of occupation badgers when hovering over them-invert colours
+*/
+a.occupation-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /*
 overlay styling on plans page...z index of minus one ensures it sits BEHIND content...in base.css as we will reuse in other
 templates on the site also
