@@ -65,7 +65,7 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3"><strong>Number:</strong></p>
+                                <p class="mt-3"><strong>Number of plans:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend"> <!--prepend and apend bootstrap classes are plus and minus buttons, easier to use on mobile, align with blank and white theme-->
@@ -112,7 +112,7 @@
     <!--second column contains plan details and eventually buttons to select goal (and technique) and adding to plan bag-->
 
 <!--including javascript code for the increment and decrement buttons-->
-{% block postloadjs %}
+{% block postload_js %}
 {{ block.super }} <!--include parent block-->
 {% include 'plans/includes/quantity_input_script.html' %} <!--location of the javascript code being brought in in includes file-->
 {% endblock %}

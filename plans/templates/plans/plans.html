@@ -145,7 +145,7 @@
 </a>	
 </div>
 {% endblock %}
-{% block postloadjs %} <!--wrapped inside postloadjs block from template-->
+{% block postload_js %} <!--wrapped inside postloadjs block from template-->
     {{ block.super }} <!--using block.super will ensure we append code to anything already in block -->
     <script type="text/javascript">
         $('.btt-link').click(function(e) {

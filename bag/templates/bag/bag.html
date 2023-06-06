@@ -128,7 +128,7 @@
     </div>
 </div>
 {% endblock %}
-{% block postloadjs %}
+{% block postload_js %}
 {{ block.super }}
 {% include 'plans/includes/quantity_input_script.html' %}
 
@@ -145,7 +145,7 @@
         var itemId = $(this).attr('id').split('remove_')[1]; //item id removed
         //var size = $(this).data('size'); //item removed..size pulled using data attribute...but no sizes for ffw
         var url = `/bag/remove/${itemId}`; //template literal-url made in future
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size}; //data variable object used to send data to server. data variable contains special ssrf key and size
+        var data = {'csrfmiddlewaretoken': csrfToken}; //data variable object used to send data to server. data variable contains special ssrf key and size
         //csrf middleware token will match field django expects to see in request.post when psted to server
         $.post(url, data) //post data to url which will be created later...post method from jquery
          .done(function() {
