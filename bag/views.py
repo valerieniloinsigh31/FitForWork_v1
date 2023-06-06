@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -23,3 +23,33 @@ def add_to_bag(request, item_id): #item_id is id of plan
     #product can be put in dictionary with quantity
     request.session['bag'] = bag #overwrite variable in session with updated version
     return redirect(redirect_url) 
+
+def adjust_bag(request, item_id): #item_id is id of plan
+    """ Adjust the quantity of the specified product to the specified amount """
+
+    quantity = int(request.POST.get('quantity')) 
+    bag = request.session.get('bag', {}) #no redirect url needed as always want to redirect to shopping bag page
+
+    if quantity > 0:
+        bag[item_id]
+    else:
+            del bag[item_id] 
+
+    request.session['bag'] = bag 
+    return redirect(reverse('view_bag')) 
+
+def remove_from_bag(request, item_id): #item_id is id of plan
+    """ Remove an item from the shopping bag, don't need quantity as quantity supposed to be zero """
+    try:
+        bag = request.session.get('bag', {}) #no redirect url needed as always want to redirect to shopping bag page
+
+        if quantity > 0:
+            bag[item_id]
+        else:
+                del bag[item_id] 
+
+        request.session['bag'] = bag 
+        return HttpResponse(status=200) #because view posted to fro a javascript function, return a 200 Http response (implying item successfully removed)
+    
+    except Exception as e:
+        return HttpResponse(status=200)

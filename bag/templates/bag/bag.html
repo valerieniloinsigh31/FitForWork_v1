@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -51,7 +52,7 @@
                                         <p class="my-0">€{{ item.plan.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %} 
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -82,7 +83,7 @@
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a> <!--Remove item from bag...data attribute, discern which specific item customer wants to remove-->
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.plan.price }}</p> <!--subtotal-to be fixed later-->
+                                        <p class="my-0">€{{ item.plan.price | calc_subtotal:item.quantity }}</p> <!--subtotal-to be fixed later-->
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">{{ item.plan.level }}</p> <!--added may not work-->
