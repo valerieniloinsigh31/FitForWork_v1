@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'plans',
     'bag',
     'checkout',
-]
+    'crispy_forms',]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,6 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'fitforwork.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -73,8 +75,13 @@ TEMPLATES = [
                 'django.template.context_processors.request', #required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media', #context processor that enables access to no image file in media folder if a plan does not have an image
                 'bag.contexts.bag_contents', #context processer for bag-makes available throughout site w/o having to return multiple views
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
