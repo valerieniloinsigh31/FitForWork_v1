@@ -1,16 +1,13 @@
-<!--comes from Bootstrap docs and customized-->
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false"> <!--custom toast class added-->
-    <div class="arrow-up arrow-success"></div> <!--added, a little extra visual touch-->
-    <div class="w-100 toast-capper bg-success"></div> <!--added, added, a little extra visual touch-->
-    <div class="toast-header bg-white text-dark"> <!---header-->
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header bg-white text-dark">
         <strong class="mr-auto">Success!</strong>
         <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
-<!--header and body header, heading on left, close button on right. data auto hide and data-dismiss, prevent autohiding, give user
-ability to dismiss on their own-->
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="toast-body bg-white"> <!--in body of toast, {{message }} included in message container in base template-->
+    <div class="toast-body bg-white">
         {{ message }}        
     </div>
 </div>

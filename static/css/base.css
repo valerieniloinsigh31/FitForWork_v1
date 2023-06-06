@@ -146,6 +146,25 @@ CSS for back-top-top button
 }
 
 
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px; 
+}
+
+
+
 /*
 overlay styling on plans page...z index of minus one ensures it sits BEHIND content...in base.css as we will reuse in other
 templates on the site also

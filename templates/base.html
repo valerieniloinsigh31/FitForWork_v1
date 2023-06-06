@@ -126,16 +126,28 @@
             </div>            
         </div>
     </header>
-
+    <!--Django messages have levels which are classifiers (debug, info, error etc for different msg types)
+    Per Django docs, these levels can be represented as an integer also. We can choose which of our includes
+    we want to render, based on the message level. Check level of message with 'with' statement and render the appropriate 
+    toast-->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-                {% include 'includes/toasts/toast_success.html' %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
             {% endfor %}
         </div>
     {% endif %}
 
-    <h1>Workouts that work for work!</h1>
 
     {% block page-header %}
     {% endblock %}

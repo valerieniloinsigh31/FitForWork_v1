@@ -11,49 +11,53 @@ def view_bag(request):
     return render(request, 'bag/bag.html')
 
 
-def add_to_bag(request, item_id): #item_id is id of plan
-    """ Add a number of sepcific plan to the shopping bag (note no plan is the same-tweaked and tailored) """
+def add_to_bag(request, item_id):
+    """ Add a quantity of the specified plan to the shopping bag """
+
     plan = Plan.objects.get(pk=item_id)
-    quantity = int(request.POST.get('quantity')) #get quantity from form and convert to integer-comes from template as string
-    redirect_url = request.POST.get('redirect_url') #get redirect so we know where to redirect at end of process
-    bag = request.session.get('bag', {}) #between view and form...session used to allow information to be stored until client and server finished communicating
-    #store shopping items in session, persists until user closes browser so they can continuously add things to bag w/o losing contents
-    #check if bag variable is there is it exists in session, if not initialise to empty dictionary
+    quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
+    bag = request.session.get('bag', {})
+
     if item_id in list(bag.keys()):
-        bag[item_id] += quantity #if item is already in bag, increment quantity
+        bag[item_id] += quantity
+        messages.success(request, f'Updated {plan.name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
-        messages.success(request,f'Added {plan.name} to your bag')
-    #plan can be put in dictionary with quantity
-    request.session['bag'] = bag #overwrite variable in session with updated version
-    return redirect(redirect_url) 
+        messages.success(request, f'Added {plan.name} to your bag')
 
-def adjust_bag(request, item_id): #item_id is id of plan
-    """ Adjust the quantity of the specified product to the specified amount """
+    request.session['bag'] = bag
+    return redirect(redirect_url)
 
-    quantity = int(request.POST.get('quantity')) 
-    bag = request.session.get('bag', {}) #no redirect url needed as always want to redirect to shopping bag page
+def adjust_bag(request, item_id):
+    """Adjust the quantity of the specified product to the specified amount"""
+    plan = get_object_or_404(Plan, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
 
     if quantity > 0:
-        bag[item_id]
+        bag[item_id] = quantity
+        messages.success(request, f'Updated {plan.name} quantity to {bag[item_id]}')
+
     else:
-            del bag[item_id] 
+        bag.pop(item_id)
+        messages.success(request, f'Removed {plan.name} from your bag')
 
-    request.session['bag'] = bag 
-    return redirect(reverse('view_bag')) 
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
 
-def remove_from_bag(request, item_id): #item_id is id of plan
-    """ Remove an item from the shopping bag, don't need quantity as quantity supposed to be zero """
+def remove_from_bag(request, item_id):
+    """Remove the item from the shopping bag"""
+
     try:
-        bag = request.session.get('bag', {}) #no redirect url needed as always want to redirect to shopping bag page
+        plan = get_object_or_404(Plan, pk=item_id)
+        bag = request.session.get('bag', {})
+        bag.pop(item_id)
+        messages.success(request, f'Removed {plan.name} from your bag')
 
-        if quantity > 0:
-            bag[item_id]
-        else:
-                del bag[item_id] 
-
-        request.session['bag'] = bag 
-        return HttpResponse(status=200) #because view posted to fro a javascript function, return a 200 Http response (implying item successfully removed)
-    
-    except Exception as e:
+        request.session['bag'] = bag
         return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
