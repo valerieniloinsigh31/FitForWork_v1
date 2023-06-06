@@ -74,6 +74,9 @@ Shift work/fixed office hours (font awesome of clock...mini calendar with 9-5 5 
 Variable annual leave/No annual leave 
 Sedentary/Mobile work (Photo of a chair, photo of moving person)
 
+Dropdowns...offering is plans based on occupation type (Sedentary etc.) Consumer chooses these as well as other preferences
+goal (weight loss, muscle gain, general fitness), level (three different tiers, tier 1,2,3) and technique (eight different approaches available)
+
 <b>Features</b>
 Responsive on all device sizes
 
