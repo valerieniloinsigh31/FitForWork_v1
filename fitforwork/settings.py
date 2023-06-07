@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'plans',
     'bag',
     'checkout',
-    'crispy_forms',]
+    'crispy_forms',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -173,4 +174,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-FREE_PT_THRESHOLD = 100 #PT SESSION PROVIDED ON PURCHASES OVER 100
+#Stripe
+
+STRIPE_CURRENCY = 'eur' #usd used in walkthrough
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')#get from environment as we don't want these on github
