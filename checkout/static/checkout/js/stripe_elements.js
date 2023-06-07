@@ -44,6 +44,8 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault(); //prevent default action to post
     card.update({ 'disabled': true}); //before call out to stripe-disable card element and submit button 
     $('#submit-button').attr('disabled', true); // to disable multiple submissions
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     stripe.confirmCardPayment(clientSecret, { //send card info securely to Stripe
         payment_method: {
             card: card,  //billing details to be filled
@@ -57,6 +59,8 @@ form.addEventListener('submit', function(ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
+            $('#payment-form').fadeToggle(100);
+            $('#loading-overlay').fadeToggle(100);
             card.update({ 'disabled': false}); //if there is an error, we want to re-enable the card element and submit button to allow user to fix it
             $('#submit-button').attr('disabled', false);
         } else {
