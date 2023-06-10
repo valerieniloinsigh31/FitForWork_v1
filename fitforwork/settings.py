@@ -180,3 +180,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STRIPE_CURRENCY = 'eur' #usd used in walkthrough
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')#get from environment as we don't want these on github
+DEFAULT_FROM_EMAIL = 'boutiqueado@example.com' 
