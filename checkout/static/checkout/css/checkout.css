@@ -36,6 +36,17 @@
     border: 1px solid brown;
 }
 
+/*Checkout dropdown styling-grey out box if invalid/unselected*/
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;

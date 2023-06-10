@@ -20,22 +20,24 @@ class OrderForm(forms.ModelForm):
             'full_name': 'What is your Name?',
             'email': 'Give us your email address...',
             'phone_number': 'Can I get your number?',
-            'country': 'Country',
             'eircode': 'Eircode',
             'town_or_city': 'Town or City',
             'street_address_1': 'Street Address 1',
             'street_address_2': 'Street Address 2',
-            'county': 'County',
+            'county': 'County, State or Locality',
         }
 
-        self.fields['full_name'].widget.attrs['autofocus'] = True #set autofocus attribute on full_name field-this makes cursor start in full_name field
+ #set autofocus attribute on full_name field-this makes cursor start in full_name field
+        self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            if field != 'country': #no placeholder for country, to avoid an error
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label = False
             self.fields[field].label = False #iterate through forms fields, adding star to placeholder if required field on model and
             #setting placeholder values to their values in the dictionary above and
             #adding a CSS class we will use later (stripe-style-input)

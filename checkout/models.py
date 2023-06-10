@@ -3,6 +3,8 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
+from django_countries.fields import CountryField
+
 from plans.models import Plan #as line_item model has foreign key to Plan model
 
 class OrderPlan(models.Model):
@@ -10,7 +12,7 @@ class OrderPlan(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=300, null=False, blank=False)
     phone_number = models.CharField(max_length=30, null=False, blank=False)
-    country = models.CharField(max_length=40, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     eircode = models.CharField(max_length=15, null=True, blank=True) #not required as doesn't exist in every country
     town_or_city = models.CharField(max_length=25, null=False, blank=False)
     street_address_1 = models.CharField(max_length=100, null=False, blank=False)
