@@ -1,30 +1,30 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save #in order for signal to work 
-from django.dispatch import receiver #in order for signal to work 
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
 
-class UserProfile(models.Model): #one to one field attached to User
+class UserProfile(models.Model):
     """
     A user profile model for maintaining default
-    order history - no delivery
+    delivery information and order history - no delivery info
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE) #one to one field attached to User each user only one profile, each profile attached to one user
-    default_phone_number = models.CharField(max_length=20, null=True, blank=True) # for delivery optional here so null and blank=True
-    default_country = CountryField(blank_label='Country *', null=True, blank=True) # for delivery optional here so null and blank=True
-    default_eircode = models.CharField(max_length=20, null=True, blank=True) # for delivery optional here so null and blank=True
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True) # for delivery optional here so null and blank=True
-    default_street_address_1 = models.CharField(max_length=80, null=True, blank=True) # for delivery optional here so null and blank=True
-    default_street_address_2 = models.CharField(max_length=80, null=True, blank=True) # for delivery optional here so null and blank=True
-    default_county = models.CharField(max_length=80, null=True, blank=True) # for delivery optional here so null and blank=True
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    default_eircode = models.CharField(max_length=20, null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_street_address_1 = models.CharField(max_length=80, null=True, blank=True)
+    default_street_address_2 = models.CharField(max_length=80, null=True, blank=True)
+    default_county = models.CharField(max_length=80, null=True, blank=True)
 
     def __str__(self):
-        return self.user.username #to return username
+        return self.user.username
 
-#only one signal for in this models subfolder so no need for separate signals file
-@receiver(post_save, sender=User) #each time user object saved, profile created or update existing profile
+
+@receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile
