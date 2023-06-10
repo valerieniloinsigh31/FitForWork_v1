@@ -89,9 +89,9 @@ class StripeWH_Handler:
                     original_bag=bag, #so consumer can purchase same order twice-if we don't find order in database, safe to create here
                     stripe_pid=pid,   #so consumer can purchase same order twice-if we don't find order in database, safe to create here
                 )
-                for item_id, item_data in json.loads(bag).items(): #
-                    plan = Plan.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
+                #for item_id, item_data in json.loads(bag).items(): #to be checked as a lot of size related code removed
+                plan = Plan.objects.get(id=item_id)
+                order_line_item = OrderLineItem(
                               order=order,
                               plan=plan,
                               quantity=item_data,

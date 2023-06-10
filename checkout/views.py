@@ -16,7 +16,7 @@ def cache_checkout_data(request):  #to determine if user had save_info box check
     try:
         pid = request.POST.get('client_secret').split('_secret')[0] #first part of client_secret=payment intent id
         stripe.api_key = settings.STRIPE_SECRET_KEY #to modify payment intent
-        stripe.PaymentIntent.modify(pid, metadata={ #modification is adding metadata
+        stripe.PaymentIntent.modify(pid, metadata={     #modification is adding metadata
             'bag': json.dumps(request.session.get('bag', {})), #json dump of shopping bag to be used later
             'save_info': request.POST.get('save_info'), #whether user wants to save info
             'username': request.user, #user placing order
