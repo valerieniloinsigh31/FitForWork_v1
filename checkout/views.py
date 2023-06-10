@@ -9,23 +9,23 @@ from plans.models import Plan
 from bag.contexts import bag_contents #makes this available for use in our views
 
 import stripe
-import json 
+import json #using to add  bag to metadata
 
 @require_POST
-def cache_checkout_data(request):  #to determine if user had save_info box checked... 
+def cache_checkout_data(request):  #to determine if user had save_info box checked...no way to determin in webhook whether user had checked...add in metadata key
     try:
-        pid = request.POST.get('client_secret').split('_secret')[0]
-        stripe.api_key = settings.STRIPE_SECRET_KEY
-        stripe.PaymentIntent.modify(pid, metadata={
-            'bag': json.dumps(request.session.get('bag', {})),
-            'save_info': request.POST.get('save_info'),
-            'username': request.user,
+        pid = request.POST.get('client_secret').split('_secret')[0] #first part of client_secret=payment intent id
+        stripe.api_key = settings.STRIPE_SECRET_KEY #to modify payment intent
+        stripe.PaymentIntent.modify(pid, metadata={ #modification is adding metadata
+            'bag': json.dumps(request.session.get('bag', {})), #json dump of shopping bag to be used later
+            'save_info': request.POST.get('save_info'), #whether user wants to save info
+            'username': request.user, #user placing order
         })
         return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
-        return HttpResponse(content=e, status=400)
+        return HttpResponse(content=e, status=400) #wrapped in a try except block-if anything goes wrong, error msg 
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -47,7 +47,10 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid(): 
-            order = order_form.save()
+            order = order_form.save(commit=False) #prevent multiple save events with commit=False, prevent first one from happening
+            pid = request.POST.get('client_secret').split('_secret')[0] #as per cache view
+            order.stripe_pid = pid #so consumer can purchase same order twice
+            order.original_bag = json.dumps(bag) #so consumer can purchase same order twice. dump to json string, set on order, save
             for item_id, item_data in bag.items():
                 try:
                     plan = Plan.objects.get(id=item_id)

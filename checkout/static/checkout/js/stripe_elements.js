@@ -64,11 +64,18 @@ form.addEventListener('submit', function(ev) {
     };
     var url = '/checkout/cache_checkout_data/';
 
-    $.post(url, postData).done(function () {
-        stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
+    $.post(url, postData).done(function () { //post data to view. post method from jquery, telling we want to post, post_data above
+        stripe.confirmCardPayment(clientSecret, { //we want to post, post_data above. wait for response that payment intent updated
+            //before calling confirm payment method, tack on .done method and execute callback function
+            //callback method-
+            payment_method: { //stripe function pasted into post function
                 card: card,
-                billing_details: {
+                //payment intent succeeded webhook coming from stripe, not own code
+                //stuff form data into payment intent object so we can retrieve it once we receive webhook
+                //add form data to confirm card payment method
+                //stripe docs-spot for billing details object...name/email/number/addess...add with data from form and
+                //trim to strip off whitespace
+                billing_details: {       
                     name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
@@ -81,19 +88,21 @@ form.addEventListener('submit', function(ev) {
                     }
                 }
             },
+            //add shipping info with all info aside from email-customer's may have different shipping/billing
+            //eircode to shipping-billing will come from card
             shipping: {
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
                 address: {
-                    line1: $.trim(form.street_address1.value),
-                    line2: $.trim(form.street_address2.value),
+                    line1: $.trim(street_address_1.value),
+                    line2: $.trim(form.street_address_2.value),
                     city: $.trim(form.town_or_city.value),
                     country: $.trim(form.country.value),
-                    postal_code: $.trim(form.postcode.value),
+                    postal_code: $.trim(form.eircode.value),
                     state: $.trim(form.county.value),
                 }
             },
-        }).then(function(result) {
+        }).then(function(result) { 
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
                 var html = `
@@ -112,8 +121,8 @@ form.addEventListener('submit', function(ev) {
                 }
             }
         });
-    }).fail(function () {
+    }).fail(function () { //failure function if veiw sends 400 bad request response
         // just reload the page, the error will be in django messages
-        location.reload();
+        location.reload(); //reload page to show user error msg from view
     })
 });
