@@ -25,6 +25,7 @@ urlpatterns = [
     path('plans/',include('plans.urls')), #given a top level url of plans/
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
+    path('profile/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 """
