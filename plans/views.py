@@ -129,3 +129,26 @@ def add_plan(request):
 
     return render(request, template, context)
 
+def edit_plan(request, product_id):
+    """ Edit a plan on the website """
+    plan = get_object_or_404(Plan, pk=plan_id)
+    if request.method == 'POST':
+        form = PlanForm(request.POST, request.FILES, instance=plan)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated plan!')
+            return redirect(reverse('plan_detail', args=[plan.id]))
+        else:
+            messages.error(request, 'Failed to update plan. Please ensure the form is valid.')
+    else:
+        form = PlanForm(instance=plan)
+        messages.info(request, f'You are editing {plan.name}')
+
+    template = 'plans/edit_plan.html'
+    context = {
+        'form': form,
+        'plan': plan,
+    }
+
+    return render(request, template, context)
+
