@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Plan, Technique, Type, Occupation
+from .models import Plan, Technique, JobType, Occupation
 from .forms import PlanForm
 
 def all_plans(request):
@@ -13,7 +13,7 @@ def all_plans(request):
     query = None
     #start with query as 'None' so we don't get error when loading plans page without search term
     techniques = None
-    types = None
+    jobtypes = None
     sort = None
     direction = None
     occupations = None
@@ -56,12 +56,12 @@ def all_plans(request):
         #can do this because plans and techniques are related with a foreign key
         #__ syntax allows us to drill into related model - models related by a foreign key
 
-        if 'type' in request.GET:
-            types = request.GET['type'].split(',')
-            plans = plans.filter(type__name__in=types)
-            types = Type.objects.filter(name__in=types)
+        if 'jobtype' in request.GET:
+            jobtypes = request.GET['jobtype'].split(',')
+            plans = plans.filter(jobtype__name__in=jobtypes)
+            jobtypes = JobType.objects.filter(name__in=jobtypes)
 
-         #Type and Plan models related by a ForeignKey so should be able to filter...  
+         #JobType and Plan models related by a ForeignKey so should be able to filter...  
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -91,7 +91,7 @@ def all_plans(request):
      #context added so that plans are available in the template...we can use this template variable in the html template
     #added query to context
         'current_techniques': techniques,
-        'current_types': types,
+        'current_jobtypes': jobtypes,
         'current_sorting': current_sorting,
         'current_occupations': occupations,
         }
@@ -110,8 +110,18 @@ def plan_detail(request, plan_id):
     return render(request, 'plans/plan_detail.html', context) #We need to send things back to the template
 
 def add_plan(request):
+    """ POST handler """
+    if request.method == 'POST':    
+        form = PlanForm(request.POST, request.FILES) #to capture image if one submitted
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added plan!')
+            return redirect(reverse('add_plan')) #back to add_plan view
+        else:
+            messages.error(request, 'Failed to add plan. Please ensure the form is valid.')
+    else:  
+     form = PlanForm() #empty form instantiation
     """ Add a plan to the store """
-    form = PlanForm()
     template = 'plans/add_plan.html'
     context = {
         'form': form,

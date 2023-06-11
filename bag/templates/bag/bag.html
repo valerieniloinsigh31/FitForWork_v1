@@ -42,7 +42,11 @@
                     -->
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.plan.image.url }}">
+                                        {% if item.plan.image %}
+                                        <img class="img-fluid rounded" src="{{ item.plan.image.url }}" alt="{{ item.plan.name }}">
+                                        {% else %}
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.plan.name }}">
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.plan.name }}</strong></p>

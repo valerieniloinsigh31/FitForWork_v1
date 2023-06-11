@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Plan, Occupation, Technique, Type, Goal, Level 
+from .models import Plan, Occupation, Technique, JobType, Goal, Level 
 
 class PlanAdmin(admin.ModelAdmin):
     list_display = ( #attribute that is a tuple that will tell the admin which fields to display
     'name',
     'occupation',
     'technique',
-    'type',
+    'jobtype',
     'price',
     'image',
     'goal',
@@ -34,11 +34,11 @@ class TechniqueAdmin(admin.ModelAdmin):
     )
 #extends the builtin ModelAdmin class
 
-class TypeAdmin(admin.ModelAdmin):
+class JobTypeAdmin(admin.ModelAdmin):
     list_display = ( #attribute that is a tuple that will tell the admin which fields to display
     'friendly_name',
     'name',
-    'type',
+    'jobtype',
     )
 #extends the builtin ModelAdmin class
 
@@ -60,7 +60,7 @@ class LevelAdmin(admin.ModelAdmin):
 admin.site.register(Plan)
 admin.site.register(Occupation)
 admin.site.register(Technique)
-admin.site.register(Type)
+admin.site.register(JobType)
 admin.site.register(Goal)
 admin.site.register(Level)
 
