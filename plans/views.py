@@ -110,18 +110,18 @@ def plan_detail(request, plan_id):
     return render(request, 'plans/plan_detail.html', context) #We need to send things back to the template
 
 def add_plan(request):
-    """ POST handler """
-    if request.method == 'POST':    
-        form = PlanForm(request.POST, request.FILES) #to capture image if one submitted
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = PlanForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            plan = form.save()
             messages.success(request, 'Successfully added plan!')
-            return redirect(reverse('add_plan')) #back to add_plan view
+            return redirect(reverse('plan_detail', args=[plan.id]))
         else:
             messages.error(request, 'Failed to add plan. Please ensure the form is valid.')
-    else:  
-     form = PlanForm() #empty form instantiation
-    """ Add a plan to the store """
+    else:
+        form = PlanForm()
+        
     template = 'plans/add_plan.html'
     context = {
         'form': form,
@@ -152,3 +152,9 @@ def edit_plan(request, product_id):
 
     return render(request, template, context)
 
+def delete_plan(request, plan_id):
+    """ Delete a plan from the store """
+    plan = get_object_or_404(Plan, pk=plan_id)
+    plan.delete()
+    messages.success(request, 'Plan deleted!')
+    return redirect(reverse('plans'))

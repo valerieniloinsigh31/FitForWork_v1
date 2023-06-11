@@ -92,6 +92,12 @@
                                             {% else %}
                                                 <small class="text-muted">No level specified</small>
                                             {% endif %}
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_plan' plan.id %}">Edit</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_plan' plan.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     <div class="row">
