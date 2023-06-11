@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Plan, Technique, Type, Occupation
+from .forms import PlanForm
 
 def all_plans(request):
     """ A view to show all plans, including sorting and search queries """
@@ -107,4 +108,14 @@ def plan_detail(request, plan_id):
     } #add plan_id as parameter and consider singular plan as opposed to plans
 
     return render(request, 'plans/plan_detail.html', context) #We need to send things back to the template
+
+def add_plan(request):
+    """ Add a plan to the store """
+    form = PlanForm()
+    template = 'plans/add_plan.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
