@@ -11,7 +11,7 @@ from plans.models import Plan #as line_item model has foreign key to Plan model
 class OrderPlan(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False) #editable=False, we want generated order number to be unique and permanent so user's can find previous orders
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-    null=True, blank=True, related_name='orders') #create a ForeignKey on the order use models.SET_NULL as allows us to keep order_history even if user deleted...null or blank (those w/o account cant make purchases...related name orders...accesse user orders by calling user.userprofile.orders etc)
+                                     null=True, blank=True, related_name='orders') #create a ForeignKey on the order use models.SET_NULL as allows us to keep order_history even if user deleted...null or blank (those w/o account cant make purchases...related name orders...accesse user orders by calling user.userprofile.orders etc)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=300, null=False, blank=False)
     phone_number = models.CharField(max_length=30, null=False, blank=False)
