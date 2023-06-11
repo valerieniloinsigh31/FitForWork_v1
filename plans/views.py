@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -109,8 +110,13 @@ def plan_detail(request, plan_id):
 
     return render(request, 'plans/plan_detail.html', context) #We need to send things back to the template
 
+@login_required
 def add_plan(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only wesbite admin can do that.')
+        return redirect(reverse('ffw'))
+
     if request.method == 'POST':
         form = PlanForm(request.POST, request.FILES)
         if form.is_valid():
@@ -129,8 +135,13 @@ def add_plan(request):
 
     return render(request, template, context)
 
+@login_required
 def edit_plan(request, product_id):
     """ Edit a plan on the website """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only website admin can do that.')
+        return redirect(reverse('ffw'))
+
     plan = get_object_or_404(Plan, pk=plan_id)
     if request.method == 'POST':
         form = PlanForm(request.POST, request.FILES, instance=plan)
@@ -152,8 +163,12 @@ def edit_plan(request, product_id):
 
     return render(request, template, context)
 
+@login_required
 def delete_plan(request, plan_id):
     """ Delete a plan from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the website admin can do that.')
+        return redirect(reverse('ffw'))
     plan = get_object_or_404(Plan, pk=plan_id)
     plan.delete()
     messages.success(request, 'Plan deleted!')
