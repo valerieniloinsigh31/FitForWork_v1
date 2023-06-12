@@ -1,6 +1,6 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-View the live project here.: URL TO LIVE PROJECT
+View the live project here.: 
 
 
 <b>User Experience (UX)</b>
