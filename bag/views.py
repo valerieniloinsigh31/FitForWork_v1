@@ -5,6 +5,7 @@ from plans.models import Plan
 
 # Create your views here.
 
+
 def view_bag(request):
     """ A view that renders the bag contents page """
 

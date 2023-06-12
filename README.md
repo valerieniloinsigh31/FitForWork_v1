@@ -157,6 +157,13 @@ Include validators for other languages (Javascript/Python)...Also what about Fla
 
 <i> Flake8 and PEP8</i>
 
+command-to output all issues into the terminal:
+
+python3 -m flake8
+Gives a list of all of the issues in the code so we can go through these one by one
+control and click on line, takes you to line - ocde style and linting issues
+
+
 <i>Written tests - Results</i>
 
 As per tutorials...
