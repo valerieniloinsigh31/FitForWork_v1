@@ -90,10 +90,10 @@ class StripeWH_Handler:
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
-                    postcode__iexact=shipping_details.address.postal_code,
+                    eircode__iexact=shipping_details.address.eircode,
                     town_or_city__iexact=shipping_details.address.city,
-                    street_address1__iexact=shipping_details.address.line1,
-                    street_address2__iexact=shipping_details.address.line2,
+                    street_address_1__iexact=shipping_details.address.line1,
+                    street_address_2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_bag=bag,
@@ -127,8 +127,8 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(bag).items(): #to be checked as a lot of size related code removed
-                 plan = Plan.objects.get(id=item_id)
-                 order_line_item = OrderLineItem(
+                    plan = Plan.objects.get(id=item_id)
+                    order_line_item = OrderLineItem(
                               order=order,
                               plan=plan,
                               quantity=item_data,
