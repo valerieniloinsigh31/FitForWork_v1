@@ -64,11 +64,9 @@ form.addEventListener('submit', function(ev) {
     };
     var url = '/checkout/cache_checkout_data/';
 
-    $.post(url, postData).done(function () { //post data to view. post method from jquery, telling we want to post, post_data above
-        stripe.confirmCardPayment(clientSecret, { //we want to post, post_data above. wait for response that payment intent updated
-            //before calling confirm payment method, tack on .done method and execute callback function
-            //callback method-
-            payment_method: { //stripe function pasted into post function
+    $.post(url, postData).done(function () { 
+        stripe.confirmCardPayment(clientSecret, { 
+            payment_method: { 
                 card: card,
                 //payment intent succeeded webhook coming from stripe, not own code
                 //stuff form data into payment intent object so we can retrieve it once we receive webhook
@@ -80,8 +78,8 @@ form.addEventListener('submit', function(ev) {
                     phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
                     address:{
-                        line1: $.trim(form.street_address1.value),
-                        line2: $.trim(form.street_address2.value),
+                        line1: $.trim(form.street_address_1.value),
+                        line2: $.trim(form.street_address_2.value),
                         city: $.trim(form.town_or_city.value),
                         country: $.trim(form.country.value),
                         state: $.trim(form.county.value),
@@ -98,7 +96,7 @@ form.addEventListener('submit', function(ev) {
                     line2: $.trim(form.street_address_2.value),
                     city: $.trim(form.town_or_city.value),
                     country: $.trim(form.country.value),
-                    postal_code: $.trim(form.eircode.value),
+                    eircode: $.trim(form.eircode.value),
                     state: $.trim(form.county.value),
                 }
             },
