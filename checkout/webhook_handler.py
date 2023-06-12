@@ -14,8 +14,8 @@ import stripe
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
-    def __init__(self, request): #init method of class is a setup method called every time an instance of the class is created
-        self.request = request #use it to assign the request as an attribute of the class in case we need to access any attributes of request coming from stripe
+    def __init__(self, request): 
+        self.request = request 
 
     def _send_confirmation_email(self, order):
         """Send the user a confirmation email"""
@@ -35,7 +35,7 @@ class StripeWH_Handler:
         )     
 
 
-    def handle_event(self, event): #class method, takes event stripe sends and return http response indicating it was received
+    def handle_event(self, event): 
         """
         Handle a generic/unknown/unexpected webhook event
         """
@@ -43,8 +43,6 @@ class StripeWH_Handler:
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
 
-
-    #for each type of webhook we want a method to handle it, makes them easier to manage
     def handle_payment_intent_succeeded(self, event):
         """
         Handle the payment_intent_succeeded webhook event from Stripe
@@ -64,7 +62,7 @@ class StripeWH_Handler:
         grand_total = round(stripe_charge.amount / 100, 2) # updated
 
         #Clean data in the shipping details
-        for field, value in shipping_details.address.items(): #ensure data in same form as what we want in database. replace empty strings with none
+        for field, value in shipping_details.address.items(): 
             if value == "":
                 shipping_details.address[field] = None
 
@@ -76,10 +74,10 @@ class StripeWH_Handler:
             if save_info:
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
-                profile.default_postcode = shipping_details.address.postal_code
+                profile.default_eircode = shipping_details.address.eircode
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address_1 = shipping_details.address.line1
+                profile.default_street_address_2 = shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
@@ -87,7 +85,7 @@ class StripeWH_Handler:
         attempt = 1
         while attempt <= 5:
             try:
-                order = Order.objects.get(
+                order = OrderPlan.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
@@ -103,7 +101,7 @@ class StripeWH_Handler:
                 )
                 order_exists = True
                 break
-            except Order.DoesNotExist:
+            except OrderPlan.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
@@ -114,7 +112,7 @@ class StripeWH_Handler:
         else:
             order = None
             try:
-                order = Order.objects.create(
+                order = OrderPlan.objects.create(
                     full_name=shipping_details.name,
                     user_profile=profile,
                     email=billing_details.email,
@@ -128,9 +126,9 @@ class StripeWH_Handler:
                     original_bag=bag,
                     stripe_pid=pid,
                 )
-                #for item_id, item_data in json.loads(bag).items(): #to be checked as a lot of size related code removed
-                plan = Plan.objects.get(id=item_id)
-                order_line_item = OrderLineItem(
+                for item_id, item_data in json.loads(bag).items(): #to be checked as a lot of size related code removed
+                 plan = Plan.objects.get(id=item_id)
+                 order_line_item = OrderLineItem(
                               order=order,
                               plan=plan,
                               quantity=item_data,
