@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://fitforwork.herokuapp.com/</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/accounts/login/?next=/profile/</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/bag/</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?sort=level</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?sort=goal</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?sort=occupation</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=Work%20from%20home</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=Sedentary%20-%20access%20to%20home%20equipment</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=Sedentary%20-%20no%20access%20to%20gym%20&amp;%20equipment</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=Sedentary%20-%20access%20to%20gym%20&amp;%20equipment</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=Mobile%20-%20access%20to%20home%20equipment</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=Mobile%20-%20access%20to%20gym%20&amp;%20equipment</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=Mobile%20-%20no%20access%20to%20gym%20&amp;%20equipment</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?type=All%20types</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Ikigai</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Kaizen</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Pomodoro</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Hara%20Hachi%20Bu</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Shoshin</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Wabi-sabi</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Forest%20bathing</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Kakeibo</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/?technique=Ikagai,Kaizen,Pomodoro,Hara%20Hachi%20Bu,Shoshin,Wabi%20Sabi,Forest%20Bathing,Kakeibo</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/plans/</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/accounts/signup/?next=%2Fprofile%2F</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fitforwork.herokuapp.com/accounts/login/?next=%2Fprofile%2F</loc>
+  <lastmod>2023-06-13T23:07:51+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
