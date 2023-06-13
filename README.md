@@ -7,24 +7,25 @@ View the live project here.:
 <b>User stories</b>
 Kanban Board
 <b>First Time Visitor Goals</b>
-As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
+As a First Time Visitor, I want to easily understand the main purpose of the site (fitness and work) and learn more about the organisation.
+As a First Time Visitor, I want to be able to easily navigate throughout the site to find content. (NAVbar)
+As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.(Facebook business profile)
 
 <b>Returning Visitor Goals</b>
-As a Returning Visitor, I want to find information about coding challenges.
+As a Returning Visitor, I want to find information about different tiers and approaches for plans and prices.
 As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-As a Returning Visitor, I want to find community links.
+As a Returning Visitor, I want to find facebook business profile.
 
 <b>Frequent User Goals</b>
-As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-As a Frequent User, I want to check to see if there are any new blog posts.
+As a Frequent User, I want to check to see if there are any newly added plans or nutrition newsletters.
+As a Frequent User, I want to check to see if there are any new customer testimonials,
 As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
 
 <b>Design</b>
 <b>Colour Scheme</b>
-The two main colours used for Fit4Work: red, and white.
+The two main colours used for Fit4Work: green and white.
 Why did I pick these colours?
+Work/occupation...
 
 <b>Typography</b>
 The XX font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Why I chose this font for Fit4Work: XX is a clean font used frequently in programming, so it is both attractive and appropriate...vivid, sharp, fitness, new, fresh...related to professionalism and occupation
@@ -80,7 +81,12 @@ goal (weight loss, muscle gain, general fitness), level (three different tiers, 
 <b>Features</b>
 Responsive on all device sizes
 
--Google Chrome developer tools, media queries (breakpoints), bootstrap
+-Google Chrome developer tools, media queries (breakpoints),
+ Bootstrap used as per walkthrough
+ Container-fluid
+ Z-index
+ v-100
+ Media-Queries
 
 <b>Interactive elements</b>
 
@@ -141,6 +147,7 @@ As part of tutorials, we learned how to build based on tests TDD but not require
 
 Python testing, Unittest library in python:
 
+Did I write any testing functions?
 
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
@@ -157,11 +164,13 @@ Include validators for other languages (Javascript/Python)...Also what about Fla
 
 <i> Flake8 and PEP8</i>
 
-command-to output all issues into the terminal:
+Command-to output all issues into the terminal:
 
 python3 -m flake8
+
 Gives a list of all of the issues in the code so we can go through these one by one
-control and click on line, takes you to line - ocde style and linting issues
+control and click on line, takes you to line - code style and linting issues. Tells you
+whee you have imported something and not used it
 
 
 <i>Written tests - Results</i>

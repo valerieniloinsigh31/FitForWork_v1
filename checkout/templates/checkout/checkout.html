@@ -118,7 +118,7 @@
                             </span>
                             <span class="font-weight-bold">Adjust bag</span>
                         </a>
-                        <button id="submit-button" class="btn btn-black rounded-0"> <!--we will access submit-button id using javascript-->
+                        <button id="submit-button" class="btn btn-black rounded-0"> 
                             <span class="font-weight-bold">Complete order</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
@@ -146,8 +146,8 @@
 {% endblock %}
 
 {% block postload_js %}
-    {{ block.super }} <!--js to add card element in external js file.-->
-    {{ stripe_public_key|json_script:"id_stripe_public_key"  }} <!--can't render django template variables in external js files, so need to use builtin template filter json script to render here-->
-    {{ client_secret|json_script:"id_client_secret" }} <!---->
+    {{ block.super }} 
+    {{ stripe_public_key|json_script:"id_stripe_public_key"  }} 
+    {{ client_secret|json_script:"id_client_secret" }} 
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>    
 {% endblock %}

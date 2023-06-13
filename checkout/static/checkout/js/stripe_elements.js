@@ -68,11 +68,6 @@ form.addEventListener('submit', function(ev) {
         stripe.confirmCardPayment(clientSecret, { 
             payment_method: { 
                 card: card,
-                //payment intent succeeded webhook coming from stripe, not own code
-                //stuff form data into payment intent object so we can retrieve it once we receive webhook
-                //add form data to confirm card payment method
-                //stripe docs-spot for billing details object...name/email/number/addess...add with data from form and
-                //trim to strip off whitespace
                 billing_details: {       
                     name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone_number.value),
@@ -86,8 +81,6 @@ form.addEventListener('submit', function(ev) {
                     }
                 }
             },
-            //add shipping info with all info aside from email-customer's may have different shipping/billing
-            //eircode to shipping-billing will come from card
             shipping: {
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
@@ -119,8 +112,7 @@ form.addEventListener('submit', function(ev) {
                 }
             }
         });
-    }).fail(function () { //failure function if veiw sends 400 bad request response
-        // just reload the page, the error will be in django messages
-        location.reload(); //reload page to show user error msg from view
+    }).fail(function () { 
+        location.reload(); 
     })
 });

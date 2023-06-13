@@ -9,7 +9,7 @@ def bag_contents(request):
     bag_items = []
     total = 0 #initialise to 0
     plan_count = 0 #initialise to 0
-    bag = request.session.get('bag', {}) #same as in add_to_bag view. Gets bag in session if exists, initializing to empty dictionary if not
+    bag = request.session.get('bag', {}) 
 
     for item_id, item_data in bag.items():
         plan = get_object_or_404(Plan, pk=item_id)
