@@ -16,12 +16,9 @@ class Plan(models.Model):
     def __str__(self):
         return self.name #just returns name of plan
 
-    def get_friendly_name(self):
-        return self.friendly_name
-
-
 class Technique(models.Model):
     name = models.CharField(max_length=300)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
     technique = models.TextField()
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)

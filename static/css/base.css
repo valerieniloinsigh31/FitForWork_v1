@@ -10,8 +10,6 @@ body {
     min-height: calc(100vh -164px);
     color: #76a49d;
     font-family: 'Sofia Sans Condensed', sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Add background image to body element. Ensures stays put in center of page. Height calc added-170px will be eventual 
