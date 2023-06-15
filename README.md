@@ -2,30 +2,85 @@
 
 View the live project here.: https://fitforwork.herokuapp.com/
 
+<h1><b>BASIC PREMISE</b></h1>
+Fit for work is an ecommerce website that offers consumers workout plans that are tailored to suit their occupation>
+
+Business model: Currently business to consumer but will transition to business to business(gym/personal trainers/fitness influencers/athletes/chefs) once the website has gained enough traction.
+
+Marketing strategy:
+
+Facebook business profile:
+Before and After photos, demonstrated stories of success and reviews. Facebook-presence and reach.
+Organic, offer talks and explanations at gyms and local sports clubs.
+Instagram:
+Mailchimp embedded sign-up form for nutrition newsletter: Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter.
+
+Paid: External from course but as I hope to continue to develop this, I will ensure to enlist the following google services to monitor, track and manage the website and related apps and profiles:
+Google ads
+Google analytics
+
+GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail the experiences of consumers are consent based. I will ensure all consent boxes are not ticked automatically as this would be a breach of GDPR.
+
+
 
 <b>User Experience (UX)</b>
 <b>User stories</b>
 Kanban Board
 <b>First Time Visitor Goals</b>
-As a First Time Visitor, I want to easily understand the main purpose of the site (fitness and work) and learn more about the organisation.
-As a First Time Visitor, I want to be able to easily navigate throughout the site to find content. (NAVbar)
+As a First Time Visitor, I want to easily understand that the main purpose of the site is to provide workout plans tailored to the work schedule of the consumer.
+As a First Time Visitor, I want to learn more about the company behind the website and the training/qualifications and experience of the people designing the plans.
+As a First Time Visitor, I want to know more about the type of plans that are being offered an and the technique that they are based on.
+As a First Time Visitor, I want to know what prices the plans will be.
+As a First Time Visitor, I want to be able to easily navigate throughout the site to find content, which I can do by scrolling and utilising the clearly labelled NAVbar and footer.
 As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.(Facebook business profile)
 
 <b>Returning Visitor Goals</b>
 As a Returning Visitor, I want to find information about different tiers and approaches for plans and prices.
 As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
 As a Returning Visitor, I want to find facebook business profile.
+As a Returning Visitor, I want to see what is involved with the other tiers.
+As a Returning Visitor, I want to be able to buy the same plan or a different plan again and for my payment information to have been saved.
 
 <b>Frequent User Goals</b>
 As a Frequent User, I want to check to see if there are any newly added plans or nutrition newsletters.
-As a Frequent User, I want to check to see if there are any new customer testimonials,
-As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+As a Frequent User, I want to check to see if there are any new customer testimonials ont he facebook business profiel.
+As a Frequent User, I want to sign up to the Nutrition Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+
+
+<b>Prioritisation</b?>
+MOSCOW prioritisation incorporated in terms of the user stories
+Labels used effectively in the kanban board structure:
+Must Have
+Should Have
+Could Have
+Won't have
+
+Ensured that no more than 60% of user stories were labelled as 'must haves' as per advice from the tutorials.
+
+Themes- The user stories could be packaged within the following themes:
+
+
+
+Milestones:
+Noted the milestone feature available on github, to focus on completing various user stories in a certain timeframe. Did not complete this.
+
+Sprints
 
 <b>Design</b>
 <b>Colour Scheme</b>
-The two main colours used for Fit4Work: green and white.
+The main colours used for Fit4Work: teal, black and white.
+
 Why did I pick these colours?
+Used colorpalette to decide on the colors.
+Wanted something stark and contrasting but not grating (teal on white)
+Wanted something relatively formal to fit in with the occupation based theme (black and white)
+
+
 Work/occupation...
+
+<b>Logo</b>
+Invested in a once off logo as came across the website, 'Looka' when researching for the project on the peer code review page...credit roman
+
 
 <b>Typography</b>
 The XX font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Why I chose this font for Fit4Work: XX is a clean font used frequently in programming, so it is both attractive and appropriate...vivid, sharp, fitness, new, fresh...related to professionalism and occupation
@@ -33,12 +88,34 @@ The XX font is the main font used throughout the whole website with Sans Serif a
 <b>Imagery</b>
 Imagery is important. The XX image is designed to be striking and catch the user's attention and is in-keeping with the theme of fitness and nutrition influenced/adjusted to suit the occupation of the user. It also has a modern, energetic aesthetic.
 
+Please see below images chosen for job type and reason why:
+Please see below images chose for techniques and reason why:
+Please see below image chosen for nutrition newsletter:
+
+
+<b>Socials</b>
 Facebook business profile
 Before/After photos...design/divided out by occupation
 Motto-'If I can do it, so can you.' 'I'm a XX and look at me!'
 
+Instagram-a must in terms of fitness. Visual is key in terms of aestjetic fitness and weight loss and instagram is a highly visible platform. Copious fintess influencers, customers with short attention spans, get involved in the competition.
+
+Instagram profile:
 
 <b>Wireframes</b>
+
+Used lucidcharts as a foundation for planning.
+
+As I continued to grow an understanding of django and full stack frameworks, I added tabs to help me to understand.
+
+Visual aspect he;ped me to solidify my understanding:
+
+Enity Relationship Diagram:
+
+One-to-one 
+Many-to-any
+
+Deciding on fields to include in the models.
 
 Home Page Wireframe - View
 
@@ -110,6 +187,8 @@ Django
 
 <b>Bootstrap 4.4.1:</b>...is this the correct version of Bootstrap?
 Bootstrap was used to assist with the responsiveness and styling of the website.
+I liked materialise also but noted in the tutorials, it was recommended not to use both frameworks simultaneously and bootstrap used as boilerplate code-stuck with bootstrap.
+
 <i>Hover.css:</i>
 Hover.css was used on the **Social Media icons** in the footer to add the float transition while being hovered over.
 
@@ -118,6 +197,7 @@ Google fonts were used to import the 'XX' font into the style.css file which is 
 
 <i>Font Awesome:</i>
 Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+Bulma used to ensure icons consistently aligned on all pages of the website-as per tutorials.
 
 <i>jQuery:</i>
 jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
@@ -127,9 +207,6 @@ Git was used for version control by utilizing the Gitpod terminal to commit to G
 
 <i>GitHub:</i>
 GitHub is used to store the projects code after being pushed from Git.
-
-**<i>Photoshop:</i>
-Photoshop was used to create the logo, resizing images and editing photos for the website.**
 
 <i>Lucidcharts:</i>
 Lucidcharts was used to create the wireframes during the design process.
@@ -262,6 +339,9 @@ On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed
 
 <b>How bugs were resolved</b>
 
+-Issue with AWS...getting active keys...consulted with people on slack
+-webhooks issue with Stripe
+
 <b>Deployment</b>
 
 GitHub Pages
@@ -306,6 +386,11 @@ Click Here to retrieve pictures for some of the buttons and more detailed explan
 
 Code:
 
+Consulted with Slack. Peer code review page, researched the repositaries of toehr students (Roman and Monique)
+
+Tutor support
+
+Mentor
 
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
@@ -319,7 +404,8 @@ All content was written by the developer.
 Psychological properties of colours text in the README.md was found here
 
 <b>Media</b>
-All Images were created by the developer.
+Images pruned from the following resourcesL
+
 
 <b>Acknowledgements</b>
 My Mentor Mitko for continuous helpful feedback.
