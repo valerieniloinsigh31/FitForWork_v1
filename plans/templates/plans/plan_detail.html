@@ -33,12 +33,12 @@
                     {% if plan.technique %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'plans' %}?technique={{ plan.technique.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ plan.technique.friendly_name }}
+                            <small class="text-muted"><i class="fas fa-tag mr-1"></i>{{ plan.technique }}</small>
                         </a>
                     </p>
                     {% endif %}
                     {% if plan.tier %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ plan.tier }} / 5</small>
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ plan.tier }}</small>
                     {% else %}
                         <small class="text-muted">No Tier specified</small>
                     {% endif %}
