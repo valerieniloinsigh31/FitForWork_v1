@@ -2,30 +2,99 @@
 
 View the live project here.: https://fitforwork.herokuapp.com/
 
-<h1><b>BASIC PREMISE</b></h1>
-Fit for work is an ecommerce website that offers consumers workout plans that are tailored to suit their occupation>
+<h2><em>Introduction</em><h2>
+Fit for work is an ecommerce website that offers consumers workout plans that are tailored to suit their occupation.
 
-Business model: Currently business to consumer but will transition to business to business(gym/personal trainers/fitness influencers/athletes/chefs) once the website has gained enough traction.
+<h2><em>Business model:</em></h2>
+Currently business to consumer but will transition to business to business(gym/personal trainers/fitness influencers/athletes/chefs) once the website has gained enough traction. This will all be done via my company, 'Pendulum to Paper Production Limited', which is a limited company registered with the Companies Registration Office in the Republic of Ireland.
 
-Marketing strategy:
 
-Facebook business profile:
+SEO:
+Meta tags within code
+Words used on code
+Use of non rel tags
+Inclusion of sitem.xml file and robots.txt. file.
+Robots.txt file will denote what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place withint the google pages on search result.
+
+Key words employed-strove to achieve a balance between short tail and long tail keywords.
+
+
+<h2><em>Marketing strategy:</em></h2>
+Target Audience:
+Very expansive-not a limited target audience.
+People who believe that their job/work schedule is rpesenting a barrier to their fitness. People who want assistance in achieving their desired level of work life balance. People who need to make time somewhere.
+Wide range of goals: Weight loss, muscle gain, general fitness, purely aesthetic.
+Job types designed to be all encompasssing: Sedentary, mobile, work from home, retired, unemployed.
+Range of prices based on tier 100-500, expands target audience. Different offerings and different timescales offered wiht each tier.
+
+
+
+<em>Facebook business profile:</em>
+Link:
+What is the purpose of this/what does it add to the marketing of the website?:
 Before and After photos, demonstrated stories of success and reviews. Facebook-presence and reach.
 Organic, offer talks and explanations at gyms and local sports clubs.
 Instagram:
 Mailchimp embedded sign-up form for nutrition newsletter: Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter.
 
 Paid: External from course but as I hope to continue to develop this, I will ensure to enlist the following google services to monitor, track and manage the website and related apps and profiles:
-Google ads
-Google analytics
+
+
+<b>Google business</b>
+Registered business with google
+Improved SEO-Improve search engine ranking for SEO key words
+Registraion free-users more likely to trust a registered business.
+Alerts for user interactions
+Detailed analytics provided...clicks, visits to profiles etc.
+Updates in real time
+Flag process available for images/comments uploaded by visitors
+
+Screenshot:
+
+
+
+![alt text](.//media/)
+
+
+<b>Google ads</b>
+<b>Google analytics</b>
+
+GDPR consent form required to sign up for google analytics.
+Toughest privacy and security policy in the world.
+Many privacy and security standards don't apply to developers.
+Website:
+https://gdpr.eu/
+
+Generated a privacy policy for 'Fit For Work' at the following website:
+
+https://www.privacypolicygenerator.info/
+
+Tetx webpage provided by app, inform users about how their data is being collected and processed.
+Concise, transparent, easily accessible.
+
+
+
+
 
 GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail the experiences of consumers are consent based. I will ensure all consent boxes are not ticked automatically as this would be a breach of GDPR.
 
 
 
 <b>User Experience (UX)</b>
+<b>User requirements</b>
+Fitness and health
+Exercises 
+Plans
+Ecommerce-ability to pay for something
+Support throughout fitness journey
+Evidence provided for success of following such plans in the past
+Can view testimonials by individuals in similar circumstances...same job type
+Ability to review experience
+Trial period
+Probably something on nutrition
+
 <b>User stories</b>
-Kanban Board
+Kanban Board-link:...screenshots
 <b>First Time Visitor Goals</b>
 As a First Time Visitor, I want to easily understand that the main purpose of the site is to provide workout plans tailored to the work schedule of the consumer.
 As a First Time Visitor, I want to learn more about the company behind the website and the training/qualifications and experience of the people designing the plans.
@@ -70,7 +139,9 @@ Sprints
 <b>Colour Scheme</b>
 The main colours used for Fit4Work: teal, black and white.
 
-Why did I pick these colours?
+Employed AdobeColour to refine the teal colours to be used on the website:
+https://color.adobe.com/search?q=teal#
+
 Used colorpalette to decide on the colors.
 Wanted something stark and contrasting but not grating (teal on white)
 Wanted something relatively formal to fit in with the occupation based theme (black and white)
@@ -155,7 +226,15 @@ Sedentary/Mobile work (Photo of a chair, photo of moving person)
 Dropdowns...offering is plans based on occupation type (Sedentary etc.) Consumer chooses these as well as other preferences
 goal (weight loss, muscle gain, general fitness), level (three different tiers, tier 1,2,3) and technique (eight different approaches available)
 
-<b>Features</b>
+<b>Database</b>
+
+<b>Database models</b>
+
+<h1><b>Features</b>
+
+Existing features
+Future features
+
 Responsive on all device sizes
 
 -Google Chrome developer tools, media queries (breakpoints),
@@ -332,6 +411,98 @@ The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7,
 A large amount of testing was done to ensure that all pages were linking correctly.
 Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
+<b>Responsiveness testing:</b>
+                       
+  <table>
+                <caption><b>Testing for responsiveness</b></caption>
+                <tr>
+                    <th><b>Iphone 12 pro</b</th>
+                    <th><b>Macbook Pro</b></th>
+                    <th><b>Ipad Air</b></th>
+                    <th><b>Nest Hub</b></th>
+                </tr>
+                <tr>
+                    <td>Site is responsive<=700px</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Links/URLs:</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Images work:</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+            </table> 
+
+
+ <p>Screengrabs of different tests:</p>
+
+ Iphone 12 pro: ![alt text](./assets/images/iphone12_test.png)
+
+ MacBook Pro: ![alt text](./assets/images/macbookpro_test.png)
+
+ Ipad Air: ![alt text](./assets/images/ipadair_test.png)
+
+ Nest Hub:  ![alt text](./assets/images/nesthub_test.png)
+
+ 2. To different browsers
+
+ I opened the website on my laptop and it worked accordingly
+
+ Browsers: Safari, Google Chrome, Internet Explorer, Firefox
+
+  <table>
+                <caption><b>Browser compatibility:</b></caption>
+                <tr>
+                    <th>Chrome</th>
+                    <th>Firefox</th>
+                    <th>Safari</th>
+                    <th>Internet Explorer</th>
+                </tr>
+                <tr>
+                    <td>Intended responsiveness:</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Intended functionality:</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>   
+
+            Include images and screenshots...google developer tools
+
+ <h2>LIGHTHOUSE</h2>
+I accessed the 'LIGHTHOUSE' testing tool via Developer Tools. Please see a screengrab of the successful lIGHTHOUSE testing below. I believe all %s are adequate:
+
+![alt text](.//)
+
 <b>Known Bugs</b>
 On some mobile devices the Work pushes the size of screen out more than any of the other content on the page.
 A white gap can be seen to the right of the footer and navigation bar as a result.
@@ -404,9 +575,19 @@ All content was written by the developer.
 Psychological properties of colours text in the README.md was found here
 
 <b>Media</b>
-Images pruned from the following resourcesL
+Images pruned from the following resources.
+
+Websites used: 
+Pexel
+Unsplash
+
+Logo: Looka
+
+Fonts: Google Fonts
+Icons: Font Awesome
 
 
 <b>Acknowledgements</b>
 My Mentor Mitko for continuous helpful feedback.
 Tutor support for their assistance throughout the process.
+

@@ -1,26 +1,28 @@
- <!-- Footer -->
- <footer class="footer-container">
-    <div class="footer-container quotes-container content-container">
-      <section class="footer">
-        <div class="row">
-          <div class="col-12 page-header mb-4">
-            <h2 class="footer-container text-uppercase">Stay in touch:</h2>
-            <hr class="block-divider block-divider--short">
-          </div>
+<footer class="container-wrapper">
+  <div class="container quotes-container content-container">
+    <section class="footer">
+      <div class="row">
+        <div class="col-12 page-header mb-4">
+          <h2 class="text-uppercase">Stay in touch:</h2>
+          <hr class="block-divider block-divider--short">
+        </div>
+     </div>
+     <div class="row">
+       <div class="col-12 col-md-6">
+         <h3>Social</h3>
+         <p>Keep up to date with all our latest offers</p>
+         <a href="https://www.facebook.com/profile.php?id=100093499517302" target="_blank"><i class="fab fa-facebook-square"></i> Follow us on Facebook!</a>
        </div>
-       <div class="row">
-         <div class="col-12 col-md-6">
-           <h3>Social</h3>
-           <p class="text-black"> Keep up to date with all our latest offers</p>
-           <a href="#" target="_blank"><i class="fab fa-facebook-square"></i> Follow us on Facebook!</a>
-         </div>
-         <div class="col-12 col-md-6">
-           <h2>Subscribe!</h2>
-           <p class="text-black">Subscribe for our <b class="text-white">Nutrition Newsletter</b></p>
-           <!-- Mailchimp signup form here -->
-         </div>
-       </div>
-     </section>
-   </div>
- </footer>
+       <div class="col-12 col-md-6">
+         <h2>Subscribe!</h2>
+         <p>All things diet related in our monthly Nutrition newsletter, which has a supplement on supplements!</p>
+         <!-- Mailchimp signup form here -->
+         {% block postload_js %}
+         <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/56f3ffac854ce27d332da540d/5680bda53978cd7be6d301a83.js");</script>
+         {% endblock %}
+        </div>
+     </div>
+   </section>
+ </div>
+</footer>
 <!-- /.footer -->
