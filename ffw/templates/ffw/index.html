@@ -25,10 +25,20 @@
             </div>
         </div>
     </div>
-  {% include 'includes/footer.html' %}
+    <div>
+      <div>
+        <!--Mailchimp signing form-->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica, Arial, sans-serif; width:600px;}
+        </style>
+        <div id="mc_embed_signup"
+      </div>
+    </div>
+  
+{% include 'includes/footer.html' %}
 {% endblock %}
 {% block postload_js %}
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/56f3ffac854ce27d332da540d/5680bda53978cd7be6d301a83.js");</script>
 {% endblock %}
 
 

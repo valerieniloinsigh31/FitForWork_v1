@@ -385,42 +385,51 @@ templates on the site also
     margin-top:auto;
 }
 
-.footer h3 {
+.footer-header {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size: 16px;
+    color:fuchsia;
+}
 
+.footer h2 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+
+}
+
+.footer h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
 }
 
 .footer ul {
-
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
 }
 
 .footer ul a {
-
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
 }
 
 .footer ul a-hover {
-
-}
-
-.footer .item.social >a {
-
-}
-
-.footer .item.social > a:hover {
+    opacity:0.6;
 
 }
 
 .footer .copyright {
-
-}
-
-.footer .item.text p {
-
-}
-
-.footer.item.social {
-
-}
-
-.footer.item.text {
-    
+    text-align:center;
+    padding-top:24px;
+    font-size:13px;
+    margin-bottom:0;
 }
