@@ -375,3 +375,19 @@ templates on the site also
     border-color: #dc3545;
     border-radius: 0;
 }
+
+/* Footer */
+
+.footer-container {
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+.text-white {
+    color: white;
+}
