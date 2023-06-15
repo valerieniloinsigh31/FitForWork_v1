@@ -378,16 +378,49 @@ templates on the site also
 
 /* Footer */
 
-.footer-container {
-    height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+.footer {
+    padding:30px 0;
+    color:fuchsia;
+    background-color:white;
+    margin-top:auto;
 }
 
-.text-white {
-    color: white;
+.footer h3 {
+
+}
+
+.footer ul {
+
+}
+
+.footer ul a {
+
+}
+
+.footer ul a-hover {
+
+}
+
+.footer .item.social >a {
+
+}
+
+.footer .item.social > a:hover {
+
+}
+
+.footer .copyright {
+
+}
+
+.footer .item.text p {
+
+}
+
+.footer.item.social {
+
+}
+
+.footer.item.text {
+    
 }
