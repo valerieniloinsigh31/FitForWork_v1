@@ -7,9 +7,11 @@ html {
 body {
     background: url('/media/landing_page.jpg') no-repeat center center fixed;
     background-size:cover;
-    height: calc(100vh -164px);
+    min-height: calc(100vh -164px);
     color: #76a49d;
     font-family: 'Sofia Sans Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Add background image to body element. Ensures stays put in center of page. Height calc added-170px will be eventual 
@@ -120,9 +122,9 @@ for styling of free intro PT call
 }
 
 /*
-for styling of occupation badgers when hovering over them-invert colours
+for styling of jobtype badges when hovering over them-invert colours
 */
-a.technique-badge > span.badge:hover {
+a.jobtype-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
@@ -380,13 +382,11 @@ templates on the site also
 
 .footer {
     padding:30px 0;
-    color:fuchsia;
-    background-color:white;
     margin-top:auto;
 }
 
 .footer-header {
-    margin-top:0;
+    margin-top:auto;
     margin-bottom:12px;
     font-weight:bold;
     font-size: 16px;
@@ -398,14 +398,16 @@ templates on the site also
     margin-bottom:12px;
     font-weight:bold;
     font-size:16px;
+    color:fuchsia;
 
 }
 
-.footer h3 {
-    margin-top:0;
+.footer p {
+    margin-top:auto;
     margin-bottom:12px;
     font-weight:bold;
     font-size:16px;
+    color:white;
 }
 
 .footer ul {
@@ -433,3 +435,16 @@ templates on the site also
     font-size:13px;
     margin-bottom:0;
 }
+
+#mc_embed_signup{
+    background:#fff; 
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif; 
+     width:600px;
+    }
+
+.text-white {
+    color: white !important;
+    opacity: 1;
+    }
+    

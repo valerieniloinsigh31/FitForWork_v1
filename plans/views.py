@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Plan, Technique, JobType, Occupation
+from .models import Plan, Technique, JobType
 from .forms import PlanForm
 
 def all_plans(request):
@@ -17,7 +17,6 @@ def all_plans(request):
     jobtypes = None
     sort = None
     direction = None
-    occupations = None
     
     #N.B. direction for filtering level is alphabetical (Advanced/Beginner/Intermediate-not ideal. Would be better as 
     # Beginner/Intermediate/Advanced...how to do this-ordering?)
@@ -29,23 +28,16 @@ def all_plans(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 plans = plans.annotate(lower_name =Lower('name'))
-#add conditional, if the sort-key is equal to occupation, adjust to tack on __name , to sort occupations by name, not ids. __ allows 
-# us to drill into a related model...changing to plans.order_by occupation__name:
-            if sortkey == 'occupation':
-                sortkey = 'occupation__name'
+#add conditional, if the sort-key is equal to jobtype, adjust to tack on __name , to sort jobtypes by name, not ids. __ allows 
+# us to drill into a related model...changing to plans.order_by jobtype__name:
+            if sortkey == 'jobtype':
+                sortkey = 'jobtype__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f-{sortkey}
             #if descending, add minus in front of sortkey with string formatting, which reverses order...need to alter for goals, can't be alphabetical
             plans = plans.order_by(sortkey)
-
-        if 'occupation' in request.GET:
-            occupations = request.GET['occupation'].split(',')
-            plans = plans.filter(occupation__name__in=occupations)
-            occupations =  Occupation.objects.filter(name__in=occupations) 
-        
-        #Occupation added-more filtering functionality
 
         if 'technique' in request.GET:
             techniques = request.GET['technique'].split(',')
@@ -94,7 +86,6 @@ def all_plans(request):
         'current_techniques': techniques,
         'current_jobtypes': jobtypes,
         'current_sorting': current_sorting,
-        'current_occupations': occupations,
         }
         #list of technique objects-returned to context so we can use in template later on
     return render(request, 'plans/plans.html', context) #We need to send things back to the template

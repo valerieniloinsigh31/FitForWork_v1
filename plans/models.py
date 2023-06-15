@@ -1,25 +1,13 @@
 from django.db import models
 
-class Occupation(models.Model):
-    name = models.CharField(max_length=350) #programmatic way to find in views.py and elsewhere
-    friendly_name = models.CharField(max_length=350, null=True, blank=True) #nicer
-
-    def __str__(self):
-        return self.name #just returns name of occupation
-
-    def get_friendly_name(self):
-        return self.friendly_name
-
 class Plan(models.Model):
-    occupation = models.ForeignKey('Occupation', null="True", blank="True", on_delete=models.SET_NULL)
     technique = models.ForeignKey('Technique', null="True", blank="True", on_delete=models.SET_NULL)
     jobtype = models.ForeignKey('JobType', null="True", blank="True", on_delete=models.SET_NULL)
     goal = models.ForeignKey('Goal', null="True", blank="True", on_delete=models.SET_NULL)
-    level = models.ForeignKey('Level',null="True", blank="True", on_delete=models.SET_NULL)
+    tier = models.ForeignKey('Tier',null="True", blank="True", on_delete=models.SET_NULL)
     name = models.CharField(max_length=300)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    level = models.CharField(max_length=100,null=True, blank=True)
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
@@ -53,8 +41,6 @@ class JobType(models.Model):
     def __str__(self):
         return self.name #just returns name of type
 
-    def get_friendly_name(self):
-        return self.friendly_name
 
 #Consider adding a model for Goal and a model for level
 #Consider nutrition newsletter and supplementary info on supplements
@@ -66,15 +52,11 @@ class Goal(models.Model):
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
-        return self.get_friendly_name
 
-class Level(models.Model):
+class Tier(models.Model):
     name = models.CharField(max_length=200)
-    level = models.TextField()
+    tier = models.IntegerField()  
+
 
     def __str__(self):
         return self.name
-
-    def get_friendly_name(self):
-        return self.get_friendly_name

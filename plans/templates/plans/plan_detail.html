@@ -37,10 +37,10 @@
                         </a>
                     </p>
                     {% endif %}
-                    {% if plan.level %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ plan.level }} / 5</small>
+                    {% if plan.tier %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ plan.tier }} / 5</small>
                     {% else %}
-                        <small class="text-muted">No level specified</small>
+                        <small class="text-muted">No Tier specified</small>
                     {% endif %}
                     {% if request.user.is_superuser %}
                         <small class="ml-3">

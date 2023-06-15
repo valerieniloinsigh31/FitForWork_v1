@@ -1,26 +1,18 @@
 from django.contrib import admin
-from .models import Plan, Occupation, Technique, JobType, Goal, Level 
+from .models import Plan, Technique, JobType, Goal, Tier 
 
 class PlanAdmin(admin.ModelAdmin):
     list_display = ( #attribute that is a tuple that will tell the admin which fields to display
     'name',
-    'occupation',
     'technique',
     'jobtype',
     'price',
     'image',
     'goal',
-    'level'
+    'tier'
     )
 
-    ordering = ('level',) #since it has to order on multiple columns, has to be a tuple even though it's only one field
-
-#extends the builtin ModelAdmin class
-class OccupationAdmin(admin.ModelAdmin):
-    list_display = ( #attribute that is a tuple that will tell the admin which fields to display
-    'friendly_name',
-    'name',
-    )
+    ordering = ('tier',) #since it has to order on multiple columns, has to be a tuple even though it's only one field
 
 #extends the builtin ModelAdmin class
 #to change the order of columns in admin, adjust order here in list_display attribute
@@ -28,7 +20,6 @@ class OccupationAdmin(admin.ModelAdmin):
 #extends the builtin ModelAdmin class
 class TechniqueAdmin(admin.ModelAdmin):
     list_display = ( #attribute that is a tuple that will tell the admin which fields to display
-    'friendly_name',
     'name',
     'technique',
     )
@@ -36,7 +27,6 @@ class TechniqueAdmin(admin.ModelAdmin):
 
 class JobTypeAdmin(admin.ModelAdmin):
     list_display = ( #attribute that is a tuple that will tell the admin which fields to display
-    'friendly_name',
     'name',
     'jobtype',
     )
@@ -44,23 +34,20 @@ class JobTypeAdmin(admin.ModelAdmin):
 
 class GoalAdmin(admin.ModelAdmin):
     list_display = (
-        'friendly_name',
         'name',
         'goal',
     )
 
-class LevelAdmin(admin.ModelAdmin):
+class TierAdmin(admin.ModelAdmin):
     list_display = (
-        'friendly_name',
         'name',
-        'level',
+        'tier',
     )
 
 
 admin.site.register(Plan)
-admin.site.register(Occupation)
 admin.site.register(Technique)
 admin.site.register(JobType)
 admin.site.register(Goal)
-admin.site.register(Level)
+admin.site.register(Tier)
 
