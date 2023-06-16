@@ -7,13 +7,13 @@ html {
 body {
     background: url('/media/landing_page.jpg') no-repeat center center fixed;
     background-size:cover;
-    min-height: calc(100vh -164px);
+    min-height: calc(100vh - 200px);
     color: #76a49d;
     font-family: 'Sofia Sans Condensed', sans-serif;
-}
+    }
 
 /* 
-164px to suit navbar
+200px to suit navbar
  */
 
 
@@ -121,7 +121,7 @@ for styling of free intro PT call
 for styling of jobtype badges when hovering over them-invert colours
 */
 a.jobtype-badge > span.badge:hover {
-    background: #212529 !important;
+    background: fuchsia !important;
     color: #fff !important;
 }
 
@@ -339,7 +339,7 @@ templates on the site also
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #08a696; /* text-info */
 }
 
 /* Plan Form */
@@ -361,20 +361,25 @@ templates on the site also
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
-    border-color: #dc3545;
+    border-color: fuchsia;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
+    background-color: fuchsia;
+    border-color: fuchsia;
     border-radius: 0;
 }
 
 /* Footer */
 
 .footer {
-    padding:30px 0;
-    margin-top:auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
 }
 
 .footer-header {

@@ -19,3 +19,4 @@ class PlanForm(forms.ModelForm):
         self.fields['technique'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0' 
+            
