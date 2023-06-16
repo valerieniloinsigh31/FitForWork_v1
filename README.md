@@ -10,11 +10,13 @@ Currently business to consumer but will transition to business to business(gym/p
 
 
 SEO:
-Meta tags within code
+-I included meta tags for description and keywords within the base.html code. I ensured to include researched long-tail and short-tail keywords.
 Words used on code
 Use of non rel tags
-Inclusion of sitem.xml file and robots.txt. file.
+Inclusion of site.xml file and robots.txt. file.
 Robots.txt file will denote what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place withint the google pages on search result.
+
+Inclusion of privacy policy-as inferred in the tutorials, this increases the credibility/legitimacy of the websote.
 
 Key words employed-strove to achieve a balance between short tail and long tail keywords.
 
@@ -30,20 +32,22 @@ Range of prices based on tier 100-500, expands target audience. Different offeri
 
 
 <em>Facebook business profile:</em>
-Link:
-What is the purpose of this/what does it add to the marketing of the website?:
-Before and After photos, demonstrated stories of success and reviews. Facebook-presence and reach.
+Link: https://www.facebook.com/photo/?fbid=113155328477784&set=a.113155365144447
+What is the purpose of this/what does it add to the marketing of the website?: Posts moderated by admin of website. Comments and reviews allowed. Facebook is an excellent marketing tool as it has huge presence and reach.
+Af effective visual tool to attract new consumers is to have 'Before' and 'After' comparative posts which include photos. These demonstrate success stories and as the occupation is stipulated, it might offer an avenue to people who thought a workout plan simlpy could not be provided for their type of job. Evidence based promotion.
 Organic, offer talks and explanations at gyms and local sports clubs.
-Instagram:
-Mailchimp embedded sign-up form for nutrition newsletter: Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter.
+<em>Nutrition newsletter</em>
+I have included a mailchimp embedded sign-up form for consumers to sign up to receive the nutrition newsletter: Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter.
 
 Paid: External from course but as I hope to continue to develop this, I will ensure to enlist the following google services to monitor, track and manage the website and related apps and profiles:
 
 
 <b>Google business</b>
-Registered business with google
-Improved SEO-Improve search engine ranking for SEO key words
-Registraion free-users more likely to trust a registered business.
+Upon reviewing the tutorials, I registered business with google.
+One of the reasons for this is it improves search engine ranking for SEO key words.
+Potential consumers are more likely to trust a registered business.
+Registration for Google Business was free.
+There are various other potential positvies of this:
 Alerts for user interactions
 Detailed analytics provided...clicks, visits to profiles etc.
 Updates in real time
@@ -55,9 +59,9 @@ Screenshot:
 
 ![alt text](.//media/)
 
+Other avenues that I will be investing in in the future are google ads and google analytics. I did not invest in these for the purposes of the project to avoid getting involved in any GDPR related issues.
 
-<b>Google ads</b>
-<b>Google analytics</b>
+ I also will monitor and manage the user interaction with the site using hotjar and facebook pexel as promoted on the tutorials.
 
 GDPR consent form required to sign up for google analytics.
 Toughest privacy and security policy in the world.
@@ -65,15 +69,12 @@ Many privacy and security standards don't apply to developers.
 Website:
 https://gdpr.eu/
 
-Generated a privacy policy for 'Fit For Work' at the following website:
+Additionally, I generated a privacy policy for 'Fit For Work' at the following website:
 
 https://www.privacypolicygenerator.info/
 
-Tetx webpage provided by app, inform users about how their data is being collected and processed.
+Text webpage was provided for the Fit For Work app, informing users about how their data is being collected and processed.
 Concise, transparent, easily accessible.
-
-
-
 
 
 GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail the experiences of consumers are consent based. I will ensure all consent boxes are not ticked automatically as this would be a breach of GDPR.
@@ -81,6 +82,9 @@ GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail t
 
 
 <b>User Experience (UX)</b>
+ 
+ I created a kanban board on github, outlining important user story. I labelled them according to MOSCOW prioritisation and ensured that less than 60% of the stories were must haves.
+
 <b>User requirements</b>
 Fitness and health
 Exercises 
@@ -94,7 +98,9 @@ Trial period
 Probably something on nutrition
 
 <b>User stories</b>
-Kanban Board-link:...screenshots
+Kanban Board-link:
+
+
 <b>First Time Visitor Goals</b>
 As a First Time Visitor, I want to easily understand that the main purpose of the site is to provide workout plans tailored to the work schedule of the consumer.
 As a First Time Visitor, I want to learn more about the company behind the website and the training/qualifications and experience of the people designing the plans.
@@ -119,15 +125,30 @@ As a Frequent User, I want to sign up to the Nutrition Newsletter so that I am e
 <b>Prioritisation</b?>
 MOSCOW prioritisation incorporated in terms of the user stories
 Labels used effectively in the kanban board structure:
-Must Have
-Should Have
-Could Have
-Won't have
+Must Have:
+Screengrab:
+
+Should Have:
+Screengrab:
+
+Could Have:
+Screengrab:
+
+Won't have:
+Screengrab:
+
 
 Ensured that no more than 60% of user stories were labelled as 'must haves' as per advice from the tutorials.
 
 Themes- The user stories could be packaged within the following themes:
 
+Registration and login
+Viewing and choosing plans
+Viewing techniques
+Learning about the founder
+Accessing facebook profile
+Signing up for the newsletter
+Purchasing plans
 
 
 Milestones:
@@ -137,7 +158,9 @@ Sprints
 
 <b>Design</b>
 <b>Colour Scheme</b>
-The main colours used for Fit4Work: teal, black and white.
+The main colours used for Fit4Work: teal, fuschia, black and white.
+
+ I used fuschia and the hover effect to make certain items pop.
 
 Employed AdobeColour to refine the teal colours to be used on the website:
 https://color.adobe.com/search?q=teal#
@@ -147,10 +170,12 @@ Wanted something stark and contrasting but not grating (teal on white)
 Wanted something relatively formal to fit in with the occupation based theme (black and white)
 
 
-Work/occupation...
+Work/occupation...background image chosen inkeeping with the occupation absed theme. A man in a suit witha. briefcase, climbing the stairs. Professional yet active.
 
 <b>Logo</b>
 Invested in a once off logo as came across the website, 'Looka' when researching for the project on the peer code review page...credit roman
+
+  I chose teal and stipulated that the website was fitness related and I have included the logo as an image beside the name in the header of the landing page and also as the favicon.
 
 
 <b>Typography</b>
@@ -169,38 +194,36 @@ Facebook business profile
 Before/After photos...design/divided out by occupation
 Motto-'If I can do it, so can you.' 'I'm a XX and look at me!'
 
-Instagram-a must in terms of fitness. Visual is key in terms of aestjetic fitness and weight loss and instagram is a highly visible platform. Copious fintess influencers, customers with short attention spans, get involved in the competition.
-
-Instagram profile:
-
 <b>Wireframes</b>
 
 Used lucidcharts as a foundation for planning.
 
+Numerous tabs used, to write along with the tutorials and break down code as this helps me to solidify/undertsand what is going on and impacts my overall planning.
+
 As I continued to grow an understanding of django and full stack frameworks, I added tabs to help me to understand.
 
-Visual aspect he;ped me to solidify my understanding:
+Visual aspect helped me to solidify my understanding:
 
 Enity Relationship Diagram:
+
+I created an ERD for the models, specifiying the field and how the mdoels related to one another.
+One to one relationship versus many to one or one to many.
 
 One-to-one 
 Many-to-any
 
 Deciding on fields to include in the models.
+(CharField/TextField/IntegerFieldetc)
 
-Home Page Wireframe - View
+Landing Page Wireframe - View
 
 Mobile Wireframe - View
 
-Contact Us Page Wireframe - View
+Techniques Page Wireframe - View
 
 Different views...
 
-How are exercise plans laid out...
-
-Free exercise descriptions
-Vs
-Detailed, tailored exercises, including plans
+On sale currently -exercise plans based on occupation. Consumer chooses based on tier and technique.
 
 How are meal plans laid out
 Will there be a photo element
@@ -256,7 +279,7 @@ Math functions....calculate something?
 <b>Technologies Used</b>
 
 <b>Languages Used</b>
-HTML5
+HTML5 
 CSS3
 Javascript
 Python
@@ -324,6 +347,9 @@ Command-to output all issues into the terminal:
 
 python3 -m flake8
 
+Screenshot:
+
+
 Gives a list of all of the issues in the code so we can go through these one by one
 control and click on line, takes you to line - code style and linting issues. Tells you
 whee you have imported something and not used it
@@ -352,7 +378,7 @@ Aids in identifying and isolating issues with the logic
 <i>First Time Visitor Goals</i>
 As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
 
-Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Briefcase and Barbell image with Text and a "Fit4Werk" Call to action button.
+Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a logo image with Text and a "" Call to action button.
 
 The main points are made immediately with the work/fitness image
 
@@ -454,13 +480,13 @@ Friends and family members were asked to review the site and documentation to po
 
  <p>Screengrabs of different tests:</p>
 
- Iphone 12 pro: ![alt text](./assets/images/iphone12_test.png)
+ Iphone 12 pro: ![alt text](./media/)
 
- MacBook Pro: ![alt text](./assets/images/macbookpro_test.png)
+ MacBook Pro: ![alt text](./media/)
 
- Ipad Air: ![alt text](./assets/images/ipadair_test.png)
+ Ipad Air: ![alt text](./media/)
 
- Nest Hub:  ![alt text](./assets/images/nesthub_test.png)
+ Nest Hub:  ![alt text](./media/)
 
  2. To different browsers
 
@@ -510,48 +536,33 @@ On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed
 
 <b>How bugs were resolved</b>
 
--Issue with AWS...getting active keys...consulted with people on slack
--webhooks issue with Stripe
+-Issue with AWS...getting active keys...consulted with people on slack. There was an additional step to set up the active keys:
+Screenshot:
+
+-Webhooks issue with Stripe...worked on safari...
+
+-Database caching issue
+
+-
 
 <b>Deployment</b>
 
 GitHub Pages
-The project was deployed to GitHub Pages using the following steps...
+The project was deployed to Heroku, using the following steps...
 
 -Log in to GitHub and locate the GitHub Repository
 -At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
 -Alternatively Click Here for a GIF demonstrating the process starting from Step 2.
 -Scroll down the Settings page until you locate the "GitHub Pages" Section.
-Under "Source", click the dropdown called "None" and select "Master Branch".
--The page will automatically refresh.
--Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
--Forking the GitHub Repository
--By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+Under "Source", click the dropdown called "None" and select "Main Branch".
 
--Log in to GitHub and locate the GitHub Repository
--At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
--You should now have a copy of the original repository in your GitHub account.
--Making a Local Clone
--Log in to GitHub and locate the GitHub Repository
--Under the repository name, click "Clone or download".
--To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
--Open Git Bash
--Change the current working directory to the location where you want the cloned directory to be made.
--Type git clone, and then paste the URL you copied in Step 3.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-Press Enter. Your local clone will be created.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
+
 
 Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 -Elephant SQL
 -Heroku
--setting up automatic deployment
+-Setting up automatic deployment
 
 <b>Credits</b>
 
