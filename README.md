@@ -597,8 +597,11 @@ Logo: Looka
 Fonts: Google Fonts
 Icons: Font Awesome
 
+Favicon: Favicon
+
 
 <b>Acknowledgements</b>
 My Mentor Mitko for continuous helpful feedback.
 Tutor support for their assistance throughout the process.
+Slack community
 
