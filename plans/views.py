@@ -37,19 +37,6 @@ def all_plans(request):
             jobtypes = request.GET['jobtype'].split(',')
             plans = plans.filter(jobtype__name__in=jobtypes)
             jobtypes = JobType.objects.filter(name__in=jobtypes)
-
-            if sortkey == 'technique':
-                sortkey = 'technique__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f-{sortkey}
-            plans = plans.order_by(sortkey)
-
-        if 'technique' in request.GET:
-            techniques = request.GET['technique'].split(',')
-            plans = plans.filter(technique__name__in=techniques)
-            techniques = Technique.objects.filter(name__in=techniques)
  
         if 'q' in request.GET:
             query = request.GET['q']

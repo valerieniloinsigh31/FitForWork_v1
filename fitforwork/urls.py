@@ -22,8 +22,8 @@ from .views import handler404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('',include('ffw.urls')),
-    path('plans/',include('plans.urls')), #given a top level url of plans/
+    path('', include('ffw.urls')),
+    path('plans/', include('plans.urls')),
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
