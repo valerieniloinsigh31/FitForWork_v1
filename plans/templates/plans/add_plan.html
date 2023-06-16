@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block page_header %}
@@ -25,13 +26,14 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'add_plan' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
+                    {{ form.technique | as_crispy_field }}
+                    {{ form.jobtype | as_crispy_field }}
+                    {{ form.goal | as_crispy_field }}
+                    {{ form.tier | as_crispy_field }}
+                    {{ form.name | as_crispy_field }}
+                    {{ form.description | as_crispy_field }}
+                    {{ form.price | as_crispy_field }}
+                    {{form.image_url | as_crispy_field }}
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'plans' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Add Plan</button>

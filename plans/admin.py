@@ -12,25 +12,20 @@ class PlanAdmin(admin.ModelAdmin):
     'tier'
     )
 
-    ordering = ('price',) #since it has to order on multiple columns, has to be a tuple even though it's only one field
+    ordering = ('price',) 
 
-#extends the builtin ModelAdmin class
-#to change the order of columns in admin, adjust order here in list_display attribute
-
-#extends the builtin ModelAdmin class
 class TechniqueAdmin(admin.ModelAdmin):
-    list_display = ( #attribute that is a tuple that will tell the admin which fields to display
+    list_display = ( 
     'name',
     'technique',
+    'image',
     )
-#extends the builtin ModelAdmin class
 
 class JobTypeAdmin(admin.ModelAdmin):
-    list_display = ( #attribute that is a tuple that will tell the admin which fields to display
+    list_display = ( 
     'name',
     'jobtype',
     )
-#extends the builtin ModelAdmin class
 
 class GoalAdmin(admin.ModelAdmin):
     list_display = (

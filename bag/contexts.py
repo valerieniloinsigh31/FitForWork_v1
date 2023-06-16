@@ -7,8 +7,8 @@ from plans.models import Plan
 def bag_contents(request):
 
     bag_items = []
-    total = 0 #initialise to 0
-    plan_count = 0 #initialise to 0
+    total = 0 
+    plan_count = 0 
     bag = request.session.get('bag', {}) 
 
     for item_id, item_data in bag.items():
@@ -21,15 +21,12 @@ def bag_contents(request):
             'plan': plan,
          })
 
-    total = total #updates bag total as seen in base.html code
+    total = total 
 
     context = {
         'bag_items':bag_items,
         'total': total,
         'plan_count': plan_count,
-    } #function returns dictionary called 'context'...add items to context so available in templates across the site
+    } 
 
-    return context #this is a context processor. It's purpose is to make this dictionary available to all templates across
-    #the application. Like use of 'request.user' across templates due to built-in request context-processor. to 
-    #To make available to all apps, needs to be added tp list of 'context-processors' in templates variable in project
-    #level settings.py file
+    return context 

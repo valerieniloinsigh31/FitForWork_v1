@@ -238,11 +238,14 @@ I found Lucicharts preferable to balsamiq due to the tabular format so I could c
  To cement my understanding of the process and tutorials, I wrote up wireframes and summaries of tutorials as i made my way thorugh, with a view to aiding my comprehension of the course and being able to establish what should be included in the project and what should not be included:
 
 Screengrab of numerous planning tabs on Lucidcharts:
-1: ![alt text](./media/)
-2: ![alt text](./media/)c
-3: ![alt text](./media/)
-4: ![alt text](./media/)
-5: ![alt text](./media/)
+1: ![alt text](./media/LC_1.png)
+2: ![alt text](./media/LC_2.png)
+3: ![alt text](./media/LC_3.png)
+4: ![alt text](./media/LC_4.png)
+5: ![alt text](./media/LC_5.png)
+6: ![alt text](./media/LC_6.png)
+7: ![alt text](./media/LC_7.png)
+8: ![alt text](./media/LC_8.png)
 
 Numerous tabs used, to write along with the tutorials and break down code as this helps me to solidify/undertsand what is going on and impacts my overall planning.
 
@@ -384,11 +387,22 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 <i>W3C Markup Validator - Results</i>
 
+Link:
+Screenshot of results:
+
 <i>W3C CSS Validator - Results</i>
+
+Link:
+Screenshot of results:
 
 <i>Javascript Validator - Results</i>
 
+Link:
+Screenshot of results:
+
 <i>Python Validator - Results</i>
+
+Inbuilt with django
 
 <i> Flake8 and PEP8</i>
 
@@ -602,7 +616,7 @@ Click Here to retrieve pictures for some of the buttons and more detailed explan
 
 <b>Credits</b>
 
-Code:
+<h1>Code:</h1>
 
 Consulted with Slack. Peer code review page, researched the repositaries of toehr students (Roman and Monique)
 
