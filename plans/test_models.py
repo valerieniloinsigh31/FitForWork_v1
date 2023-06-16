@@ -1,12 +1,10 @@
-# Imports
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 3rd party:
+
 from django.test import TestCase, Client
 from django.urls import reverse, resolve
-# Internal:
+
 from django.contrib.auth.models import User
 from .models import JobType, Plan
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 class TestTechniqueModel(TestCase):

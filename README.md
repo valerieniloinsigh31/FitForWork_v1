@@ -254,6 +254,8 @@ As I continued to grow an understanding of django and full stack frameworks, I a
 Visual aspect helped me to solidify my understanding:
 
 Enity Relationship Diagram:
+1: ![alt text]()
+
 
 I created an ERD for the models, specifiying the field and how the mdoels related to one another.
 One to one relationship versus many to one or one to many.

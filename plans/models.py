@@ -12,9 +12,8 @@ class Plan(models.Model):
     image = models.ImageField(null=True, blank=True)
 
 
-#Not blank=true, null=true, each plan requires a name, description, price, everything else is optional
     def __str__(self):
-        return self.name #just returns name of plan
+        return self.name 
 
 class Technique(models.Model):
     name = models.CharField(max_length=300)
@@ -23,9 +22,8 @@ class Technique(models.Model):
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     
-    #Not blank=true, null=true, each plan requires a name, description, price, everything else is optional
     def __str__(self):
-        return self.name #just returns name of technique
+        return self.name 
 
     def get_friendly_name(self):
         return self.friendly_name
@@ -34,13 +32,8 @@ class JobType(models.Model):
     name = models.CharField(max_length=300)
     jobtype = models.TextField()
 
-#Not blank=true, null=true, each plan requires a name, description, price, everything else is optional
     def __str__(self):
-        return self.name #just returns name of type
-
-
-#Consider adding a model for Goal and a model for level
-#Consider nutrition newsletter and supplementary info on supplements
+        return self.name 
 
 class Goal(models.Model):
     name = models.CharField(max_length=500)

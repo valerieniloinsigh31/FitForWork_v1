@@ -376,10 +376,12 @@ templates on the site also
     position: fixed;
     left: 0;
     bottom: 0;
+    margin-bottom: auto;
     width: 100%;
     background-color: white;
     color: black;
     text-align: center;
+    height:290px;
 }
 
 .footer-header {

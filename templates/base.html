@@ -32,7 +32,6 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-        <!-- Stripe javascript link. Put in base.html so available on all other pages-enables fraud detection -->
         <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
@@ -84,15 +83,10 @@
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
-                        <!--Dropdown menu uses several Django template tags to determine what to display in the menu
-                        account_logout/signup/login coming from allauth urls in urls.py
-                        if person authenticated to be superuser, can access plan management system (Adding, updating and 
-                        deleting plans)-->
                     <li class="list-inline-item">
                         <a class="{% if total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <!-- context processor creates grand_total variable-->
                                 <p class="my-0">
                                     {% if total %}
                                         €{{ total|floatformat:2 }}
@@ -106,8 +100,6 @@
                 </ul>
             </div>
         </div>
-        <!-- Consider removing grand_total and just having total
-        -->
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,6 +133,9 @@
     {% endblock %}
 
     {% block content %}
+    <footer>
+        {% include 'includes/subscribe.html' %}
+    </footer>
     {% endblock %}
 
     {% block postload_js %}

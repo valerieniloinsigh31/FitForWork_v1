@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Plan, Technique, JobType, Goal, Tier 
 
 class PlanAdmin(admin.ModelAdmin):
-    list_display = ( #attribute that is a tuple that will tell the admin which fields to display
+    list_display = ( 
     'name',
     'technique',
     'jobtype',

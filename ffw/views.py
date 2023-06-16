@@ -17,3 +17,11 @@ def techniques(request):
 def founder(request):
     """ A view to return the founder page """
     return render(request, 'ffw/founder.html')
+
+def tiers(request):
+    """ A view to return the tiers page """
+    return render(request, 'ffw/tiers.html')
+
+def nutrition_newsletter(request):
+    """ A view to return the nutrition_newsletter page """
+    return render(request, 'ffw/nutrition_newsletter.html')

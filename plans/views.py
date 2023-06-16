@@ -33,10 +33,18 @@ def all_plans(request):
                     sortkey = f-{sortkey}
             plans = plans.order_by(sortkey)
 
+            if sortkey == 'technique':
+                sortkey = 'technique__name'
+
         if 'jobtype' in request.GET:
             jobtypes = request.GET['jobtype'].split(',')
             plans = plans.filter(jobtype__name__in=jobtypes)
             jobtypes = JobType.objects.filter(name__in=jobtypes)
+
+        if 'technique' in request.GET:
+            techniques = request.GET['technique'].split(',')
+            plans = plans.filter(technique__name__in=techniques)
+            techniques = Technique.objects.filter(name__in=techniques)
  
         if 'q' in request.GET:
             query = request.GET['q']
@@ -62,7 +70,6 @@ def all_plans(request):
 
 def plan_detail(request, plan_id):
     """ A view to show individual plan details """
-    print('plan_id: ', plan_id)
     plan = get_object_or_404(Plan, pk=plan_id)
 
     context = {
