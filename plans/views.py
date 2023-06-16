@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Plan, Technique, JobType
+from .models import Plan, JobType, Technique
 from .forms import PlanForm
 
 def all_plans(request):
@@ -12,8 +12,8 @@ def all_plans(request):
 
     plans = Plan.objects.all()
     query = None
-    techniques = None
     jobtypes = None
+    techniques = None
     sort = None
     direction = None
     
@@ -37,6 +37,14 @@ def all_plans(request):
             jobtypes = request.GET['jobtype'].split(',')
             plans = plans.filter(jobtype__name__in=jobtypes)
             jobtypes = JobType.objects.filter(name__in=jobtypes)
+
+        if sortkey == 'technique':
+                sortkey = 'technique__name'
+        if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f-{sortkey}
+        plans = plans.order_by(sortkey)
 
         if 'technique' in request.GET:
             techniques = request.GET['technique'].split(',')
