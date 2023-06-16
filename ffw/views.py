@@ -13,3 +13,7 @@ def privacy(request):
 def techniques(request):
     """ A view to return the techniques page """
     return render(request, 'ffw/techniques.html')
+
+def founder(request):
+    """ A view to return the founder page """
+    return render(request, 'ffw/founder.html')
