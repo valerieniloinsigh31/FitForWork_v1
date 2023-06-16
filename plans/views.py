@@ -78,7 +78,7 @@ def plan_detail(request, plan_id):
 
 @login_required
 def add_plan(request):
-    """ Add a product to the store """
+    """ Add a plan to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only wesbite admin can do that.')
         return redirect(reverse('ffw'))
@@ -102,7 +102,7 @@ def add_plan(request):
     return render(request, template, context)
 
 @login_required
-def edit_plan(request, product_id):
+def edit_plan(request, plan_id):
     """ Edit a plan on the website """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only website admin can do that.')

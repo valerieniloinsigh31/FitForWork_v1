@@ -42,7 +42,7 @@
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'ffw' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Fit</strong> For <strong>Work</strong></h2>
+                    <h2 class="logo-font text-black my-0"><strong>Fit</strong> For <strong>Work</strong><img></h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -104,11 +104,7 @@
                 </ul>
             </div>
         </div>
-        <!-- Final anchor link is shopping bag link or for FFW app, buy your plans link...anchor element with a 
-            font awesome icon in it with some Django template logic. Checking whether grand_total template variable exists.
-            If it does, we want to display total formatted to two decimal places (float). If not, zero is displayed. Same template
-            variable used to determine which classes to apply to the element. If there is something in the bag, the font will be bold
-            and a different colour.
+        <!-- Consider removing grand_total and just having total
         -->
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
@@ -117,16 +113,9 @@
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
-            
-                <!--using includes template we added. By using includes, it keeps the base.html template clean and
-                individual html files isolated in case we want to make changes-->
             </nav>
         </div>
     </header>
-    <!--Django messages have levels which are classifiers (debug, info, error etc for different msg types)
-    Per Django docs, these levels can be represented as an integer also. We can choose which of our includes
-    we want to render, based on the message level. Check level of message with 'with' statement and render the appropriate 
-    toast-->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -150,7 +139,6 @@
     {% endblock %}
 
     {% block content %}
-    {% include 'includes/footer.html' %}
     {% endblock %}
 
     {% block postload_js %}
