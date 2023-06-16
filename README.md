@@ -4,60 +4,78 @@ View the live project here.: https://fitforwork.herokuapp.com/
 
 <h2><em>Introduction</em><h2>
 Fit for work is an ecommerce website that offers consumers workout plans that are tailored to suit their occupation.
+It employs eight different Japanese techniques that are detailed on the website int he approach taken to the design of 
+the tailored workout plans. Consumers can choose their plan based on occupation type, technique to be used in the approach, their goal for the workout plan (weight loss/muscle gain/general fitness) and the tier that they want to select (there are three different tiers that differ in what will be provided with the plan and the lenth of time support will be available for.) Consumers can purchase these plans online using their credit card. They can also sign up to the facebook business profile which is linked throughout the site. They can also opt into subscribing for the nutrition newsletter which is a free subscription service, wherein a newsletter with nutrition tips and details on supplements is sent to their personal email each month.
 
 <h2><em>Business model:</em></h2>
-Currently business to consumer but will transition to business to business(gym/personal trainers/fitness influencers/athletes/chefs) once the website has gained enough traction. This will all be done via my company, 'Pendulum to Paper Production Limited', which is a limited company registered with the Companies Registration Office in the Republic of Ireland.
+Currently the business is a business to consumer(B2C) structure but it will eventually evolve to include business to business services as well (with gyms/personal trainers/fitness influencers/athletes/chefs). This transition will be put into effect once the website has gained enough traction. 
+
+ The Fit For Work app is in affiliation with my company, 'Pendulum to Paper Production Limited', which is a limited company registered with the Companies Registration Office in the Republic of Ireland.
 
 
-SEO:
--I included meta tags for description and keywords within the base.html code. I ensured to include researched long-tail and short-tail keywords.
+<b>SEO:</b>
+-I included meta tags for description and keywords within the base.html code. I ensured to include researched long-tail and short-tail keywords within the base.html meta tags block code.
 Words used on code
-Use of non rel tags
-Inclusion of site.xml file and robots.txt. file.
-Robots.txt file will denote what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place withint the google pages on search result.
+Use of non rel tags...for links that are not relevant or should not be considered when assessing the SEO of the website.
 
-Inclusion of privacy policy-as inferred in the tutorials, this increases the credibility/legitimacy of the websote.
+<b>Inclusion of site.xml file and robots.txt. file.</b>
 
-Key words employed-strove to achieve a balance between short tail and long tail keywords.
+<p>Robots.txt file will denote what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place withint the google pages on search result.</p>
 
+<b>Inclusion of privacy policy</b>
+<p>As inferred in the tutorials, this increases the credibility/legitimacy of the website.</p>
 
 <h2><em>Marketing strategy:</em></h2>
-Target Audience:
-Very expansive-not a limited target audience.
-People who believe that their job/work schedule is rpesenting a barrier to their fitness. People who want assistance in achieving their desired level of work life balance. People who need to make time somewhere.
-Wide range of goals: Weight loss, muscle gain, general fitness, purely aesthetic.
-Job types designed to be all encompasssing: Sedentary, mobile, work from home, retired, unemployed.
-Range of prices based on tier 100-500, expands target audience. Different offerings and different timescales offered wiht each tier.
+<b>Target Audience:</b>
+Very expansive-not a limited target audience. The fact that it ties occupation and fitness together is inclusive as opposed to exclusive. Everybody has a job (there are also plans available for the retired and unemployed even if they don't). Our occupation as the name suggests occupies us for most of our lives and, accordingly will have a pervasive impact on our health and fitness. This is why occupation is the primacy lense through which the plans are designed. This way work can no longer be used as an excuse for avoiding addressing your fitness and health. We ensure that your work is not a barrier to fitness by making the workouts complimentary/designed to align with your occupation.
 
+ The plans are especially suitable for people who believe that their job/work schedule is presenting a barrier to their fitness. The workout plans offered are ideal for people who want assistance in achieving their desired level of work life balance. The team at Fit For Work will help consumers to carve out time where they previously believed that there was none.
+
+Wide range of goals: Weight loss, muscle gain, general fitness, purely aesthetic.
+Job types designed to be all encompassing (not limiting): Sedentary, mobile, work from home, retired, unemployed.
+Range of prices based on the tier that the consumer chooses (ranging from 100e-500e), expands target audience. A different level of time commitment and intensity is expected for each of the tiers, as further described on the app.
 
 
 <em>Facebook business profile:</em>
 Link: https://www.facebook.com/photo/?fbid=113155328477784&set=a.113155365144447
-What is the purpose of this/what does it add to the marketing of the website?: Posts moderated by admin of website. Comments and reviews allowed. Facebook is an excellent marketing tool as it has huge presence and reach.
+<p>What is the purpose of this/what does it add to the marketing of the website?: Posts moderated by admin of website. Comments and reviews allowed. Facebook is an excellent marketing tool as it has huge presence and reach.
 Af effective visual tool to attract new consumers is to have 'Before' and 'After' comparative posts which include photos. These demonstrate success stories and as the occupation is stipulated, it might offer an avenue to people who thought a workout plan simlpy could not be provided for their type of job. Evidence based promotion.
-Organic, offer talks and explanations at gyms and local sports clubs.
+Organic, offer talks and explanations at gyms and local sports clubs.</p>
+
 <em>Nutrition newsletter</em>
-I have included a mailchimp embedded sign-up form for consumers to sign up to receive the nutrition newsletter: Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter.
+<p>I have included a mailchimp embedded sign-up form for consumers to sign up to receive the nutrition newsletter: Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter.
 
-Paid: External from course but as I hope to continue to develop this, I will ensure to enlist the following google services to monitor, track and manage the website and related apps and profiles:
+A sample newsletter is provided in the tab so that consumers can peruse it with a view to deciding whether they would like to subscribe.
+</p>
 
+<h1>Other paid avenues to pursue in managing the FFW App.</h1>
+
+<p>External from course but as I hope to continue to develop this, I will ensure to enlist the following google services to monitor, track and manage the website and related apps and profiles:
+<ol>
+<li>Google business</li>
+<li>Google Analytics</li>
+<li>Google Adwords</li>
+<li>HotJar</li>
+<li>Facebook Pexel</li>
+</ol>
 
 <b>Google business</b>
-Upon reviewing the tutorials, I registered business with google.
+<p>Upon reviewing the tutorials, I registered business with google.
 One of the reasons for this is it improves search engine ranking for SEO key words.
 Potential consumers are more likely to trust a registered business.
 Registration for Google Business was free.
-There are various other potential positvies of this:
+There are various other potential <em>positives</em> of this:
 Alerts for user interactions
-Detailed analytics provided...clicks, visits to profiles etc.
-Updates in real time
-Flag process available for images/comments uploaded by visitors
+Detailed analytics could be provided...clicks, visits to profiles etc.
+Updates provided in real time
+There is flag process available for images/comments uploaded by visitors.
+I didn't become to deeply involved with this in terms of analysis for project submission stage, to avoid
+GDPR related issues.</p>
 
-Screenshot:
+<section>Screenshot:
 
-
-
-![alt text](.//media/)
+![alt text](.//media/ffw_google_business.png)
+</section>
 
 Other avenues that I will be investing in in the future are google ads and google analytics. I did not invest in these for the purposes of the project to avoid getting involved in any GDPR related issues.
 
@@ -86,16 +104,19 @@ GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail t
  I created a kanban board on github, outlining important user story. I labelled them according to MOSCOW prioritisation and ensured that less than 60% of the stories were must haves.
 
 <b>User requirements</b>
-Fitness and health
-Exercises 
-Plans
-Ecommerce-ability to pay for something
-Support throughout fitness journey
-Evidence provided for success of following such plans in the past
-Can view testimonials by individuals in similar circumstances...same job type
-Ability to review experience
-Trial period
-Probably something on nutrition
+The things that I considered when assessing user requirements in terms of business plan:
+<ul>
+<li>Fitness and health</li>
+<li>Exercises</li> 
+<li>Plans</li>
+<li>Ecommerce-ability to pay for something</li>
+<li>Support throughout fitness journey</li>
+<li>Evidence provided for success of following such plans in the past</li>
+<li>Can view testimonials by individuals in similar circumstances...same job type</li>
+<li>Ability to review experience</li>
+<li>Trial period</li>
+<li>Probably something on nutrition</li>
+</ul>
 
 <b>User stories</b>
 Kanban Board-link:
@@ -117,44 +138,48 @@ As a Returning Visitor, I want to see what is involved with the other tiers.
 As a Returning Visitor, I want to be able to buy the same plan or a different plan again and for my payment information to have been saved.
 
 <b>Frequent User Goals</b>
-As a Frequent User, I want to check to see if there are any newly added plans or nutrition newsletters.
-As a Frequent User, I want to check to see if there are any new customer testimonials ont he facebook business profiel.
+As a Frequent User, I want to check to see if there are any newly added plans or add-ons t the nutrition newsletters.
+As a Frequent User, I want to check to see if there are any new customer testimonials on the facebook business profile.
 As a Frequent User, I want to sign up to the Nutrition Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+As a Frequent User, I want to be able to quickly access the affiliated facebook business profile so that I can leave post.
 
 
 <b>Prioritisation</b?>
-MOSCOW prioritisation incorporated in terms of the user stories
-Labels used effectively in the kanban board structure:
-Must Have:
+I incorporated MOSCOW prioritisation incorporated in terms of the user stories.
+Labels were used effectively in the kanban board structure:
+Must Have (Colour: Green):
 Screengrab:
 
-Should Have:
+Should Have (Colour: XX):
 Screengrab:
 
-Could Have:
+Could Have (Colour: XX):
 Screengrab:
 
-Won't have:
+Won't have (Colour: Red):
 Screengrab:
 
 
 Ensured that no more than 60% of user stories were labelled as 'must haves' as per advice from the tutorials.
 
 Themes- The user stories could be packaged within the following themes:
+<ol>
+<li>Registration and login</li>
+<li>Viewing and choosing plans</li>
+<li>Viewing techniques</li>
+<li>Learning about the founder, the company, the eudcation and qualifications behind the plan</li>
+<li>Accessing the facebook business profile and seeing reviews/testimonials/posts of other consumers</li>
+<li>Signing up for the newsletter</li>
+<li>Purchasing plans</li>
+</ol>
 
-Registration and login
-Viewing and choosing plans
-Viewing techniques
-Learning about the founder
-Accessing facebook profile
-Signing up for the newsletter
-Purchasing plans
-
-
-Milestones:
+<em>Milestones:</em>
 Noted the milestone feature available on github, to focus on completing various user stories in a certain timeframe. Did not complete this.
 
-Sprints
+I had fully intended to create milestones for particular iterations of the user stories but unfortunately, I was too anxious to do so and did not put this into action.
+
+<em>Sprints</em>
+Allocated amounts of time to set smaller goals-this certainly would have alleviated my anxiety and I will ensure to put this into effect for future projects.
 
 <b>Design</b>
 <b>Colour Scheme</b>
@@ -168,35 +193,56 @@ https://color.adobe.com/search?q=teal#
 Used colorpalette to decide on the colors.
 Wanted something stark and contrasting but not grating (teal on white)
 Wanted something relatively formal to fit in with the occupation based theme (black and white)
+The UI still felt flat after incorporating the above colours so I applied the stark and revitalising fuschia colour
+to make certain items pop and so that the UI would not appear too mundane.
 
 
-Work/occupation...background image chosen inkeeping with the occupation absed theme. A man in a suit witha. briefcase, climbing the stairs. Professional yet active.
+Work/occupation...background image chosen inkeeping with the occupation absed theme. A man in a suit with a briefcase, climbing the stairs. Professional yet active.
 
 <b>Logo</b>
-Invested in a once off logo as came across the website, 'Looka' when researching for the project on the peer code review page...credit roman
+Having reviewed other students repositaries via the peer-code-reveiw section of Slack, I noted that 
+others were investing in logos on the website Looka and as I felt there was an option for a once off subscription without purchase and I felt that the logo, which could be used on the landing page as well as in the favicon added hugely to the UI, I purchased a logo for Fit For Work that was inkeeping with the teal and balck theme of the website.
 
   I chose teal and stipulated that the website was fitness related and I have included the logo as an image beside the name in the header of the landing page and also as the favicon.
 
+![alt text](.//media/FFW%20logo.png)
 
 <b>Typography</b>
-The XX font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Why I chose this font for Fit4Work: XX is a clean font used frequently in programming, so it is both attractive and appropriate...vivid, sharp, fitness, new, fresh...related to professionalism and occupation
+The San-Serif font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Why I chose this font for Fit4Work: XX is vivid, sharp and I felt that it was in-keeping with the theme of professionalism and occupation.
 
 <b>Imagery</b>
 Imagery is important. The XX image is designed to be striking and catch the user's attention and is in-keeping with the theme of fitness and nutrition influenced/adjusted to suit the occupation of the user. It also has a modern, energetic aesthetic.
 
 Please see below images chosen for job type and reason why:
+
 Please see below images chose for techniques and reason why:
+
+
 Please see below image chosen for nutrition newsletter:
+  I felt that the sandwich with the measurement device on it perfectly encaptured what the nutrition newsletter was trying 
+  to put into effect. Eat wholesome, tasty foods but be calculating and precise in your tracking.
 
 
 <b>Socials</b>
-Facebook business profile
+<b>Facebook business profile</b>
+ 
 Before/After photos...design/divided out by occupation
 Motto-'If I can do it, so can you.' 'I'm a XX and look at me!'
 
-<b>Wireframes</b>
 
-Used lucidcharts as a foundation for planning.
+<i> Wireframes and Lucidcharts:</i>
+Lucidcharts was used to create the wireframes during the design process.
+
+I found Lucicharts preferable to balsamiq due to the tabular format so I could compartmentalise elements of the design process myself and apply the pomodoro technique to each segment (focussing for specific time periods on each segment) even in the planning phase. Also, I am a very visual person so the element of shapes, tabs and clear 1-2-3 continuing visual structure assisted me in formulating the design.
+
+ To cement my understanding of the process and tutorials, I wrote up wireframes and summaries of tutorials as i made my way thorugh, with a view to aiding my comprehension of the course and being able to establish what should be included in the project and what should not be included:
+
+Screengrab of numerous planning tabs on Lucidcharts:
+1: ![alt text](./media/)
+2: ![alt text](./media/)c
+3: ![alt text](./media/)
+4: ![alt text](./media/)
+5: ![alt text](./media/)
 
 Numerous tabs used, to write along with the tutorials and break down code as this helps me to solidify/undertsand what is going on and impacts my overall planning.
 
@@ -209,17 +255,26 @@ Enity Relationship Diagram:
 I created an ERD for the models, specifiying the field and how the mdoels related to one another.
 One to one relationship versus many to one or one to many.
 
+To cement my understanding of what ERD is and what the fields in a model mean, I replicated ERD's from tutorials in my own Lucidcharts:
+
+
 One-to-one 
 Many-to-any
 
 Deciding on fields to include in the models.
 (CharField/TextField/IntegerFieldetc)
 
-Landing Page Wireframe - View
+Landing Page Wireframe - View:
 
-Mobile Wireframe - View
+
+Mobile Wireframe - View: ...resposniveness
+
 
 Techniques Page Wireframe - View
+
+Founded wireframe
+
+Tiers based wireframe
 
 Different views...
 
@@ -235,46 +290,48 @@ Landing page/Home page view...
 What will be here?
 The whole concept is how work shapes our lives and how we must adapt to the shape
 
-Dropdown filter based on professiom?
-Background theme?
-Font awesome?
-
-Medical/Teaching/Artist (stethescope, ruler, canvas)
-Work from home/work from office/work from vehicle (bus/train/plane)
-(Representative photos for each...person sitting up in bed for work from home, office chair for office, moving bus for vehicle)
-Shift work/fixed office hours (font awesome of clock...mini calendar with 9-5 5 days blocked and a separate mini calendar with random dots)
-Variable annual leave/No annual leave 
-Sedentary/Mobile work (Photo of a chair, photo of moving person)
-
-Dropdowns...offering is plans based on occupation type (Sedentary etc.) Consumer chooses these as well as other preferences
-goal (weight loss, muscle gain, general fitness), level (three different tiers, tier 1,2,3) and technique (eight different approaches available)
+<em>Dropdowns</em>
+<h2>A note on the use of dropdowns</h2>
+<p>offering is plans based on occupation type (Sedentary etc.) Consumer chooses these as well as other preferences
+goal (weight loss, muscle gain, general fitness), level (three different tiers, tier 1,2,3) and technique (eight different approaches available)</p>
 
 <b>Database</b>
+
+SQLite...
+
+Updating code-tutorials
+
+Removing migrations and remigration
+
+Including in config vars on Heroku
 
 <b>Database models</b>
 
 <h1><b>Features</b>
 
-Existing features
-Future features
+Existing features:
+
+Future features:
 
 Responsive on all device sizes
 
--Google Chrome developer tools, media queries (breakpoints),
+-I ensured that the website was responsive across multiple devices, using Google Chrome developer tools, media queries (breakpoints),.
+I employed a mobile first design approach.
+
  Bootstrap used as per walkthrough
  Container-fluid
  Z-index
  v-100
  Media-Queries
+ Bulma used to centre font awesome icons
 
 <b>Interactive elements</b>
 
-Hover over buttons
-Absolute header and footer
-Forms
-Loading bars
-Animations
-Math functions....calculate something?
+Hover over buttons- as influenced by walkthrough
+Absolute header and footer-is this applied?
+Forms, buttons changing colour and required fields
+Loading bars- automatic once for checkout...what else
+Animations-bottom fo founder page
 
 <b>Technologies Used</b>
 
@@ -287,7 +344,7 @@ Python
 <b>Frameworks, Libraries & Programs Used</b>
 Django
 
-<b>Bootstrap 4.4.1:</b>...is this the correct version of Bootstrap?
+<b>Bootstrap 4.4.1:</b>.
 Bootstrap was used to assist with the responsiveness and styling of the website.
 I liked materialise also but noted in the tutorials, it was recommended not to use both frameworks simultaneously and bootstrap used as boilerplate code-stuck with bootstrap.
 
@@ -306,32 +363,24 @@ jQuery came with Bootstrap to make the navbar responsive but was also used for t
 
 <i>Git</i>
 Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+I tried to ensure my commit messages were always imperative.
 
 <i>GitHub:</i>
 GitHub is used to store the projects code after being pushed from Git.
 
-<i>Lucidcharts:</i>
-Lucidcharts was used to create the wireframes during the design process.
-
-I found Lucicharts preferable to balsamiq due to the tabular format so I could compartmentalise elements of the design process myself and apply the pomodoro technique to each segment (focussing for 25minutes on each segment) even in the planning phase. Also, I am a very visual person so the element of shapes, tabs and clear 1-2-3 continuing visual structure assisted me in formulating the design.
-
 <b>Testing</b>
 
-BDD-TDD
+Throughout the mtutorials for module five, we learned a lot about test driven development but it was specified also in the tutorials that this would not be expected for the project.
 
-Jest...install jest
-JQuery...screengrabs of JQuery tests
+<em>Manual testing:</em>
+I inserted specific text.py files in the Plans app. I inserted tests for the models and the views.
 
-As part of tutorials, we learned how to build based on tests TDD but not required for this project
 
 Python testing, Unittest library in python:
-
-Did I write any testing functions?
 
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-Include validators for other languages (Javascript/Python)...Also what about Flake8?
 
 <i>W3C Markup Validator - Results</i>
 
@@ -343,36 +392,23 @@ Include validators for other languages (Javascript/Python)...Also what about Fla
 
 <i> Flake8 and PEP8</i>
 
-Command-to output all issues into the terminal:
+<p>Useful to ensure PEP8 and Flake8 complaint. Command-to output all issues into the terminal:</p>
 
 python3 -m flake8
 
-Screenshot:
+<p>Screenshot:</p>
 
 
-Gives a list of all of the issues in the code so we can go through these one by one
+<p>Gives a list of all of the issues in the code so we can go through these one by one
 control and click on line, takes you to line - code style and linting issues. Tells you
-whee you have imported something and not used it
-
-
-<i>Written tests - Results</i>
-
-As per tutorials...
-
-Types of tests
-
-Written before the code
-
-To ensure the tests were readable and easy to interpret and understand by other developers, I added specific tabs for each of the segments. These were called ''
-
-I included the main tests for each of these segments, what I considered to be the most important tests...
+whee you have imported something and not used it.</p>
 
 
 <Debugger>
 
 PythonTutor and Javascript Tutor, as used in tutorials
-Visualise execution-steps through the logic of the code step by step
-Aids in identifying and isolating issues with the logic
+These were incredibly useful tools that allowed the user to visualise execution-steps through the logic of the code step by step
+Aids in identifying and isolating issues with the logic.
 
 <b>Testing User Stories from User Experience (UX) Section</b>
 <i>First Time Visitor Goals</i>
@@ -398,25 +434,25 @@ The user can also scroll to the bottom of any page on the site to locate social 
 At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
 
 <i>Returning Visitor Goals</i>
-As a Returning Visitor, I want to find the targeted fitness and nutrition plans.
+As a Returning Visitor, I want to find the targeted fitness and nutrition plans. I may have tried one of the plans and want to try another that differs in approach. Alternatively, I may want to try the same plan but at a more advanced tier (e.g. I may have purchased and completed a Tier 1 Pomodoro technique for a person working in a sedentary job with access to gym and equipment but I may now want to move on to a more advance plan, with the Tier 2 version or tier 3 version.)
 
 These are clearly shown in the banner message.
 They will be directed to a page with another fitness image and call to action.
-As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have (progressive overload)
+As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have (progressive overload). This can be done via the facebook business profile, where contact details are readily available. Also an email address and iframe/google business link to the business is provided on the founder page.
 
 The navigation bar clearly highlights the "Contact Us" Page.
 Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
+The footer contains links to the organisations Facebook.
 Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
 The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
 As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
 
 The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
+Alternatively, the user can scroll to the bottom of the Landing Page page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
+ The user is incentivized as they are told there is a weekly favourite product posted in the group.
 
 <b>Frequent User Goals</b>
-As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
+As a Frequent User, I want to check to see if there are any newly added offers.
 
 The user would already be comfortable with the website layout and can easily click the banner message.
 As a Frequent User, I want to check to see if there are any new blog posts.
@@ -560,9 +596,9 @@ Under "Source", click the dropdown called "None" and select "Main Branch".
 
 Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
--Elephant SQL
--Heroku
--Setting up automatic deployment
+-Elephant SQL-to create database
+-Heroku-to create app and set up automatic deployment
+
 
 <b>Credits</b>
 
@@ -598,6 +634,8 @@ Fonts: Google Fonts
 Icons: Font Awesome
 
 Favicon: Favicon
+
+Lucidcharts-for planning and wireframes
 
 
 <b>Acknowledgements</b>
