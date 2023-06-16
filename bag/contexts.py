@@ -21,13 +21,12 @@ def bag_contents(request):
             'plan': plan,
          })
 
-    grand_total = total #need to declare grand_total variable, updates bag total as seen in base.html code
+    total = total #updates bag total as seen in base.html code
 
     context = {
         'bag_items':bag_items,
         'total': total,
         'plan_count': plan_count,
-        'grand_total': grand_total,
     } #function returns dictionary called 'context'...add items to context so available in templates across the site
 
     return context #this is a context processor. It's purpose is to make this dictionary available to all templates across

@@ -12,7 +12,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-plans-link">
                 <a href="{% url 'plans' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'plans' %}?sort=tier" class="dropdown-item ">By Tier (1,2,3)</a>
+                <a href="{% url 'plans' %}?sort=tier&direction=asc" class="dropdown-item ">By Tier (1,2,3)</a>
                 <a href="{% url 'plans' %}?sort=goal" class="dropdown-item ">By Goal (Weight loss, Muscle gain, Keep fit)</a>
                 <a href="{% url 'plans' %}?" class="dropdown-item">All Plans</a>
             </div>
@@ -24,14 +24,14 @@
                 Job type
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="job-type-link">
-                <a href="{% url 'plans' %}?type=Work from home" class="dropdown-item">Work from home</a>
-                <a href="{% url 'plans' %}?type=Sedentary - access to home equipment" class="dropdown-item">Sedentary - access to home equipment</a>
-                <a href="{% url 'plans' %}?type=Sedentary - no access to gym & equipment" class="dropdown-item">Sedentary - no access to gym & equipment</a>
-                <a href="{% url 'plans' %}?type=Sedentary - access to gym & equipment" class="dropdown-item">Sedentary - access to gym & equipment</a>
-                <a href="{% url 'plans' %}?type=Mobile - access to home equipment" class="dropdown-item">Mobile - access to home equipment</a>
-                <a href="{% url 'plans' %}?type=Mobile - access to gym & equipment" class="dropdown-item">Mobile - access to gym & equipment </a>
-                <a href="{% url 'plans' %}?type=Mobile - no access to gym & equipment" class="dropdown-item">Mobile - no access to gym & equipment</a>
-                <a href="{% url 'plans' %}?type=All types" class="dropdown-item">Unemployed or retired</a>
+                <a href="{% url 'plans' %}?jobtype=Work from home" class="dropdown-item">Work from home</a>
+                <a href="{% url 'plans' %}?jobtype=Sedentary - access to home equipment" class="dropdown-item">Sedentary - access to home equipment</a>
+                <a href="{% url 'plans' %}?jobtype=Sedentary - no access to gym & equipment" class="dropdown-item">Sedentary - no access to gym & equipment</a>
+                <a href="{% url 'plans' %}?jobtype=Sedentary - access to gym & equipment" class="dropdown-item">Sedentary - access to gym & equipment</a>
+                <a href="{% url 'plans' %}?jobtype=Mobile - access to home equipment" class="dropdown-item">Mobile - access to home equipment</a>
+                <a href="{% url 'plans' %}?jobtype=Mobile - access to gym & equipment" class="dropdown-item">Mobile - access to gym & equipment </a>
+                <a href="{% url 'plans' %}?jobtype=Mobile - no access to gym & equipment" class="dropdown-item">Mobile - no access to gym & equipment</a>
+                <a href="{% url 'plans' %}?jobtype=All types" class="dropdown-item">Unemployed or retired</a>
             </div>
         </li>
         <!--name is used here (programmatic name not friendly_name)...will there be an issue here?-->
@@ -59,8 +59,8 @@
                 Other
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="/templates/includes/privacy_policy.html"" class="dropdown-item">Privacy policy</a>
                 <a href="" class="dropdown-item">More info on techniques</a>
-                <a href="" class="dropdown-item">Privacy policy</a>
 
             </div>
         </li>

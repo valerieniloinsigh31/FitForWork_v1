@@ -15,14 +15,11 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Plans</h2>
-                <!--Trying to slot in buttons for techniques...used name not friendly name as no friendly_name for techniques
-                on admin interface-->
-                {% for c in current_techniques %}
-                    <a class="jobtype-badge text-decoration-none" href="{% url 'plans' %}?jobtype={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.Name }}</span>
+                {% for t in current_technique %}
+                    <a class="technique-badge text-decoration-none" href="{% url 'plans' %}?technique={{ t.name }}">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ t.Name }}</span>
                     </a>
                 {% endfor %}
-                        <!--occupation-badge css class for styling-ensure corresponding css class is updated-->
                     <hr class="w-50 mb-1">
                 <hr class="w-50 mb-1">
             </div>
@@ -76,11 +73,11 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">€{{ plan.price }}</p>
-                                            <!-- to display jobtype on card includes a link also...link if you click on, filters only that occupation-->
-                                            {% if plan.jobtype %}
+                                            <!-- to display jobtype on card includes a link also...link if you click on, filters only that jobtype-->
+                                            {% if <plan class="jobtype"></plan> %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'plans' %}?jobtype={{ plan.jobtype.name }}">
-                                                    <i class="fa-solid fa-certificate mr-1"></i>{{ plan.jobtype.friendly_name }}
+                                                    <i class="fa-solid fa-certificate mr-1"></i>{{ plan.jobtype }}
                                                 </a>
                                             </p>
                                             {% endif %}

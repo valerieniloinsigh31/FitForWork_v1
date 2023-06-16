@@ -87,13 +87,13 @@
                         if person authenticated to be superuser, can access plan management system (Adding, updating and 
                         deleting plans)-->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                        <a class="{% if total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <!-- context processor creates grand_total variable-->
                                 <p class="my-0">
-                                    {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
+                                    {% if total %}
+                                        €{{ total|floatformat:2 }}
                                     {% else %}
                                         €0.00
                                     {% endif %} 

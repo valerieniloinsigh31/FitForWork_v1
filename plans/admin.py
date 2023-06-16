@@ -12,7 +12,7 @@ class PlanAdmin(admin.ModelAdmin):
     'tier'
     )
 
-    ordering = ('tier',) #since it has to order on multiple columns, has to be a tuple even though it's only one field
+    ordering = ('price',) #since it has to order on multiple columns, has to be a tuple even though it's only one field
 
 #extends the builtin ModelAdmin class
 #to change the order of columns in admin, adjust order here in list_display attribute

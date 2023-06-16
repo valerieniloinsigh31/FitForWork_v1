@@ -136,7 +136,7 @@
     $('.remove-item').click(function(e) { //
         var csrfToken = "{{ csrf_token }}"; //csrf token stored as strong...template variable no %
         var itemId = $(this).attr('id').split('remove_')[1]; //item id removed
-        var size = $(this).data('plan_size');
+        //var size = $(this).data('plan_size');
         var url = `/bag/remove/${itemId}/`;
     
         var data = {'csrfmiddlewaretoken': csrfToken}; //data variable object used to send data to server. data variable contains special ssrf key and size

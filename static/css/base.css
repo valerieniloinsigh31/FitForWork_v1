@@ -120,7 +120,7 @@ for styling of free intro PT call
 /*
 for styling of jobtype badges when hovering over them-invert colours
 */
-a.jobtype-badge > span.badge:hover {
+a.technique-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
@@ -427,6 +427,17 @@ templates on the site also
     font-size:13px;
     margin-bottom:0;
     justify-content: center;
+   
+}
+
+.footer .facebook-link {
+    text-align:center;
+    padding-top:24px;
+    font-size:13px;
+    margin-bottom:0;
+    justify-content: center;
+    opacity: 1;
+    outline:black;
 }
 
 #mc_embed_signup{

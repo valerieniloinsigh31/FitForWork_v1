@@ -38,13 +38,13 @@ def all_plans(request):
             plans = plans.filter(jobtype__name__in=jobtypes)
             jobtypes = JobType.objects.filter(name__in=jobtypes)
 
-        if sortkey == 'technique':
+            if sortkey == 'technique':
                 sortkey = 'technique__name'
-        if 'direction' in request.GET:
+            if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f-{sortkey}
-        plans = plans.order_by(sortkey)
+            plans = plans.order_by(sortkey)
 
         if 'technique' in request.GET:
             techniques = request.GET['technique'].split(',')
@@ -88,7 +88,7 @@ def plan_detail(request, plan_id):
 def add_plan(request):
     """ Add a plan to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only wesbite admin can do that.')
+        messages.error(request, 'Sorry, only website admin can do that.')
         return redirect(reverse('ffw'))
 
     if request.method == 'POST':
