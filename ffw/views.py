@@ -9,3 +9,7 @@ def index(request):
 def privacy(request):
     """ A view to return the privacy page """
     return render(request, 'ffw/privacy.html')
+
+def techniques(request):
+    """ A view to return the techniques page """
+    return render(request, 'ffw/techniques.html')
