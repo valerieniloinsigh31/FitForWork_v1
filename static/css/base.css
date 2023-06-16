@@ -12,10 +12,8 @@ body {
     font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
-/* Add background image to body element. Ensures stays put in center of page. Height calc added-170px will be eventual 
-height of top header
-Add default font color...how did I choose font color...sharp energetic but business like..used color mind-color palettes
-font-family...how did I choose font family...google fonts...Sofia Sans Condensed
+/* 
+164px to suit navbar
  */
 
 
@@ -50,13 +48,13 @@ ensures logo only takes up as much space as the text requires
 
 
 .shop-now-button {
-    background: black;
+    background: fuchsia;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: fuchsia;
     color: white;
 }
 
@@ -428,6 +426,7 @@ templates on the site also
     padding-top:24px;
     font-size:13px;
     margin-bottom:0;
+    justify-content: center;
 }
 
 #mc_embed_signup{
