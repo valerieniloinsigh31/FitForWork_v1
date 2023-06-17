@@ -1,11 +1,3 @@
-/*
-    Core logic/payment flow for this comes from here:
-    https://stripe.com/docs/payments/accept-a-payment
-
-    CSS from here: 
-    https://stripe.com/docs/stripe-js
-*/
-
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -81,18 +73,6 @@ form.addEventListener('submit', function(ev) {
                     }
                 }
             },
-            //shipping: {
-                //name: $.trim(form.full_name.value),
-                //phone: $.trim(form.phone_number.value),
-                //address: {
-                    //line1: $.trim(street_address_1.value),
-                    //line2: $.trim(form.street_address_2.value),
-                    //city: $.trim(form.town_or_city.value),
-                    //country: $.trim(form.country.value),
-                    //eircode: $.trim(form.eircode.value),
-                    //state: $.trim(form.county.value),
-                //}
-            //},
         }).then(function(result) { 
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');

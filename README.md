@@ -432,25 +432,50 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 i>W3C HTML Validator - Results</i>
 
 Link: https://validator.w3.org/
-Screenshot of results:
 
+
+Screengrabs of HTML Templates tested:
+Base.html:
+plans.html:
+plan.details.html:
+profiles.html:
+subscribe.html:
+founder.html:
+technique.html:
+tiers.html:
+Checkout:
+Shopping bag:
+606 error:
 
 <i>W3C CSS Validator - Results</i>
 
 Link: https://jigsaw.w3.org/css-validator/
 Screenshot of results:
 
+base.css:
+checkout.css:
+profile.css:
+
 <i>Javascript Validator - Results</i>
 
 Link: https://jshint.com/
 Screenshot of results:
 
+stripe_elements.js:
+
+
 <i>Python Validator - Results</i>
 
 Link: https://pep8ci.herokuapp.com/
-Screenshot of results:
 
-Inbuilt with django
+Results split out by app:
+
+FFW:
+Checkout:
+Plans:
+Bag:
+Profile:
+
 
 <i> Flake8 and PEP8</i>
 
@@ -465,6 +490,54 @@ python3 -m flake8
 control and click on line, takes you to line - code style and linting issues. Tells you
 where you have imported something and not used it.</p>
 
+
+<p>Lighthouse testing</p>
+Screengrabs of results for different screens (with a desktop version and a mobile version)
+
+FFW:
+On desktop:
+On mobile:
+
+All Plans
+On desktop:
+On mobile:
+
+Plan Detail
+On desktop:
+On mobile:
+
+Shopping Bag
+On desktop:
+On mobile:
+
+Checkout
+On desktop:
+On mobile:
+
+Checkout success
+On desktop:
+On mobile:
+
+Profile
+On desktop:
+On mobile:
+
+Add plan
+On desktop:
+On mobile:
+
+Login
+On desktop:
+On mobile:
+
+Logout
+On desktop:
+On mobile:
+
+Register
+On desktop:
+On mobile:
+
 <Debugger>
 
 PythonTutor and Javascript Tutor, as used in tutorials
@@ -476,61 +549,6 @@ Aids in identifying and isolating issues with the logic.
 In an effort to comply with agile methodology, I set up a kanban board and connected it with the project on Github. I labelled the user stories added according to MOSCOW prioritisation. I included acceptance criteria and tasks.
 
 ![alt text](./media/user_stories_ffw.png)
-
-<i>First Time Visitor Goals</i>
-
-As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-
-Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a logo image with Text and a "View Plans" Call to action button and a mialchimp newsletter subscription sign up and link to the facebook business profile.
-
-The main points are made immediately with the work/fitness image
-
-The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
-As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
-
-The site has been designed to be fluid and easy to navigate. At the top of each page there is a clean navigation bar, each link describes what page the user will navigate.
-
-At the bottom of the landing page, there is a useful back to top button to save the user from having to scroll back up.
-
-
-As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are. This links to the facebook business profile page where client before/after photos and testimonials can be viewed.
-
-Once the new visitor has read the 'Workout to suit your Work' text, they will notice the 'Plan descriptions' section.
-
-The user can also scroll to the bottom of any page on the site to locate social media links in the footer. (is the footer absolute...what is contained in the footer. Importance of the footer article)
-
-At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
-
-<i>Returning Visitor Goals</i>
-As a Returning Visitor, I want to find the targeted fitness and nutrition plans. I may have tried one of the plans and want to try another that differs in approach. Alternatively, I may want to try the same plan but at a more advanced tier (e.g. I may have purchased and completed a Tier 1 Pomodoro technique for a person working in a sedentary job with access to gym and equipment but I may now want to move on to a more advance plan, with the Tier 2 version or tier 3 version.)
-
-These are clearly shown in the banner message.
-They will be directed to a page with another fitness image and call to action.
-As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have (progressive overload). This can be done via the facebook business profile, where contact details are readily available. Also an email address and iframe/google business link to the business is provided on the founder page.
-
-The navigation bar clearly highlights the "Contact Us" Page.
-Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-The footer contains links to the organisations Facebook.
-Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
-As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-
-The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-Alternatively, the user can scroll to the bottom of the Landing Page page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
- The user is incentivized as they are told there is a weekly favourite product posted in the group.
-
-<b>Frequent User Goals</b>
-As a Frequent User, I want to check to see if there are any newly added offers.
-
-The user would already be comfortable with the website layout and can easily click the banner message.
-As a Frequent User, I want to check to see if there are any new blog posts.
-
-The user would already be comfortable with the website layout and can easily click the blog link.
-As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-
-At the bottom of every page their is a footer which content is consistent throughout all pages.
-To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
 
 <b>Further Testing</b>
 
