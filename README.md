@@ -616,6 +616,25 @@ Click Here to retrieve pictures for some of the buttons and more detailed explan
 -Heroku-to create app and set up automatic deployment
 
 
+<b>Checklist for PP5</b>
+<p>Please see below how the criteria checklist included on the LMS for PP5 has been considered.
+
+-External html links tagged as non-rel for SEO purposes: Numerous links to external resources found on the founder page.
+-CRUD: Admin or general user. CRUD functionality fully enabled for admin user logged in.
+
+Login details: login name: val login password: Lauragym1!
+Can edit, delete or add plans to the website, enabling full crud functionality.
+
+-Authentication-Django allauths used...log in/log out and registration functionalities fully enabled.
+
+-Responsive design
+Use of media queries for breakpoints
+Use of bootstrap
+Use of CSS design
+Tested on google developer tools across a range of devices. Please see pictures below
+
+-
+
 <b>Credits</b>
 
 <h1>Code:</h1>

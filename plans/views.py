@@ -56,7 +56,6 @@ def all_plans(request):
             plans = plans.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    #return sorting methodology to template...using string both sort and direction variable stored-easy to do with string formatting
 
     context = {
         'plans': plans,
