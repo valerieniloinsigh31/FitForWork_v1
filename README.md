@@ -13,15 +13,13 @@ the tailored workout plans. Consumers can choose their plan based on occupation 
 <p>The Fit For Work app is in affiliation with, 'Pendulum to Paper Production Limited', which is a limited company registered with the Companies Registration Office in the Republic of Ireland.</p>
 
 <b>SEO:</b>
--I included meta tags for description and keywords within the base.html code. I ensured to include researched long-tail and short-tail keywords within the base.html meta tags block code.
+-I included meta tags for description and keywords within the base.html code. I ensured to include researched long-tail and short-tail keywords within the base.html meta tags block code. I was careful to avoid stuffing the meta tags, which would displease Google SEO raters.
 
 Please see a screen grab of some documented research below (based on related searches in google):
 
-KW Research 1:
-KW Research 2:
-KW Research 3:
-KW Research 4:
-KW Research 5:
+KW Research 1: ![alt text](./media/kw_1.jpg)
+KW Research 2: ![alt text](.//media/kw_2.jpg)
+
 
 
 -Use of rel tags for hyperlinks to external code. I ensured to incorporate rel tags in the hyperlinks to external websites to improve the SEO. This is evidenced on the Founder page which includes several external links.
@@ -146,15 +144,16 @@ As a First Time Visitor, I want to look for testimonials to understand what thei
 <b>Returning Visitor Goals</b>
 As a Returning Visitor, I want to find information about different tiers and approaches for plans and prices.
 As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-As a Returning Visitor, I want to find facebook business profile.
-As a Returning Visitor, I want to see what is involved with the other tiers.
+As a Returning Visitor, I want to find  the facebook business profile.
+As a Returning Visitor, I want to see what is involved with the other tiers and approaches.
 As a Returning Visitor, I want to be able to buy the same plan or a different plan again and for my payment information to have been saved.
+As a Returning Visitor, i want to be able to view my customer profile history.
 
 <b>Frequent User Goals</b>
-As a Frequent User, I want to check to see if there are any newly added plans or add-ons t the nutrition newsletters.
+As a Frequent User, I want to check to see if there are any newly added plans or add-ons to the nutrition newsletters.
 As a Frequent User, I want to check to see if there are any new customer testimonials on the facebook business profile.
 As a Frequent User, I want to sign up to the Nutrition Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-As a Frequent User, I want to be able to quickly access the affiliated facebook business profile so that I can leave post.
+As a Frequent User, I want to be able to quickly access the affiliated facebook business profile so that I can leave a post about my progress.
 
 
 <b>Prioritisation</b?>
@@ -253,10 +252,7 @@ others were investing in logos on the website Looka and as I felt there was an o
 -Install Boto3 and Django storages. Freeze to requirements.txt. Add storages to installed apps in Settings.py.
 -Add settings.py code for S3 pending on whether USE_AWS is in the environment.
 -Add config vars to Heroku with USE_AWS set to true.
--
--
-
-
+-Add all images needed to the relevant bucket on AWS.
 
 <b>Socials</b>
 <b>Facebook business profile</b>
@@ -347,19 +343,20 @@ Including in config vars on Heroku
 
 <h1><b>Features</b>
 
-Existing features:
+<p>Existing features:<p>
+<ul>
+<li>Filter</li> 
+<li>Search</li> 
+<li>Input card details</li> 
+<li>Purchase plan</li> 
+<li>Customer profile</li> 
+</ul>
 
-Filter 
-Search
-Input card details
-Purchase plan
-Customer profile
-
-
-Future features:
-
--Reviews-customers can levae reviews directly on the website.
-
+<p>Future features:</p>
+<ul>
+<li>Reviews-customers can leave reviews directly on the website.</li> 
+<li>A contact us page</li> 
+</ul>
 <h1>Responsive on all device sizes</h1>
 
 -I ensured that the website was responsive across multiple devices, using Google Chrome developer tools, media queries (breakpoints),.
@@ -427,9 +424,7 @@ Throughout the mtutorials for module five, we learned a lot about test driven de
 <em>Manual testing:</em>
 I inserted specific text.py files in the Plans app. I inserted tests for the models and the views.
 
-
-Python testing, Unittest library in python:
-
+Validators:
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
@@ -468,10 +463,7 @@ python3 -m flake8
 
 <p>It gives a list of all of the issues in the code so we can go through these one by one
 control and click on line, takes you to line - code style and linting issues. Tells you
-whee you have imported something and not used it.</p>
-
-
-
+where you have imported something and not used it.</p>
 
 <Debugger>
 
@@ -486,19 +478,21 @@ In an effort to comply with agile methodology, I set up a kanban board and conne
 ![alt text](./media/user_stories_ffw.png)
 
 <i>First Time Visitor Goals</i>
+
 As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
 
-Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a logo image with Text and a "" Call to action button.
+Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a logo image with Text and a "View Plans" Call to action button and a mialchimp newsletter subscription sign up and link to the facebook business profile.
 
 The main points are made immediately with the work/fitness image
 
 The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
 As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
 
-The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page. (What about the footer?)
+The site has been designed to be fluid and easy to navigate. At the top of each page there is a clean navigation bar, each link describes what page the user will navigate.
 
-On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
+At the bottom of the landing page, there is a useful back to top button to save the user from having to scroll back up.
+
+
 As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are. This links to the facebook business profile page where client before/after photos and testimonials can be viewed.
 
 Once the new visitor has read the 'Workout to suit your Work' text, they will notice the 'Plan descriptions' section.
@@ -648,6 +642,7 @@ Screengrab:
 -6. Techniques dropdown would not filter properly, did not filter the correct techniques.
 -7. Updated models and migrations only applied to local environment, did not transfer to the deployed app.
 -8. Images and plans appeared on local environment but not deployed code.
+-9. Tabs would not open on deployed app
 
 
 <b>How bugs were resolved</b>
@@ -661,34 +656,30 @@ Screenshot:
 -6. Reviewed all techniques related code. Sorting and filtering code. Ensured name was aligned with filter specifications.
 -7. Consulted with fellow students on slack and added release code for migrations (makemigrations and migrate commands) to the Procfile.
 -8. Consulted with fellow students
+-9. Consulted with fellow students, added DATABASE_URL to env.py file
 
 <b>Deployment</b>
 
-GitHub Pages
-The project was deployed to Heroku, using the following steps...
+Initial set-up of Repositary:
+-I created my repositary on github and pinned the workspace to gitpod workspaces. I would open the repo from the pined workspace from this place going forward, to avoid installations reversing or deletion of my env.py file.
+-I pinned my workspace under the CI Students dropdown banner due to limited coding hours.
+-I follwoed the usual steps to set up my new repositary on github.
+-I created a repositary, giving it a name and description.
+-I also created an issue template for user stories and linked this with the project.
+-Upon advice from tutor support, I wused the full-CI template as a template for starting my code.
+-I ensured all relevant installations were completed (Django etc.) and frozen to the requirements.txt file with the following command:
+pip3 freeze > requirements.txt
+-I ensured to have an env.py file which held the SECRET_KEYs that I did not want to be visible and I included the env.py file in the gitignore file so it would not be exposed.
 
--Log in to GitHub and locate the GitHub Repository
--At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
--Alternatively Click Here for a GIF demonstrating the process starting from Step 2.
--Scroll down the Settings page until you locate the "GitHub Pages" Section.
-Under "Source", click the dropdown called "None" and select "Main Branch".
-
+Deploying:
+I set up a database on ElephantSQL by creating an instance the Fit For Work app
+I copied the necessary database url from Elephant SQL 
+-I created an app for Fit For Work on Heroku
+-I started installing the config vars in the settings tab on Heroku, including the DATABASE_URL, AWS keys, Secret key and STRIPE keys
+-I set Heroku up for automatic deployment so it would be linked to the repositary and everything would also be transferred to Heroku once aditional codes were added or if database models were created/deleted and migrations were made. I ensured to check the build logs on heroku each time I migrated code or committed code to ensure everything wa supdated correctly.
 
 
 Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
-
-<b>Elephant SQL-to create database</b>
--Logged into my Elephant SQL account, which I had previously created in other apps.
--Set up a '' specifically for FFW app.
--Followed the usual steps:
-
-Copied relevant database code for insertion into Heroku Config vars.
-
--Heroku-to create app and set up automatic deployment
--Logged into my heroku account, confirmed using downloaded authenticator app.
--Created an app for fit for work.
--set up automatic deployments.
--Monitored build logs.
 
 
 <b>Checklist for PP5</b>
@@ -696,22 +687,13 @@ Copied relevant database code for insertion into Heroku Config vars.
 
 -External html links tagged as non-rel for SEO purposes: Numerous links to external resources found on the founder page.
 -CRUD: Admin or general user. CRUD functionality fully enabled for admin user logged in.
- 
-<b>Wireframe on CRUD functionality:</b>
- Overview:![alt text]()
- Part 1:
- Part 2:
- Part 3:
- Part 4:
 
-
-
-<b>Login details: </b>
-login name: val 
+<b>Login details for admin: </b>
+login name: Valerie
 login password: Lauragym1!
 Can edit, delete or add plans to the website, enabling full crud functionality.
 
--Authentication-Django allauths used...log in/log out and registration functionalities fully enabled.
+-With regard to ensuring Authentication was operable-the Django allauths were used. Log in/log out and registration functionalities fully enabled.
 
 -Responsive design
 Use of media queries for breakpoints
@@ -720,52 +702,56 @@ Use of bootstrap
 Use of CSS design
 Tested on google developer tools across a range of devices. Please see pictures below
 
--
+-Inclusion of site maps and robots.txt file
+-Mailchimp subscription
+-3 custom models
+-Stripe functionality
 
 <b>Credits</b>
 
 <h1>Code:</h1>
 
-Consulted with Slack. Peer code review page, researched the repositaries of toehr students (Roman and Monique)
+<p>For the coding, I consulted with Slack a lot fo rthis project. I researched other projects on the 'Peer code review' page, researched the repositaries of other students (particularly Roman Rakic and his project 'Blade') to see what approaches were taken.</p>
 
-Tutor support - ensured to use my allocated 90minutes a week to talk out various code related issues with the tutors on the LMS tutor suport platform. Always pointed me in the right direction.
+<p>Tutor support - ensured to use my allocated ninety minutes a week to talk out various code related issues with the tutors on the LMS tutor support platform. Always pointed me in the right direction.</p>
 
-Mentor-Mitko, extremely patient, helpful and flexible when setting up our sessions.
+<p>My mentor, Mitko Bachvarov was very helpful to me. He was extremely patient, helpful and flexible when setting up our sessions. We had all three mentor sessions at the recommended pacing (Beginning for project inception, Middle for when project is roughly complete and End when the project was about to be deployed.)</p>
 
-Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+<p>Bootstrap4: The Bootstrap Library was used throughout the project, mainly to make the site responsive, using the Bootstrap Grid System. It was also used for buttons and various other design features. I was interested in using Materialise also but did not as the two cannot be used together.</p>
 
-MDN Web Docs : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found Here
-
-Django...
+<p>I used the CI README template as a premise for this README.</p>
 
 <b>Content</b>
 
-I derived a lot of inspiration for the project form the Boutique aAdo walkthrough project, provided by Code institute. I used the walkthrough code as boilerplate code to use as a foundation for my own project.
+<p>I derived a lot of inspiration for the project from the Boutique Ado walkthrough project, provided by Code institute. I completed this walkthrough project twice (including deployment to Heroku twice). I used the code from the walkthrough as boilerplate code to use as a foundation for my own project on my second completion of it, customizing and altering the code to suit my idea as I progressed through, based on the idea and models for Fit For Work.</p>
 
 
 <b>Media</b>
-Images pruned from the following resources.
 
-Websites used: 
-Pexel
+<p>The images used for the plans on the website were pruned from the following resources:</p>
+
+Pixabay
 Unsplash
+The before and after photo on the founder page is from my own personal photos.
 
-Colours: Adobe colors and colorpalette website
+<p>Colours: Adobe colors and colormind.io.</p>
 
-Logo: Looka (idea inspired by fellow students on slack Peer Code Review page)
+<p>Logo: Looka (idea inspired by fellow students on slack Peer Code Review page)</p>
 
-Fonts: Google Fonts
-Icons: Font Awesome
+<p>Fonts: Google Fonts</p>
 
-Favicon: Favicon-using original logo to build this
+<p>Icons: Font Awesome</p>
 
-Lucidcharts-for planning and wireframes
+<p>Favicon: Favicon-using original Looka logo to build this.</p>
 
-Tiers animation: https://tenor.com/en-GB/view/%C3%A9de-chorar-valtatu%C3%AD-cry-sad-tears-gif-16739376
+<p>Lucidcharts-for planning and wireframes</p>
+
+<p> Animation: I took the animation used on the Tiers page form the following source: https://tenor.com/en-GB/view/%C3%A9de-chorar-valtatu%C3%AD-cry-sad-tears-gif-16739376</p>
 
 <b>Acknowledgements</b>
 My Mentor Mitko for continuous helpful feedback.
 Tutor support for their assistance throughout the process.
-Slack community
+Slack community who were extremely forthcoming and responsive.
+My friends and family for helping me throughout the process.
 
 
