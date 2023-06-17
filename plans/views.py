@@ -23,24 +23,15 @@ def all_plans(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                plans = plans.annotate(lower_name =Lower('name'))
-
-            if sortkey == 'jobtype':
-                sortkey = 'jobtype__name'
+                plans = plans.annotate(lower_name=Lower('name'))
+            if sortkey == 'technique':
+                sortkey = 'technique__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
-                    sortkey = f-{sortkey}
+                    sortkey = f'-{sortkey}'
             plans = plans.order_by(sortkey)
-
-            if sortkey == 'technique':
-                sortkey = 'technique__name'
-
-        if 'jobtype' in request.GET:
-            jobtypes = request.GET['jobtype'].split(',')
-            plans = plans.filter(jobtype__name__in=jobtypes)
-            jobtypes = JobType.objects.filter(name__in=jobtypes)
-
+            
         if 'technique' in request.GET:
             techniques = request.GET['technique'].split(',')
             plans = plans.filter(technique__name__in=techniques)
@@ -60,7 +51,7 @@ def all_plans(request):
     context = {
         'plans': plans,
         'search_term': query, 
-        'current_jobtypes': jobtypes,
+        #'current_jobtypes': jobtypes,
         'current_techniques': techniques,
         'current_sorting': current_sorting,
         }
