@@ -1,8 +1,8 @@
 from django import template
 
 
-register = template.Library()  #variable called register, instance of template.Library()...creating custom template tags-django docs
+register = template.Library()  
 
-@register.filter(name='calc_subtotal')  #decorator
-def calc_subtotal(price, quantity): #function that takes in price and quantity as parameters and returns their product
+@register.filter(name='calc_subtotal')  
+def calc_subtotal(price, quantity): 
     return price * quantity

@@ -45,8 +45,8 @@
                                     {% include "bag/plan-info.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 order-sm-last">
-                                    <p class="my-0">Price Each: ${{ item.plan.price }}</p>
-                                    <p><strong>Subtotal: </strong>${{ item.plan.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0">Price Each: €{{ item.plan.price }}</p>
+                                    <p><strong>Subtotal: </strong>€{{ item.plan.price | calc_subtotal:item.quantity }}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     {% include "bag/quantity-form.html" %}
@@ -81,13 +81,13 @@
                                         {% include "bag/plan-info.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.plan.price }}</p>
+                                        <p class="my-0">€{{ item.plan.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         {% include "bag/quantity-form.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.plan.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">€{{ item.plan.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -123,12 +123,6 @@
         window.scrollTo(0,0)
     })
 </script>
-{ block.super }}
-<script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
-</script>
 {% include 'plans/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
@@ -142,9 +136,8 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
          .done(function() {
