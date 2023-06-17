@@ -242,12 +242,19 @@ others were investing in logos on the website Looka and as I felt there was an o
  And added it to the requirements.txt file of the project
  pip3 feeze > requirements.txt
 
- As demonstrated on the tutorials also, I hosted the images in a media folder file on Amazon WebServices also. I used a link to AWS to present the logo as a favicon on the app.
+ As demonstrated on the tutorials also, I hosted the images in a media folder file on Amazon Web Services also. I used a link to AWS to present the logo as a favicon on the app.
 
  AWS 1: ![alt text](media/AWS_1.png)
  AWS 2: ![alt text](media/AWS_2.png)
 
 <h4>Summary of steps required to setting up AWS:</h4>
+-Set up bucket, user and user groups on S3 and IAM on AWS website.
+-Create AWS Access keys and add them to env.py file.
+-Install Boto3 and Django storages. Freeze to requirements.txt. Add storages to installed apps in Settings.py.
+-Add settings.py code for S3 pending on whether USE_AWS is in the environment.
+-Add config vars to Heroku with USE_AWS set to true.
+-
+-
 
 
 
