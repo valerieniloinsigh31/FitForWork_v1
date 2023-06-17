@@ -1,5 +1,3 @@
-<!--Almost identical to base.html except a few things. Links use d-block display block and d-lg-none classes
-from bootstrap. Hidden on large screens where they will instead show up in top portion of the header-->
 <li class="list-inline-item">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
@@ -7,8 +5,6 @@ from bootstrap. Hidden on large screens where they will instead show up in top p
             <p class="my-0">Have a peek</p>
         </div>
     </a>
-    <!-- Search form now in dropdown menu. Instead of list of links as per My Profile version, form inserted instead. Will display
-    cleanly on mobile-->
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
         <form class="form" method="GET" action="{% url 'plans' %}">
             <div class="input-group w-100">

@@ -1,2 +1,2 @@
+release: python manage.py makemigrations && python manage.py migrate
 web: gunicorn fitforwork.wsgi:application
-release: python manage.py migrate
