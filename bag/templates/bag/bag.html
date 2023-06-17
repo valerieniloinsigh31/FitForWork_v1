@@ -12,7 +12,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container mb-2">
+    <div class="container mb-2" style="padding-top: 200px">
         <div class="row">
             <div class="col">
                 <hr>
@@ -104,7 +104,7 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your have chosen no plans.</p>
+                    <p class="lead mb-5">You have chosen no plans.</p>
                     <a href="{% url 'plans' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
@@ -123,27 +123,32 @@
         window.scrollTo(0,0)
     })
 </script>
+{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function(e) {
+        window.scrollTo(0,0)
+    })
+</script>
 {% include 'plans/includes/quantity_input_script.html' %}
 
-<script type="text/javascript"> 
-    
+<script type="text/javascript">
+    // Update quantity on click
     $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form'); //on click event, use previous method to find most recently seen update form in DOM, store form in variable
-        form.submit(); //calls form's submit method
+        var form = $(this).prev('.update-form');
+        form.submit();
     })
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) { //
-        var csrfToken = "{{ csrf_token }}"; //csrf token stored as strong...template variable no %
-        var itemId = $(this).attr('id').split('remove_')[1]; //item id removed
-        //var size = $(this).data('plan_size');
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
         var url = `/bag/remove/${itemId}/`;
-    
-        var data = {'csrfmiddlewaretoken': csrfToken}; //data variable object used to send data to server. data variable contains special ssrf key and size
-        //csrf middleware token will match field django expects to see in request.post when psted to server
-        $.post(url, data) //post data to url which will be created later...post method from jquery
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+
+        $.post(url, data)
          .done(function() {
-             location.reload(); //once response back from server, reload page to updated bag...execute function ro reload page
+             location.reload();
          });
     })
 </script>
