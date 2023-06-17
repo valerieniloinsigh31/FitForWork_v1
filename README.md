@@ -17,8 +17,12 @@ the tailored workout plans. Consumers can choose their plan based on occupation 
 
 Please see a screen grab of some documented research below (based on related searches in google):
 
+KW Research 1:
+KW Research 2:
+KW Research 3:
+KW Research 4:
+KW Research 5:
 
-Words used on code
 
 -Use of rel tags for hyperlinks to external code. I ensured to incorporate rel tags in the hyperlinks to external websites to improve the SEO. This is evidenced on the Founder page which includes several external links.
 
@@ -460,9 +464,7 @@ control and click on line, takes you to line - code style and linting issues. Te
 whee you have imported something and not used it.</p>
 
 
-Lighthouse on Google Developer Tools
-Link: https://developer.chrome.com/docs/lighthouse/overview/
-Screengrab:
+
 
 <Debugger>
 
@@ -530,6 +532,7 @@ To the right hand side of the footer the user can see "Subscribe to our Newslett
 There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
 
 <b>Further Testing</b>
+
 <b>Browser based testing</b>
 The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 <b>Device based testing</b>
@@ -625,7 +628,9 @@ Friends and family members were asked to review the site and documentation to po
  <h2>LIGHTHOUSE</h2>
 I accessed the 'LIGHTHOUSE' testing tool via Developer Tools. Please see a screengrab of the successful lIGHTHOUSE testing below. I believe all %s are adequate:
 
-![alt text](.//)
+Lighthouse on Google Developer Tools
+Link: https://developer.chrome.com/docs/lighthouse/overview/
+Screengrab:
 
 <b>Known Bugs</b>
 -1.On some mobile devices the Work pushes the size of screen out more than any of the other content on the page.
@@ -684,14 +689,26 @@ Copied relevant database code for insertion into Heroku Config vars.
 
 -External html links tagged as non-rel for SEO purposes: Numerous links to external resources found on the founder page.
 -CRUD: Admin or general user. CRUD functionality fully enabled for admin user logged in.
+ 
+<b>Wireframe on CRUD functionality:</b>
+ Overview:![alt text]()
+ Part 1:
+ Part 2:
+ Part 3:
+ Part 4:
 
-Login details: login name: val login password: Lauragym1!
+
+
+<b>Login details: </b>
+login name: val 
+login password: Lauragym1!
 Can edit, delete or add plans to the website, enabling full crud functionality.
 
 -Authentication-Django allauths used...log in/log out and registration functionalities fully enabled.
 
 -Responsive design
 Use of media queries for breakpoints
+Absolute header and footer
 Use of bootstrap
 Use of CSS design
 Tested on google developer tools across a range of devices. Please see pictures below
@@ -704,9 +721,9 @@ Tested on google developer tools across a range of devices. Please see pictures 
 
 Consulted with Slack. Peer code review page, researched the repositaries of toehr students (Roman and Monique)
 
-Tutor support
+Tutor support - ensured to use my allocated 90minutes a week to talk out various code related issues with the tutors on the LMS tutor suport platform. Always pointed me in the right direction.
 
-Mentor
+Mentor-Mitko, extremely patient, helpful and flexible when setting up our sessions.
 
 Bootstrap4: Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
@@ -715,9 +732,9 @@ MDN Web Docs : For Pattern Validation code. Code was modified to better fit my n
 Django...
 
 <b>Content</b>
-All content was written by the developer.
 
-Psychological properties of colours text in the README.md was found here
+I derived a lot of inspiration for the project form the Boutique aAdo walkthrough project, provided by Code institute. I used the walkthrough code as boilerplate code to use as a foundation for my own project.
+
 
 <b>Media</b>
 Images pruned from the following resources.
@@ -726,18 +743,22 @@ Websites used:
 Pexel
 Unsplash
 
-Logo: Looka
+Colours: Adobe colors and colorpalette website
+
+Logo: Looka (idea inspired by fellow students on slack Peer Code Review page)
 
 Fonts: Google Fonts
 Icons: Font Awesome
 
-Favicon: Favicon
+Favicon: Favicon-using original logo to build this
 
 Lucidcharts-for planning and wireframes
 
+Tiers animation: https://tenor.com/en-GB/view/%C3%A9de-chorar-valtatu%C3%AD-cry-sad-tears-gif-16739376
 
 <b>Acknowledgements</b>
 My Mentor Mitko for continuous helpful feedback.
 Tutor support for their assistance throughout the process.
 Slack community
+
 
