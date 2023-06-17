@@ -216,11 +216,6 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/*
-overlay styling on plans page...z index of minus one ensures it sits BEHIND content...in base.css as we will reuse in other
-templates on the site also
-*/
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
