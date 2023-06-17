@@ -3,54 +3,58 @@
 View the live project here.: https://fitforwork.herokuapp.com/
 
 <h2><em>Introduction</em><h2>
-Fit for work is an ecommerce website that offers consumers workout plans that are tailored to suit their occupation.
-It employs eight different Japanese techniques that are detailed on the website int he approach taken to the design of 
-the tailored workout plans. Consumers can choose their plan based on occupation type, technique to be used in the approach, their goal for the workout plan (weight loss/muscle gain/general fitness) and the tier that they want to select (there are three different tiers that differ in what will be provided with the plan and the lenth of time support will be available for.) Consumers can purchase these plans online using their credit card. They can also sign up to the facebook business profile which is linked throughout the site. They can also opt into subscribing for the nutrition newsletter which is a free subscription service, wherein a newsletter with nutrition tips and details on supplements is sent to their personal email each month.
+<p>Fit For Work is an ecommerce website that offers consumers workout plans that are tailored to suit their occupation.
+It employs eight different Japanese techniques that are detailed on the website. These approaches are implemented in the design of 
+the tailored workout plans. Consumers can choose their plan based on occupation type, the technique that they wish to implement in the approach, their goal for the workout plan (weight loss/muscle gain/general fitness) and the tier that they want to select (there are three different tiers that differ in what will be provided with the plan and the length of time support will be available for. Detail on the tiers and pricing can be accessed via dropdown in the landing page). Consumers can purchase these plans online using their credit card. They can also sign up to the facebook business profile which is linked throughout the site. They can also opt into subscribing for the nutrition newsletter which is a free subscription service, wherein a newsletter with nutrition tips and details on supplements is sent to their personal email each month.</p>
 
 <h2><em>Business model:</em></h2>
-Currently the business is a business to consumer(B2C) structure but it will eventually evolve to include business to business services as well (with gyms/personal trainers/fitness influencers/athletes/chefs). This transition will be put into effect once the website has gained enough traction. 
+<p>Currently the business is a business to consumer(B2C) structure but it will eventually evolve to include business to business services as well (in collaboration with gyms/personal trainers/fitness influencers/athletes/chefs/performers). This transition will be put into effect once the website has gained enough traction. Fit For Work has been registered as a Google business as part of the development process.</p>
 
- The Fit For Work app is in affiliation with my company, 'Pendulum to Paper Production Limited', which is a limited company registered with the Companies Registration Office in the Republic of Ireland.
-
+<p>The Fit For Work app is in affiliation with, 'Pendulum to Paper Production Limited', which is a limited company registered with the Companies Registration Office in the Republic of Ireland.</p>
 
 <b>SEO:</b>
 -I included meta tags for description and keywords within the base.html code. I ensured to include researched long-tail and short-tail keywords within the base.html meta tags block code.
+
+Please see a screen grab of some documented research below (based on related searches in google):
+
+
 Words used on code
-Use of non rel tags...for links that are not relevant or should not be considered when assessing the SEO of the website.
+
+-Use of rel tags for hyperlinks to external code. I ensured to incorporate rel tags in the hyperlinks to external websites to improve the SEO. This is evidenced on the Founder page which includes several external links.
 
 <b>Inclusion of site.xml file and robots.txt. file.</b>
 
-<p>Robots.txt file will denote what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place withint the google pages on search result.</p>
+<p>Robots.txt file denotes what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place withint the google pages on search result. I have included my robots.txt file in the root directory.</p>
+
+<p>I ran a site.xml file on '' and have included this in the root directory.</p>
 
 <b>Inclusion of privacy policy</b>
-<p>As inferred in the tutorials, this increases the credibility/legitimacy of the website.</p>
+<p>As inferred in the tutorials, this increases the credibility/legitimacy of the website. I created an original privacy policy for Fit For Work on https://www.privacypolicygenerator.info/live.php?token=AlWojlJjEgVKTE4IMDuUkaIsSscIhsz3 and included this in the 'Other' dropdown item in the main navbar.</p>
 
 <h2><em>Marketing strategy:</em></h2>
 <b>Target Audience:</b>
-Very expansive-not a limited target audience. The fact that it ties occupation and fitness together is inclusive as opposed to exclusive. Everybody has a job (there are also plans available for the retired and unemployed even if they don't). Our occupation as the name suggests occupies us for most of our lives and, accordingly will have a pervasive impact on our health and fitness. This is why occupation is the primacy lense through which the plans are designed. This way work can no longer be used as an excuse for avoiding addressing your fitness and health. We ensure that your work is not a barrier to fitness by making the workouts complimentary/designed to align with your occupation.
+<p>Due to the nature of the business-'health and fitness' being all inclusive, it is very expansive and the scope of the reach of the app is not limited to a niche target audience. The fact that it ties occupation and fitness together is inclusive as opposed to exclusive. Everybody has a job (there are also plans available for the retired and unemployed even if they don't). Our occupation as the name suggests occupies us for most of our lives and, accordingly will have a pervasive impact on our health and fitness. This is why occupation is the primary lense through which the plans are designed. This way work can no longer be used as an excuse for avoiding addressing your fitness and health. We ensure that your work is not a barrier to fitness by making the workouts complimentary/designed to align with your occupation.</P>
 
- The plans are especially suitable for people who believe that their job/work schedule is presenting a barrier to their fitness. The workout plans offered are ideal for people who want assistance in achieving their desired level of work life balance. The team at Fit For Work will help consumers to carve out time where they previously believed that there was none.
+<p>The plans are especially suitable for people who believe that their job/work schedule is presenting a barrier to their fitness. The workout plans offered are ideal for people who want assistance in achieving their desired level of work life balance. The team at <em>Fit For Work</em> will help consumers to carve out time where they previously believed that there was none.</p>
 
-Wide range of goals: Weight loss, muscle gain, general fitness, purely aesthetic.
-Job types designed to be all encompassing (not limiting): Sedentary, mobile, work from home, retired, unemployed.
-Range of prices based on the tier that the consumer chooses (ranging from 100e-500e), expands target audience. A different level of time commitment and intensity is expected for each of the tiers, as further described on the app.
+<p>There is a wide range in terms of the goals specified: Weight loss, muscle gain and general fitness.
+Additionally, the job types designed to be all encompassing (not limiting): Sedentary, mobile, work from home, retired, unemployed.
+The range of prices offered is based on the tier that the consumer chooses (ranging from 100e-500e), and the tiers are further explained on the Tiers page of the website. A different level of time commitment and intensity is expected for each of the tiers, as further described on the app.</p>
 
 
 <em>Facebook business profile:</em>
 Link: https://www.facebook.com/photo/?fbid=113155328477784&set=a.113155365144447
-<p>What is the purpose of this/what does it add to the marketing of the website?: Posts moderated by admin of website. Comments and reviews allowed. Facebook is an excellent marketing tool as it has huge presence and reach.
-Af effective visual tool to attract new consumers is to have 'Before' and 'After' comparative posts which include photos. These demonstrate success stories and as the occupation is stipulated, it might offer an avenue to people who thought a workout plan simlpy could not be provided for their type of job. Evidence based promotion.
-Organic, offer talks and explanations at gyms and local sports clubs.</p>
+<p>What is the purpose of this/what does it add to the marketing of the website?: The facebook posts are moderated by the administrator of the Fit For Work app. Comments, reviews, posts are encouraged. Facebook is an excellent marketing tool as it has huge presence and reach.
+An effective visual tool to attract new consumers is to have 'Before' and 'After' comparative posts which include photos. These demonstrate success stories and as the occupation is stipulated, it might offer an avenue to people who thought a workout plan simlpy could not be provided for their type of job. Facebook allows for evidence based promotion.
+</p>
 
 <em>Nutrition newsletter</em>
-<p>I have included a mailchimp embedded sign-up form for consumers to sign up to receive the nutrition newsletter: Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter.
-
-A sample newsletter is provided in the tab so that consumers can peruse it with a view to deciding whether they would like to subscribe.
+<p>I have included a mailchimp embedded sign-up form for consumers to sign up to receive the nutrition newsletter. The Nutrition newsletter sent fortnightly. An effort will be made to keep this relevant and engaging to retain the interest of the consumer and to also nudge people in the direction of signing up for a nutrition plan offering that will be offered soon. Company updates and links to socials will also be included on this newsletter. The tiered strcuture of the plans encourages customers to start with a tier 1 plan then to progress to tier 2 and tier 3. The Nutrition Newsletter will be a useful way of retaining interest and ensuring momentum is maintained throughout their journey.
 </p>
 
 <h1>Other paid avenues to pursue in managing the FFW App.</h1>
 
-<p>External from course but as I hope to continue to develop this, I will ensure to enlist the following google services to monitor, track and manage the website and related apps and profiles:
+<p>Other options that I will pursue that I became aware of from tutorials but that are external from the course (due to requiring payment), are the following:
 <ol>
 <li>Google business</li>
 <li>Google Analytics</li>
@@ -58,6 +62,8 @@ A sample newsletter is provided in the tab so that consumers can peruse it with 
 <li>HotJar</li>
 <li>Facebook Pexel</li>
 </ol>
+
+I will ensure to enlist the following google services to monitor, track and manage the website and related apps and profiles:
 
 <b>Google business</b>
 <p>Upon reviewing the tutorials, I registered business with google.
@@ -87,7 +93,7 @@ Many privacy and security standards don't apply to developers.
 Website:
 https://gdpr.eu/
 
-Additionally, I generated a privacy policy for 'Fit For Work' at the following website:
+Additionally, as aforementioned, I generated a privacy policy for 'Fit For Work' at the following website:
 
 https://www.privacypolicygenerator.info/
 
@@ -96,7 +102,6 @@ Concise, transparent, easily accessible.
 
 
 GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail the experiences of consumers are consent based. I will ensure all consent boxes are not ticked automatically as this would be a breach of GDPR.
-
 
 
 <b>User Experience (UX)</b>
@@ -112,7 +117,7 @@ The things that I considered when assessing user requirements in terms of busine
 <li>Ecommerce-ability to pay for something</li>
 <li>Support throughout fitness journey</li>
 <li>Evidence provided for success of following such plans in the past</li>
-<li>Can view testimonials by individuals in similar circumstances...same job type</li>
+<li>Can view testimonials by individuals in similar occupations as consumer</li>
 <li>Ability to review experience</li>
 <li>Trial period</li>
 <li>Probably something on nutrition</li>
@@ -120,6 +125,10 @@ The things that I considered when assessing user requirements in terms of busine
 
 <b>User stories</b>
 Kanban Board-link:
+
+ As stipulated in the PP5 checklist, I changed the settings from private to public mode:
+
+![alt text](media/kanban_public.png)
 
 
 <b>First Time Visitor Goals</b>
@@ -147,18 +156,18 @@ As a Frequent User, I want to be able to quickly access the affiliated facebook 
 <b>Prioritisation</b?>
 I incorporated MOSCOW prioritisation incorporated in terms of the user stories.
 Labels were used effectively in the kanban board structure:
+
 Must Have (Colour: Green):
-Screengrab:
+Screengrab: ![alt text](media/user_must_have.png)
 
-Should Have (Colour: XX):
-Screengrab:
+Should Have (Colour: Yellow):
+Screengrab: ![alt text](media/user_should_have.png)
 
-Could Have (Colour: XX):
-Screengrab:
+Could Have (Colour: Brown):
+Screengrab: ![alt text](media/user_could_have.png)
 
 Won't have (Colour: Red):
-Screengrab:
-
+Screengrab: ![alt text](media/user_wont_have.png)
 
 Ensured that no more than 60% of user stories were labelled as 'must haves' as per advice from the tutorials.
 
@@ -178,6 +187,8 @@ Noted the milestone feature available on github, to focus on completing various 
 
 I had fully intended to create milestones for particular iterations of the user stories but unfortunately, I was too anxious to do so and did not put this into action.
 
+ However, now that I am becoming adept at full-stack-framework projects, I will endeavour to apply this going forward. It is an excellent time management tool and allows for the pomodoro approach to be applied.
+
 <em>Sprints</em>
 Allocated amounts of time to set smaller goals-this certainly would have alleviated my anxiety and I will ensure to put this into effect for future projects.
 
@@ -185,59 +196,85 @@ Allocated amounts of time to set smaller goals-this certainly would have allevia
 <b>Colour Scheme</b>
 The main colours used for Fit4Work: teal, fuschia, black and white.
 
- I used fuschia and the hover effect to make certain items pop.
+ I used fuschia and the hover effect to make certain items pop (e.g. the loading spinner after submitting payment or the search/view bag buttons)
 
 Employed AdobeColour to refine the teal colours to be used on the website:
 https://color.adobe.com/search?q=teal#
 
-Used colorpalette to decide on the colors.
-Wanted something stark and contrasting but not grating (teal on white)
-Wanted something relatively formal to fit in with the occupation based theme (black and white)
+I used colorpalette to decide on the colors.
+Please see a color palette of teal used below:
+![alt text](media/Teal%20colour%20selection%20AdobeColor.jpeg)
+
+
+<p>I wanted something stark and contrasting but not grating (teal on white).
+I also wanted something relatively formal to relect the occupation based theme (black and white).
 The UI still felt flat after incorporating the above colours so I applied the stark and revitalising fuschia colour
-to make certain items pop and so that the UI would not appear too mundane.
+to make certain items pop and so that the UI would not appear too mundane.</p>
 
-
-Work/occupation...background image chosen inkeeping with the occupation absed theme. A man in a suit with a briefcase, climbing the stairs. Professional yet active.
+The background image chosen inkeeping with the occupation based theme and the teal colors. A man in a suit with a briefcase, climbing the stairs. Professional yet active.
 
 <b>Logo</b>
-Having reviewed other students repositaries via the peer-code-reveiw section of Slack, I noted that 
-others were investing in logos on the website Looka and as I felt there was an option for a once off subscription without purchase and I felt that the logo, which could be used on the landing page as well as in the favicon added hugely to the UI, I purchased a logo for Fit For Work that was inkeeping with the teal and balck theme of the website.
+<p>Having reviewed other students repositaries via the peer-code-reveiw section of Slack, I noted that 
+others were investing in logos on the website Looka and as I felt there was an option for a once off subscription without purchase and I felt that the logo, which could be used on the landing page as well as in the favicon added hugely to the UI, I purchased a logo for Fit For Work that was inkeeping with the teal and balck theme of the website.</p>
 
-  I chose teal and stipulated that the website was fitness related and I have included the logo as an image beside the name in the header of the landing page and also as the favicon.
+<p>I chose teal and stipulated that the website was fitness related and I have included the logo as an image beside the name in the header of the landing page and also as the favicon.</p>
 
 ![alt text](.//media/FFW%20logo.png)
 
 <b>Typography</b>
-The San-Serif font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Why I chose this font for Fit4Work: XX is vivid, sharp and I felt that it was in-keeping with the theme of professionalism and occupation.
+<p>The Sofia Sans Condensed font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly.I chose this font for Fit For Work as upon conducting Google Font Research, I felt that is was the most suited as it is vivid, sharp and I felt that it was in-keeping with the theme of professionalism and occupation.</p> 
+
+<p>I looked through a number of options of google font before deciding on this:</p>
+
+ Google font: ![alt text](media/google_fonts.png)
 
 <b>Imagery</b>
-Imagery is important. The XX image is designed to be striking and catch the user's attention and is in-keeping with the theme of fitness and nutrition influenced/adjusted to suit the occupation of the user. It also has a modern, energetic aesthetic.
+<p>I put great efforts into rearching and pruning relevant images for the website. A picture paints a thousand words after all.
 
-Please see below images chosen for job type and reason why:
+ I used a number of different free photo resources when pruning the suitable images. These resources has been shared ont he LMS. These included Unsplash and Pixabay websites.
 
-Please see below images chose for techniques and reason why:
+  I ensured to install pillow with the following command also:
+  pip3 install pillow
+ And added it to the requirements.txt file of the project
+ pip3 feeze > requirements.txt
 
+ As demonstrated on the tutorials also, I hosted the images in a media folder file on Amazon WebServices also. I used a link to AWS to present the logo as a favicon on the app.
 
-Please see below image chosen for nutrition newsletter:
-  I felt that the sandwich with the measurement device on it perfectly encaptured what the nutrition newsletter was trying 
-  to put into effect. Eat wholesome, tasty foods but be calculating and precise in your tracking.
+ AWS 1: ![alt text](media/AWS_1.png)
+ AWS 2: ![alt text](media/AWS_2.png)
+
+<h4>Summary of steps required to setting up AWS:</h4>
+
 
 
 <b>Socials</b>
 <b>Facebook business profile</b>
  
-Before/After photos...design/divided out by occupation
-Motto-'If I can do it, so can you.' 'I'm a XX and look at me!'
+<p>As aforementioned, I set up a facebook business profile for the FFW app. I included the background image of the landing photo as the cover photo and included the original logo as the profile picture. I followed the steps as detailed on the tutorials. I included a link to the deployed app and also manufactured a post for a 'before/after' result for someone who followed one of the plans:
 
+Review post on facebook business profile: ![alt text](media/)
+
+
+<p>An instagram account will be added afterwards once the business has build a bit as lack of followers would make for poor advertising at the moment.</p>
+
+<p>I will also consider a tik tok profile as it is extremely popular with the younger demographic.</p>
+
+<b>Mailchimp:</b>
+<p>I followed the steps outlined on the tutorial to set up a mailchimp account. The setup was successful and I managed to subscribe to the nutrition newsletter and received a confirmation email to the email address that I provided on subscription:</p>
+
+Request to confirm subscription email: ![alt text](media/mailchimp_confirm_sub.png)
+
+Confirmation of subscription email: ![alt text](media/mailchimp_confirmation.png)
 
 <i> Wireframes and Lucidcharts:</i>
-Lucidcharts was used to create the wireframes during the design process.
 
-I found Lucicharts preferable to balsamiq due to the tabular format so I could compartmentalise elements of the design process myself and apply the pomodoro technique to each segment (focussing for specific time periods on each segment) even in the planning phase. Also, I am a very visual person so the element of shapes, tabs and clear 1-2-3 continuing visual structure assisted me in formulating the design.
+<p><em>Lucidcharts</em> was used to create the wireframes during the design process.</p>
 
- To cement my understanding of the process and tutorials, I wrote up wireframes and summaries of tutorials as i made my way thorugh, with a view to aiding my comprehension of the course and being able to establish what should be included in the project and what should not be included:
+<p>I found Lucicharts preferable to balsamiq due to the tabular format so I could compartmentalise elements of the design process myself and apply the pomodoro technique to each segment (focussing for specific time periods on each segment) even in the planning phase. Also, I am a very visual person so the element of shapes, tabs and clear 1-2-3 continuing visual structure assisted me in formulating the design.</p>
 
-Screengrab of numerous planning tabs on Lucidcharts:
+ <p>To cement my understanding of the process and tutorials, I wrote up wireframes and summaries of tutorials as i made my way thorugh, with a view to aiding my comprehension of the course and being able to establish what should be included in the project and what should not be included:</p>
+
+<h3>Screengrab of numerous planning tabs on Lucidcharts:</h3>
 1: ![alt text](./media/LC_1.png)
 2: ![alt text](./media/LC_2.png)
 3: ![alt text](./media/LC_3.png)
@@ -247,82 +284,81 @@ Screengrab of numerous planning tabs on Lucidcharts:
 7: ![alt text](./media/LC_7.png)
 8: ![alt text](./media/LC_8.png)
 
-Numerous tabs used, to write along with the tutorials and break down code as this helps me to solidify/undertsand what is going on and impacts my overall planning.
+<p>Numerous tabs used, to write along with the tutorials and break down code as this helps me to solidify/undertsand what is going on and impacts my overall planning.</p>
 
-As I continued to grow an understanding of django and full stack frameworks, I added tabs to help me to understand.
+<p>As I continued to grow an understanding of django and full stack frameworks, I added tabs to help me to understand.</p>
 
-Visual aspect helped me to solidify my understanding:
+<p>Visual aspect helped me to solidify my understanding. </p>
 
-Enity Relationship Diagram:
-1: ![alt text]()
+<b>Rough sketch to gain understanding of ERD:</b>
+![alt text](media/ERD_understand_1.png)
+![alt text](media/ERD_understand_2.png)
+![alt text](media/ERD_Understand_3.png)
 
+<B> Fit For Work Enity Relationship Diagram (progression):
+1: BASIC ERD SKELETON ![alt text](media/ERD_Basic.png)
+2. MORE ADVANCED ERD ![alt text](media/ERD_detail.png)
 
-I created an ERD for the models, specifiying the field and how the mdoels related to one another.
-One to one relationship versus many to one or one to many.
-
-To cement my understanding of what ERD is and what the fields in a model mean, I replicated ERD's from tutorials in my own Lucidcharts:
-
-
-One-to-one 
-Many-to-any
-
-Deciding on fields to include in the models.
-(CharField/TextField/IntegerFieldetc)
-
-Landing Page Wireframe - View:
+<p>I created an ERD for the models, specifiying the field and how the models related to one another.
+I wanted to ensure that I had three custom models, with models that were suitably different from the Boutique Ado walkthrough, without being overly complicated as well.
+I also considered whether they had a one-to-one relationship versus many to one or one to many(Plan model has many foreign keys).</p>
 
 
-Mobile Wireframe - View: ...resposniveness
+Landing Page Wireframe - View: ![alt text](media/landing_page.jpg)
+
+Plans Page Wireframe - View: ![alt text](media/plans_wf.png)
+
+Plan Detail Page Wireframe - View: ![alt text](media/plandetail_wf.png)
+
+Bag Wireframe - View: ![alt text](media/bag_wf.png)
+
+Checkout Page Wireframe - View: ![alt text](media/checkout_wf.png)
+
+Checkout Success Wireframe - View: ![alt text](media/checkout_success_wf.png)
+
+Other wireframes include the add and edit plans wireframes and the various html tabs from the ffw app such as the privacy policy page, the page explaining tiers, the page explaining technqiues or the page discussing the founder.
 
 
-Techniques Page Wireframe - View
+<em>Dropdowns and searches</em>
 
-Founded wireframe
-
-Tiers based wireframe
-
-Different views...
-
-On sale currently -exercise plans based on occupation. Consumer chooses based on tier and technique.
-
-How are meal plans laid out
-Will there be a photo element
-Free descriptions of meal plans
-Vs
-Detailed, tailored meal plans with details on protein content, fibre content, calories and estimate macros
-
-Landing page/Home page view...
-What will be here?
-The whole concept is how work shapes our lives and how we must adapt to the shape
-
-<em>Dropdowns</em>
-<h2>A note on the use of dropdowns</h2>
-<p>offering is plans based on occupation type (Sedentary etc.) Consumer chooses these as well as other preferences
-goal (weight loss, muscle gain, general fitness), level (three different tiers, tier 1,2,3) and technique (eight different approaches available)</p>
+<p>Dropdowns and searches were a useful way of presenting the relevant filters for consumers.
+It aided to the navigation of the website, with the customer able to search for particular words or filter by price, technique or goal.</p>
 
 <b>Database</b>
 
-SQLite...
+Elephant SQL
 
-Updating code-tutorials
+SQLite included with Django
 
 Removing migrations and remigration
 
 Including in config vars on Heroku
 
-<b>Database models</b>
-
 <h1><b>Features</b>
 
 Existing features:
 
+Filter 
+Search
+Input card details
+Purchase plan
+Customer profile
+
+
 Future features:
 
-Responsive on all device sizes
+-Reviews-customers can levae reviews directly on the website.
+
+<h1>Responsive on all device sizes</h1>
 
 -I ensured that the website was responsive across multiple devices, using Google Chrome developer tools, media queries (breakpoints),.
 I employed a mobile first design approach.
 
+Please see below screengrabs of website on various devices:
+
+
+
+<h1>Methods to ensure site is responsive.</h1>
  Bootstrap used as per walkthrough
  Container-fluid
  Z-index
@@ -333,10 +369,10 @@ I employed a mobile first design approach.
 <b>Interactive elements</b>
 
 Hover over buttons- as influenced by walkthrough
-Absolute header and footer-is this applied?
+Absolute header and footer.
 Forms, buttons changing colour and required fields
-Loading bars- automatic once for checkout...what else
-Animations-bottom fo founder page
+Loading bars- spinner once payment is going through.
+Animations-tiers animation on tiers tab.
 
 <b>Technologies Used</b>
 
@@ -387,38 +423,46 @@ Python testing, Unittest library in python:
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 
-<i>W3C Markup Validator - Results</i>
+i>W3C HTML Validator - Results</i>
 
-Link:
+Link: https://validator.w3.org/
 Screenshot of results:
+
 
 <i>W3C CSS Validator - Results</i>
 
-Link:
+Link: https://jigsaw.w3.org/css-validator/
 Screenshot of results:
 
 <i>Javascript Validator - Results</i>
 
-Link:
+Link: https://jshint.com/
 Screenshot of results:
 
 <i>Python Validator - Results</i>
+
+Link: https://pep8ci.herokuapp.com/
+Screenshot of results:
 
 Inbuilt with django
 
 <i> Flake8 and PEP8</i>
 
-<p>Useful to ensure PEP8 and Flake8 complaint. Command-to output all issues into the terminal:</p>
+<p>Useful to ensure PEP8 and Flake8 compliat. Command-to output all issues into the terminal:</p>
 
 python3 -m flake8
 
 <p>Screenshot:</p>
 
 
-<p>Gives a list of all of the issues in the code so we can go through these one by one
+<p>It gives a list of all of the issues in the code so we can go through these one by one
 control and click on line, takes you to line - code style and linting issues. Tells you
 whee you have imported something and not used it.</p>
 
+
+Lighthouse on Google Developer Tools
+Link: https://developer.chrome.com/docs/lighthouse/overview/
+Screengrab:
 
 <Debugger>
 
@@ -427,6 +471,11 @@ These were incredibly useful tools that allowed the user to visualise execution-
 Aids in identifying and isolating issues with the logic.
 
 <b>Testing User Stories from User Experience (UX) Section</b>
+
+In an effort to comply with agile methodology, I set up a kanban board and connected it with the project on Github. I labelled the user stories added according to MOSCOW prioritisation. I included acceptance criteria and tasks.
+
+![alt text](./media/user_stories_ffw.png)
+
 <i>First Time Visitor Goals</i>
 As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
 
@@ -550,7 +599,6 @@ Friends and family members were asked to review the site and documentation to po
                 <caption><b>Browser compatibility:</b></caption>
                 <tr>
                     <th>Chrome</th>
-                    <th>Firefox</th>
                     <th>Safari</th>
                     <th>Internet Explorer</th>
                 </tr>
@@ -561,13 +609,11 @@ Friends and family members were asked to review the site and documentation to po
                     <td>Yes</td>
                     <td>Yes</td>
                     <td>Yes</td>
-                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td>Intended functionality:</td>
                 </tr>
                 <tr>
-                    <td>Yes</td>
                     <td>Yes</td>
                     <td>Yes</td>
                     <td>Yes</td>
@@ -582,20 +628,27 @@ I accessed the 'LIGHTHOUSE' testing tool via Developer Tools. Please see a scree
 ![alt text](.//)
 
 <b>Known Bugs</b>
-On some mobile devices the Work pushes the size of screen out more than any of the other content on the page.
-A white gap can be seen to the right of the footer and navigation bar as a result.
-On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
+-1.On some mobile devices the Work pushes the size of screen out more than any of the other content on the page.
+-2. Had issues in development due to database caching where app would not work on Google Chrome but would work on Safari.
+-3. Had ongoing issues with webhooks and stripe. The checkout would not submit and loading spinner would run indefinitely.
+-4. View plans call to action button on landing page was covered by main nav header.
+-5. Issues with regard to the layout of the mailchimp subscription button and facebook link button.
+-6. Techniques dropdown would not filter properly, did not filter the correct techniques.
+-7. Updated models and migrations only applied to local environment, did not transfer to the deployed app.
+-8. Images and plans appeared on local environment but not deployed code.
+
 
 <b>How bugs were resolved</b>
 
--Issue with AWS...getting active keys...consulted with people on slack. There was an additional step to set up the active keys:
+-1. Issue with AWS...getting active keys...consulted with people on slack. There was an additional step to set up the active keys:
 Screenshot:
-
--Webhooks issue with Stripe...worked on safari...
-
--Database caching issue
-
--
+-2. Cleared sessions via google developer tools and reloaded. Did not automatically resolve on Google Chrome. Waited overnight.
+-3. Added different endpoints (local versus deployed app) on Stripe webhooks. Noted the error messages and what was causing them (payment_intent function created etc.) Targetted those areas in code and used diffchecker to cross reference against the source code for the Boutique Ado walkthrough. Ensured indentation and logic of code was correct. Removed and readded STRIPE Public and Secret keys to code and settings. Ensured they were present as config vars on the heroku app.
+-4. Put styling directly into html file, adding padding until it was visible.
+-5. Added the related html file to includes file and inserted this directly into relevant page.
+-6. Reviewed all techniques related code. Sorting and filtering code. Ensured name was aligned with filter specifications.
+-7. Consulted with fellow students on slack and added release code for migrations (makemigrations and migrate commands) to the Procfile.
+-8. Consulted with fellow students
 
 <b>Deployment</b>
 
@@ -612,8 +665,18 @@ Under "Source", click the dropdown called "None" and select "Main Branch".
 
 Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
--Elephant SQL-to create database
+<b>Elephant SQL-to create database</b>
+-Logged into my Elephant SQL account, which I had previously created in other apps.
+-Set up a '' specifically for FFW app.
+-Followed the usual steps:
+
+Copied relevant database code for insertion into Heroku Config vars.
+
 -Heroku-to create app and set up automatic deployment
+-Logged into my heroku account, confirmed using downloaded authenticator app.
+-Created an app for fit for work.
+-set up automatic deployments.
+-Monitored build logs.
 
 
 <b>Checklist for PP5</b>
