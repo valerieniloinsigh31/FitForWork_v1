@@ -593,13 +593,13 @@ Friends and family members were asked to review the site and documentation to po
 
  <p>Screengrabs of different tests:</p>
 
- Iphone 12 pro: ![alt text](./media/)
+ Iphone 12 pro: ![alt text](./media/ffw_iphone12.png)
 
- MacBook Pro: ![alt text](./media/)
+ MacBook Pro: ![alt text](./media/ffw_macbookpro.png)
 
- Ipad Air: ![alt text](./media/)
+ Ipad Air: ![alt text](./media/ffw_ipadair.png)
 
- Nest Hub:  ![alt text](./media/)
+ Nest Hub:  ![alt text](./media/ffw_nesthub.png)
 
  2. To different browsers
 
@@ -632,10 +632,13 @@ Friends and family members were asked to review the site and documentation to po
                 </tr>
             </table>   
 
+<p> Throughout the development process, there have been noted issues with google chrome, where updates took horus to load. 
+Safari has not caused any issues.</p>
+
     Screengrabs of different browsers:
-        Google:
-        Safaro:
-        Internet Explorer:
+        Google: ![alt text](./media/ffw_google.png)
+        Safari: ![alt text](./media/ffw_safari.png)
+
 
  
 <b>Known Bugs</b>
@@ -660,7 +663,7 @@ Screenshot:
 -5. Added the related html file to includes file and inserted this directly into relevant page.
 -6. Reviewed all techniques related code. Sorting and filtering code. Ensured name was aligned with filter specifications.
 -7. Consulted with fellow students on slack and added release code for migrations (makemigrations and migrate commands) to the Procfile.
--8. Consulted with fellow students
+-8. Consulted with fellow students. Had media files from gitpod in subfolder within the media folder on S3 bucket. Moved all images into the main media folder on AWS.
 -9. Consulted with fellow students, added DATABASE_URL to env.py file
 
 <b>Deployment</b>
@@ -684,19 +687,17 @@ I copied the necessary database url from Elephant SQL
 -I set Heroku up for automatic deployment so it would be linked to the repositary and everything would also be transferred to Heroku once aditional codes were added or if database models were created/deleted and migrations were made. I ensured to check the build logs on heroku each time I migrated code or committed code to ensure everything wa supdated correctly.
 
 
-Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
-
-
 <b>Checklist for PP5</b>
-<p>Please see below how the criteria checklist included on the LMS for PP5 has been considered.
+<p>Please see below how the criteria checklist included on the LMS for PP5 has been considered.</p>
 
 -External html links tagged as non-rel for SEO purposes: Numerous links to external resources found on the founder page.
 -CRUD: Admin or general user. CRUD functionality fully enabled for admin user logged in.
+Can edit, delete or add plans to the website, enabling full crud functionality.
 
 <b>Login details for admin: </b>
-login name: Valerie
-login password: Lauragym1!
-Can edit, delete or add plans to the website, enabling full crud functionality.
+<p>login name: Valerie</p>
+<p>login password: Lauragym1!</p>
+
 
 -With regard to ensuring Authentication was operable-the Django allauths were used. Log in/log out and registration functionalities fully enabled.
 
@@ -708,15 +709,17 @@ Use of CSS design
 Tested on google developer tools across a range of devices. Please see pictures below
 
 -Inclusion of site maps and robots.txt file
--Mailchimp subscription
--3 custom models
--Stripe functionality
+-Mailchimp subscription included
+-3 custom models included
+-Stripe functionality working
+-AWS has caused issues, ensured the images were included in the correct folder in the s3 bucket today
+-Set DEBUG to True
 
 <b>Credits</b>
 
 <h1>Code:</h1>
 
-<p>For the coding, I consulted with Slack a lot fo rthis project. I researched other projects on the 'Peer code review' page, researched the repositaries of other students (particularly Roman Rakic and his project 'Blade') to see what approaches were taken.</p>
+<p>For the coding, I consulted with Slack a lot for this project. I researched other projects on the 'Peer code review' page, researched the repositaries of other students (particularly Roman Rakic and his project 'Blade') to see what approaches were taken.</p>
 
 <p>Tutor support - ensured to use my allocated ninety minutes a week to talk out various code related issues with the tutors on the LMS tutor support platform. Always pointed me in the right direction.</p>
 
