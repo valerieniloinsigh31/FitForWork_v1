@@ -52,21 +52,21 @@ class StripeWH_Handler:
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
-# Get the Charge object
+
         stripe_charge = stripe.Charge.retrieve(
         intent.latest_charge
 )
 
-        billing_details = stripe_charge.billing_details # updated
+        billing_details = stripe_charge.billing_details 
         shipping_details = intent.shipping
-        total = round(stripe_charge.amount / 100, 2) # updated
+        total = round(stripe_charge.amount / 100, 2) 
 
-        #Clean data in the shipping details
+        
         for field, value in shipping_details.address.items(): 
             if value == "":
                 shipping_details.address[field] = None
 
-        # Update profile information if save_info was checked
+       
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
@@ -126,7 +126,7 @@ class StripeWH_Handler:
                     original_bag=bag,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(bag).items(): #to be checked as a lot of size related code removed
+                for item_id, item_data in json.loads(bag).items(): 
                     plan = Plan.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
                               order=order,
@@ -152,6 +152,3 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Payment Failed Webhook received: {event["type"]}',
             status=200)
-
-
-   

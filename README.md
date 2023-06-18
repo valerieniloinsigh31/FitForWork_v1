@@ -3,6 +3,7 @@
 View the live project here.: https://fitforwork.herokuapp.com/
 
 <h2><em>Introduction</em><h2>
+
 <p>Fit For Work is an ecommerce website that offers consumers workout plans that are tailored to suit their occupation.
 It employs eight different Japanese techniques that are detailed on the website. These approaches are implemented in the design of 
 the tailored workout plans. Consumers can choose their plan based on occupation type, the technique that they wish to implement in the approach, their goal for the workout plan (weight loss/muscle gain/general fitness) and the tier that they want to select (there are three different tiers that differ in what will be provided with the plan and the length of time support will be available for. Detail on the tiers and pricing can be accessed via dropdown in the landing page). Consumers can purchase these plans online using their credit card. They can also sign up to the facebook business profile which is linked throughout the site. They can also opt into subscribing for the nutrition newsletter which is a free subscription service, wherein a newsletter with nutrition tips and details on supplements is sent to their personal email each month.</p>
@@ -13,29 +14,29 @@ the tailored workout plans. Consumers can choose their plan based on occupation 
 <p>The Fit For Work app is in affiliation with, 'Pendulum to Paper Production Limited', which is a limited company registered with the Companies Registration Office in the Republic of Ireland.</p>
 
 <b>SEO:</b>
+<p>Various tactics employed to improve SEO</p>
 -I included meta tags for description and keywords within the base.html code. I ensured to include researched long-tail and short-tail keywords within the base.html meta tags block code. I was careful to avoid stuffing the meta tags, which would displease Google SEO raters.
 
 Please see a screen grab of some documented research below (based on related searches in google):
 
-KW Research 1: ![alt text](./media/kw_1.jpg)
-KW Research 2: ![alt text](.//media/kw_2.jpg)
+Key Word Research 1: ![alt text](./media/kw_1.jpg)
+Key Word Research 2: ![alt text](.//media/kw_2.jpg)
 
 
-
--Use of rel tags for hyperlinks to external code. I ensured to incorporate rel tags in the hyperlinks to external websites to improve the SEO. This is evidenced on the Founder page which includes several external links.
+-I used rel tags for hyperlinks to external code. I ensured to incorporate rel tags in the hyperlinks to external websites to improve the SEO. This is evidenced on the Founder page which includes several external links.
 
 <b>Inclusion of site.xml file and robots.txt. file.</b>
 
-<p>Robots.txt file denotes what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place withint the google pages on search result. I have included my robots.txt file in the root directory.</p>
+<p>The robots.txt file denotes what sections of the website should be ignored when the google spiders crawl the website to decide on where it should place within the google pages on search result. I have included my robots.txt file in the root directory, as specified in tutorials. It is a basic file currently as I don't think that any of the pages need to be ignored.</p>
 
-<p>I ran a site.xml file on '' and have included this in the root directory.</p>
+<p>I ran a site.xml file on 'https://www.xml-sitemaps.com/' and have included this in the root directory, as specified in tutorials.</p>
 
 <b>Inclusion of privacy policy</b>
 <p>As inferred in the tutorials, this increases the credibility/legitimacy of the website. I created an original privacy policy for Fit For Work on https://www.privacypolicygenerator.info/live.php?token=AlWojlJjEgVKTE4IMDuUkaIsSscIhsz3 and included this in the 'Other' dropdown item in the main navbar.</p>
 
 <h2><em>Marketing strategy:</em></h2>
 <b>Target Audience:</b>
-<p>Due to the nature of the business-'health and fitness' being all inclusive, it is very expansive and the scope of the reach of the app is not limited to a niche target audience. The fact that it ties occupation and fitness together is inclusive as opposed to exclusive. Everybody has a job (there are also plans available for the retired and unemployed even if they don't). Our occupation as the name suggests occupies us for most of our lives and, accordingly will have a pervasive impact on our health and fitness. This is why occupation is the primary lense through which the plans are designed. This way work can no longer be used as an excuse for avoiding addressing your fitness and health. We ensure that your work is not a barrier to fitness by making the workouts complimentary/designed to align with your occupation.</P>
+<p>Due to the nature of the business-'health and fitness' being all inclusive, it is very expansive and the scope of the reach of the app is not limited to a niche target audience. The fact that it ties occupation and fitness together is inclusive as opposed to exclusive. Everybody has a job (there are also plans available for the retired and unemployed even if they don't). Our occupation as the name suggests occupies us for most of our lives and, accordingly will have a pervasive impact on our health and fitness. This is why occupation is the primary lense through which the plans are designed. This way work can no longer be used as an excuse for avoiding addressing your fitness and health. We ensure that your work is not a barrier to fitness by making the workouts complimentary/designed to align with your occupation.</p>
 
 <p>The plans are especially suitable for people who believe that their job/work schedule is presenting a barrier to their fitness. The workout plans offered are ideal for people who want assistance in achieving their desired level of work life balance. The team at <em>Fit For Work</em> will help consumers to carve out time where they previously believed that there was none.</p>
 
@@ -46,8 +47,9 @@ The range of prices offered is based on the tier that the consumer chooses (rang
 
 <em>Facebook business profile:</em>
 Link: https://www.facebook.com/photo/?fbid=113155328477784&set=a.113155365144447
-<p>What is the purpose of this/what does it add to the marketing of the website?: The facebook posts are moderated by the administrator of the Fit For Work app. Comments, reviews, posts are encouraged. Facebook is an excellent marketing tool as it has huge presence and reach.
-An effective visual tool to attract new consumers is to have 'Before' and 'After' comparative posts which include photos. These demonstrate success stories and as the occupation is stipulated, it might offer an avenue to people who thought a workout plan simlpy could not be provided for their type of job. Facebook allows for evidence based promotion.
+<p>What is the purpose of this/what does it add to the marketing of the website?:</p> 
+<p>The facebook posts are moderated by the administrator of the Fit For Work app. Comments, reviews, posts are encouraged. Facebook is an excellent marketing tool as it has huge presence and reach.
+It's an effective visual tool to attract new consumers is to have 'Before' and 'After' comparative posts which include photos. These demonstrate success stories and as the occupation is stipulated, it might offer an avenue to people who thought a workout plan simlpy could not be provided for their type of job. Facebook allows for evidence based promotion.
 </p>
 
 <em>Nutrition newsletter</em>
@@ -56,7 +58,7 @@ An effective visual tool to attract new consumers is to have 'Before' and 'After
 
 <h1>Other paid avenues to pursue in managing the FFW App.</h1>
 
-<p>Other options that I will pursue that I became aware of from tutorials but that are external from the course (due to requiring payment), are the following:
+<p>Other options that I will pursue at a future point - that I became aware of from tutorials but that are external from the course (due to requiring payment), are the following:
 <ol>
 <li>Google business</li>
 <li>Google Analytics</li>
@@ -85,30 +87,27 @@ GDPR related issues.</p>
 ![alt text](.//media/ffw_google_business.png)
 </section>
 
-Other avenues that I will be investing in in the future are google ads and google analytics. I did not invest in these for the purposes of the project to avoid getting involved in any GDPR related issues.
+<p>Other avenues that I will be investing in in the future are google ads and google analytics. I did not invest in these for the purposes of the project to avoid getting involved in any GDPR related issues.</p>
 
- I also will monitor and manage the user interaction with the site using hotjar and facebook pexel as promoted on the tutorials.
+<p>I also will monitor and manage the user interaction with the site using hotjar and Meta (Facebook) pixel as promoted on the tutorials.</p>
 
-GDPR consent form required to sign up for google analytics.
+<p>GDPR consent form required to sign up for google analytics.
 Toughest privacy and security policy in the world.
 Many privacy and security standards don't apply to developers.
-Website:
-https://gdpr.eu/
+The GDPR website: https://gdpr.eu/</p>
 
-Additionally, as aforementioned, I generated a privacy policy for 'Fit For Work' at the following website:
+<p>GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail the experiences of consumers are consent based. I will ensure all consent boxes are not ticked automatically as this would be a breach of GDPR.</p>
+
+<p>Additionally, as aforementioned, I generated a privacy policy for 'Fit For Work' at the following website:
 
 https://www.privacypolicygenerator.info/
 
-Text webpage was provided for the Fit For Work app, informing users about how their data is being collected and processed.
-Concise, transparent, easily accessible.
-
-
-GDPR: I will pay close heed to GDPR, ensure that all facebok posts that detail the experiences of consumers are consent based. I will ensure all consent boxes are not ticked automatically as this would be a breach of GDPR.
-
+<p>Text webpage was provided for the Fit For Work app, informing users about how their data is being collected and processed.
+Concise, transparent, easily accessible.</p>
 
 <b>User Experience (UX)</b>
  
- I created a kanban board on github, outlining important user story. I labelled them according to MOSCOW prioritisation and ensured that less than 60% of the stories were must haves.
+<p>I created a kanban board on github, outlining important user stories. I labelled them according to MOSCOW prioritisation and ensured that less than 60% of the stories were must haves.</p>
 
 <b>User requirements</b>
 The things that I considered when assessing user requirements in terms of business plan:
@@ -128,37 +127,51 @@ The things that I considered when assessing user requirements in terms of busine
 <b>User stories</b>
 Kanban Board-link:
 
- As stipulated in the PP5 checklist, I changed the settings from private to public mode:
-
+ As stipulated in the PP5 checklist, I changed the settings from private to public mode: 
 ![alt text](media/kanban_public.png)
 
 
 <b>First Time Visitor Goals</b>
-As a First Time Visitor, I want to easily understand that the main purpose of the site is to provide workout plans tailored to the work schedule of the consumer.
-As a First Time Visitor, I want to learn more about the company behind the website and the training/qualifications and experience of the people designing the plans.
-As a First Time Visitor, I want to know more about the type of plans that are being offered an and the technique that they are based on.
-As a First Time Visitor, I want to know what prices the plans will be.
-As a First Time Visitor, I want to be able to easily navigate throughout the site to find content, which I can do by scrolling and utilising the clearly labelled NAVbar and footer.
-As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.(Facebook business profile)
+<p>
+<ul>
+<li>As a First Time Visitor, I want to easily understand that the main purpose of the site is to provide workout plans tailored to the work schedule of the consumer.</li>
+<li>As a First Time Visitor, I want to learn more about the company behind the website and the training/qualifications and experience of the people designing the plans.</li>
+<li>As a First Time Visitor, I want to know more about the type of plans that are being offered and the techniques that they are based on.</li>
+<li>As a First Time Visitor, I want to know what prices the plans will be.</li>
+<li>As a First Time Visitor, I want to be able to easily navigate throughout the site to find content, which I can do by scrolling and utilising the clearly labelled NAVbar and footer.</li>
+<li>As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.(Facebook business profile)</li>
+</ul>
+</p>
 
 <b>Returning Visitor Goals</b>
-As a Returning Visitor, I want to find information about different tiers and approaches for plans and prices.
-As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-As a Returning Visitor, I want to find  the facebook business profile.
-As a Returning Visitor, I want to see what is involved with the other tiers and approaches.
-As a Returning Visitor, I want to be able to buy the same plan or a different plan again and for my payment information to have been saved.
-As a Returning Visitor, i want to be able to view my customer profile history.
+<p>
+<ul>
+<li>As a Returning Visitor, I want to find information about different tiers and approaches for plans and prices.</li>
+<li>As a Returning Visitor, I want my login information to have been saved and to autopopulate so I don't have to type it in.</li>
+<li>As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.</li>
+<li>As a Returning Visitor, I want to find  the facebook business profile.</li>
+<li>As a Returning Visitor, I want to see what is involved with the other tiers and approaches.</li>
+<li>As a Returning Visitor, I want to be able to buy the same plan or a different plan again and for my payment information to have been saved.</li>
+<li>As a Returning Visitor, I want to be able to view my customer profile history.</li>
+</ul>
+</p>
 
 <b>Frequent User Goals</b>
-As a Frequent User, I want to check to see if there are any newly added plans or add-ons to the nutrition newsletters.
-As a Frequent User, I want to check to see if there are any new customer testimonials on the facebook business profile.
-As a Frequent User, I want to sign up to the Nutrition Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-As a Frequent User, I want to be able to quickly access the affiliated facebook business profile so that I can leave a post about my progress.
+<p>
+<ul>
+<li>As a Frequent User, I want to check to see if there are any newly added plans.</li>
+<li>As a Frequent User, I want to check to see if there are any new customer testimonials on the facebook business profile.</li>
+<li>As a Frequent User, I want to sign up to the Nutrition Newsletter so that I am emailed any major updates and/or changes to the website or organisation.</li>
+<li>As a Frequent User, I want to be able to quickly access the affiliated facebook business profile so that I can leave a post about my progress.</li>
+<li>As a Frequent User, I want to be able to receive an award for purchasing numerous plans.</li>
+<li>As a Frequent User, I want to be able to connect with other consumers or consumers who has a similar occupation or goal as myself.</li>
+</ul>
+</p>
 
 
 <b>Prioritisation</b?>
-I incorporated MOSCOW prioritisation incorporated in terms of the user stories.
-Labels were used effectively in the kanban board structure:
+<p>As aforementioned, I incorporated MOSCOW prioritisation incorporated in terms of the user stories.
+Labels were used effectively in the kanban board structure:</P>
 
 Must Have (Colour: Green):
 Screengrab: ![alt text](media/user_must_have.png)
@@ -172,9 +185,9 @@ Screengrab: ![alt text](media/user_could_have.png)
 Won't have (Colour: Red):
 Screengrab: ![alt text](media/user_wont_have.png)
 
-Ensured that no more than 60% of user stories were labelled as 'must haves' as per advice from the tutorials.
+<p>I ensured that no more than 60% of user stories were labelled as 'must haves' as per advice from the tutorials.</p>
 
-Themes- The user stories could be packaged within the following themes:
+<p>Themes- The user stories could be packaged within the following themes:</p>
 <ol>
 <li>Registration and login</li>
 <li>Viewing and choosing plans</li>
@@ -186,26 +199,22 @@ Themes- The user stories could be packaged within the following themes:
 </ol>
 
 <em>Milestones:</em>
-Noted the milestone feature available on github, to focus on completing various user stories in a certain timeframe. Did not complete this.
-
-I had fully intended to create milestones for particular iterations of the user stories but unfortunately, I was too anxious to do so and did not put this into action.
-
- However, now that I am becoming adept at full-stack-framework projects, I will endeavour to apply this going forward. It is an excellent time management tool and allows for the pomodoro approach to be applied.
+<p>Noted the milestone feature available on github, to focus on completing various user stories in a certain timeframe. I had fully intended to create milestones for particular iterations of the user stories but unfortunately, I was too anxious to do so and did not put this into action. However, now that I am becoming adept at full-stack-framework projects, I will endeavour to apply this going forward. It is an excellent time management tool and allows for the pomodoro approach to be applied.</p>
 
 <em>Sprints</em>
-Allocated amounts of time to set smaller goals-this certainly would have alleviated my anxiety and I will ensure to put this into effect for future projects.
+<p>Allocated amounts of time to set smaller goals-this certainly would have alleviated my anxiety and I will ensure to put this into effect for future projects.</p>
 
 <b>Design</b>
 <b>Colour Scheme</b>
-The main colours used for Fit4Work: teal, fuschia, black and white.
+<p>The main colours used for Fit4Work: teal, fuschia, black and white.</p>
 
- I used fuschia and the hover effect to make certain items pop (e.g. the loading spinner after submitting payment or the search/view bag buttons)
+<p>I used fuschia and the hover effect to make certain items pop (e.g. the loading spinner after submitting payment or the search/view bag buttons).</p>
 
-Employed AdobeColour to refine the teal colours to be used on the website:
+<p>I employed AdobeColour to refine the teal colours to be used on the website:</p>
 https://color.adobe.com/search?q=teal#
 
-I used colorpalette to decide on the colors.
-Please see a color palette of teal used below:
+<p>I used colorpalette to decide on the colors.</p>
+<p>Please see a color palette of teal used below:</p>
 ![alt text](media/Teal%20colour%20selection%20AdobeColor.jpeg)
 
 
@@ -214,7 +223,7 @@ I also wanted something relatively formal to relect the occupation based theme (
 The UI still felt flat after incorporating the above colours so I applied the stark and revitalising fuschia colour
 to make certain items pop and so that the UI would not appear too mundane.</p>
 
-The background image chosen inkeeping with the occupation based theme and the teal colors. A man in a suit with a briefcase, climbing the stairs. Professional yet active.
+<p>The background image chosen inkeeping with the occupation based theme and the teal colors. A man in a suit with a briefcase, climbing the stairs. Professional yet active.</p>
 
 <b>Logo</b>
 <p>Having reviewed other students repositaries via the peer-code-reveiw section of Slack, I noted that 
@@ -311,7 +320,7 @@ I wanted to ensure that I had three custom models, with models that were suitabl
 I also considered whether they had a one-to-one relationship versus many to one or one to many(Plan model has many foreign keys).</p>
 
 
-Landing Page Wireframe - View: ![alt text](media/landing_page.jpg)
+Landing Page Wireframe - View: ![alt text](media/landing_page_wf.png)
 
 Plans Page Wireframe - View: ![alt text](media/plans_wf.png)
 
@@ -325,7 +334,6 @@ Checkout Success Wireframe - View: ![alt text](media/checkout_success_wf.png)
 
 Other wireframes include the add and edit plans wireframes and the various html tabs from the ffw app such as the privacy policy page, the page explaining tiers, the page explaining technqiues or the page discussing the founder.
 
-
 <em>Dropdowns and searches</em>
 
 <p>Dropdowns and searches were a useful way of presenting the relevant filters for consumers.
@@ -333,13 +341,11 @@ It aided to the navigation of the website, with the customer able to search for 
 
 <b>Database</b>
 
-Elephant SQL
+<p>Elephant SQL used to create the database for the app and linked in with Heroku.</p>
 
-SQLite included with Django
+<p>SQLite included with Django, inserted an if else statement in settings.py that would ensure the database url that was defined in. the env.py file would be used.</p>
 
-Removing migrations and remigration
-
-Including in config vars on Heroku
+<p>Removing migrations and remigration: At one point there was a major issue with the app and i had to manually delete all of the migration files except for init.py from the migration folders and remigrate everything to resolve it.</p>
 
 <h1><b>Features</b>
 
@@ -357,30 +363,34 @@ Including in config vars on Heroku
 <li>Reviews-customers can leave reviews directly on the website.</li> 
 <li>A contact us page</li> 
 </ul>
+
 <h1>Responsive on all device sizes</h1>
 
--I ensured that the website was responsive across multiple devices, using Google Chrome developer tools, media queries (breakpoints),.
-I employed a mobile first design approach.
+<p>I ensured that the website was responsive across multiple devices, using Google Chrome developer tools, media queries (breakpoints),.
+I employed a mobile first design approach.</p>
 
-Please see below screengrabs of website on various devices:
+<p>Please see below screengrabs of website on various devices:</p>
 
 
 
 <h1>Methods to ensure site is responsive.</h1>
- Bootstrap used as per walkthrough
- Container-fluid
- Z-index
- v-100
- Media-Queries
- Bulma used to centre font awesome icons
+ <ul>
+<li>Bootstrap used as per walkthrough</li>
+<li>Container-fluid</li>
+<li>Z-index</li>
+<li>v-100</li>
+<li>Media-Queries</li>
+<li>Bulma used to centre font awesome icons</li>
+ </ul>
 
 <b>Interactive elements</b>
-
-Hover over buttons- as influenced by walkthrough
-Absolute header and footer.
-Forms, buttons changing colour and required fields
-Loading bars- spinner once payment is going through.
-Animations-tiers animation on tiers tab.
+<ul>
+<li>Hover over buttons- as influenced by walkthrough</li>
+<li>Absolute header and footer</li>
+<li>Forms, buttons changing colour and required fields</li>
+<li>Loading bars- spinner once payment is going through</li>
+<li>Animations-tiers animation on tiers tab</li>
+</ul>
 
 <b>Technologies Used</b>
 
@@ -464,18 +474,50 @@ countryfield.js: ![alt text](media/country_field.js_validation.png)
 
 Link: https://pep8ci.herokuapp.com/
 
-Results split out by app:
+<p>Results split out by app:</p>
 
-FFW:
-Checkout:
-Plans:
-Bag:
-Profile:
+
+<p>FFW:</p>
+
+urls: ![alt text](media/ffw_urls_pytest.png)
+views: ![alt text](media/ffw_views_pytest.png)
+
+<p>Plans:</p>
+
+form: ![alt text](media/planforms_pytest.png)
+models: ![alt text](media/plansmodels_pytest.png)
+urls: ![alt text](media/plansurls_pytest.png)
+views: ![alt text](media/planviews_pytest.png)
+
+<p>Checkout:</p>
+
+models: ![alt text](media/chmodels_pytest.png)
+signals: ![alt text](media/chksignals_pytest.png)
+urls: ![alt text](media/chkurls_pytest.png)
+views: ![alt text](media/chkviews_pytest.png)
+webhook: ![alt text](media/chkwebhook_pytest.png)
+webhook_handler: ![alt text](media/ch_whhandler_pytest.png)
+
+
+
+<p>Bag:</p>
+
+context: ![alt text](media/bagcontext_pytest.png)
+views: ![alt text](media/bagviews_pytest.png)
+urls: ![alt text](media/bagurls_pytest.png)
+
+
+<p>Profile:</p>
+
+form: ![alt text](media/profilesforms_pytest.png)
+models: ![alt text](media/profilemodels_pytest.png)
+urls: ![alt text](media/profilesurls_pytest.png)
+views:![alt text](media/profilesviews_pytest.png)
 
 
 <i> Flake8 and PEP8</i>
 
-<p>Useful to ensure PEP8 and Flake8 compliat. Command-to output all issues into the terminal:</p>
+<p>Useful to ensure PEP8 and Flake8 compliant. Command-to output all issues into the terminal:</p>
 
 python3 -m flake8
 
@@ -762,10 +804,13 @@ The before and after photo on the founder page is from my own personal photos.
 
 <p> Animation: I took the animation used on the Tiers page form the following source: https://tenor.com/en-GB/view/%C3%A9de-chorar-valtatu%C3%AD-cry-sad-tears-gif-16739376</p>
 
+<p>Used for sitemaps: https://www.xml-sitemaps.com/</p>
+<p>Used to generate FFW policy: https://www.privacypolicygenerator.info/live.php?token=AlWojlJjEgVKTE4IMDuUkaIsSscIhsz3</p>
+
 <b>Acknowledgements</b>
-My Mentor Mitko for continuous helpful feedback.
+<p>My Mentor Mitko for continuous helpful feedback.
 Tutor support for their assistance throughout the process.
 Slack community who were extremely forthcoming and responsive.
-My friends and family for helping me throughout the process.
+My friends and family for helping me throughout the process.</p>
 
 

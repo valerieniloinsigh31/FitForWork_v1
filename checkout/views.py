@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -8,10 +9,11 @@ from .models import OrderPlan, OrderLineItem
 from plans.models import Plan
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
-from bag.contexts import bag_contents 
+from bag.contexts import bag_contents
 
 import stripe
-import json 
+import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -28,6 +30,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -48,11 +51,11 @@ def checkout(request):
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
-        if order_form.is_valid(): 
-            order = order_form.save(commit=False) 
-            pid = request.POST.get('client_secret').split('_secret')[0] 
-            order.stripe_pid = pid 
-            order.original_bag = json.dumps(bag) 
+        if order_form.is_valid():
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
             order.save()
             for item_id, item_data in bag.items():
                 try:
@@ -63,10 +66,10 @@ def checkout(request):
                             quantity=item_data,
                         )
                     order_line_item.save()
-    
+
                 except Plan.DoesNotExist:
                     messages.error(request, (
-                        "One of the plans in your bag wasn't found in our offering. "
+                        "One of the plans in your bag isn't available. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -74,14 +77,15 @@ def checkout(request):
                     print("checking order form", order_form)
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag now")
             return redirect(reverse('plans'))
 
         current_bag = bag_contents(request)
@@ -108,16 +112,14 @@ def checkout(request):
                     'county': profile.default_county,
                 })
             except UserProfile.DoesNotExist:
-                order_form = OrderForm() 
+                order_form = OrderForm()
         else:
             order_form = OrderForm()
 
         order_form = OrderForm()
 
-
-
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
+        messages.warning(request, 'Stripe public key is missing!')
 
     template = 'checkout/checkout.html'
     context = {
@@ -127,6 +129,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """

@@ -9,14 +9,16 @@ class PlanForm(forms.ModelForm):
         model = Plan
         fields = '__all__'
 
-    image = forms.ImageField(label="Image", required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label="Image", required=False,
+                             widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         techniques = Technique.objects.all()
-        friendly_names = [(t.id, t.get_friendly_name()) for t in techniques] 
+        friendly_names = [(t.id, t.get_friendly_name()) for t in techniques]
 
         self.fields['technique'].choices = friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0' 
+            field.widget.attrs['class'] = 'border-black rounded-0'
+
             

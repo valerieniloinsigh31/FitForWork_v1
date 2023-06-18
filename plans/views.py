@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Plan, JobType, Technique
 from .forms import PlanForm
 
+
 def all_plans(request):
     """ A view to show all plans, including sorting and search queries """
 
@@ -16,7 +17,7 @@ def all_plans(request):
     techniques = None
     sort = None
     direction = None
-    
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -31,16 +32,16 @@ def all_plans(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             plans = plans.order_by(sortkey)
-            
+
         if 'technique' in request.GET:
             techniques = request.GET['technique'].split(',')
             plans = plans.filter(technique__name__in=techniques)
             techniques = Technique.objects.filter(name__in=techniques)
- 
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error
+                (request, "You didn't enter any search criteria!")
                 return redirect(reverse('plans'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -50,13 +51,13 @@ def all_plans(request):
 
     context = {
         'plans': plans,
-        'search_term': query, 
-        #'current_jobtypes': jobtypes,
+        'search_term': query,
         'current_techniques': techniques,
         'current_sorting': current_sorting,
         }
-    
-    return render(request, 'plans/plans.html', context) 
+
+    return render(request, 'plans/plans.html', context)
+
 
 def plan_detail(request, plan_id):
     """ A view to show individual plan details """
@@ -64,9 +65,10 @@ def plan_detail(request, plan_id):
 
     context = {
         'plan': plan,
-    } 
+    }
 
-    return render(request, 'plans/plan_detail.html', context) 
+    return render(request, 'plans/plan_detail.html', context)
+
 
 @login_required
 def add_plan(request):
@@ -82,16 +84,18 @@ def add_plan(request):
             messages.success(request, 'Successfully added plan!')
             return redirect(reverse('plan_detail', args=[plan.id]))
         else:
-            messages.error(request, 'Failed to add plan. Please ensure the form is valid.')
+            messages.error
+            (request, 'Failed to add plan.Please ensure the form is valid.')
     else:
         form = PlanForm()
-        
+
     template = 'plans/add_plan.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_plan(request, plan_id):
@@ -108,7 +112,8 @@ def edit_plan(request, plan_id):
             messages.success(request, 'Successfully updated plan!')
             return redirect(reverse('plan_detail', args=[plan.id]))
         else:
-            messages.error(request, 'Failed to update plan. Please ensure the form is valid.')
+            messages.error
+        (request, 'Failed to update plan. Please ensure the form is valid.')
     else:
         form = PlanForm(instance=plan)
         messages.info(request, f'You are editing {plan.name}')
@@ -121,6 +126,7 @@ def edit_plan(request, plan_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_plan(request, plan_id):
     """ Delete a plan from the store """
@@ -131,3 +137,4 @@ def delete_plan(request, plan_id):
     plan.delete()
     messages.success(request, 'Plan deleted!')
     return redirect(reverse('plans'))
+    
