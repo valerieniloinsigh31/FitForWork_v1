@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Plan, Technique, JobType, Goal, Tier 
 
+
 class PlanAdmin(admin.ModelAdmin):
     list_display = ( 
     'name',

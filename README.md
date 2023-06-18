@@ -130,6 +130,9 @@ Kanban Board-link:
  As stipulated in the PP5 checklist, I changed the settings from private to public mode: 
 ![alt text](media/kanban_public.png)
 
+In an effort to comply with agile methodology, I set up a kanban board and connected it with the project on Github. I labelled the user stories added according to MOSCOW prioritisation. I included acceptance criteria and tasks.
+
+![alt text](./media/user_stories_ffw.png)
 
 <b>First Time Visitor Goals</b>
 <p>
@@ -432,9 +435,9 @@ GitHub is used to store the projects code after being pushed from Git.
 Throughout the mtutorials for module five, we learned a lot about test driven development but it was specified also in the tutorials that this would not be expected for the project.
 
 <em>Manual testing:</em>
-I inserted specific text.py files in the Plans app. I inserted tests for the models and the views.
+I ensured to test every feature included in the app on each update and migration. I test the webhooks, paying heed to the status messages provided.
 
-Validators:
+<b>Validators:</b>
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
@@ -519,74 +522,23 @@ views:![alt text](media/profilesviews_pytest.png)
 
 <p>Useful to ensure PEP8 and Flake8 compliant. Command-to output all issues into the terminal:</p>
 
-python3 -m flake8
-
-<p>Screenshot:</p>
-
-
+<b>python3 -m flake8</b>
 <p>It gives a list of all of the issues in the code so we can go through these one by one
 control and click on line, takes you to line - code style and linting issues. Tells you
-where you have imported something and not used it.</p>
+where you have imported something and not used it. I found this very useful when cleaning up code and ensuring that stray comments had not been left within the code. At times, lines that were too long were flagged but I did not adjust these as it would have made the code not work. Other occassions, I could adjust with spacing and indentation. I ignored any items flagged with regard to migrations files, as it was inferred to do so on the tutorials.</p>
 
+<h2>LIGHTHOUSE TESTING</h2>
+I accessed the 'LIGHTHOUSE' testing tool via Developer Tools. Please see a screengrab of the successful lIGHTHOUSE testing below. I believe all %s are adequate:
 
-<p>Lighthouse testing</p>
-Screengrabs of results for different screens (with a desktop version and a mobile version)
-
-FFW:
-On desktop:
-On mobile:
-
-All Plans
-On desktop:
-On mobile:
-
-Plan Detail
-On desktop:
-On mobile:
-
-Shopping Bag
-On desktop:
-On mobile:
-
-Checkout
-On desktop:
-On mobile:
-
-Checkout success
-On desktop:
-On mobile:
-
-Profile
-On desktop:
-On mobile:
-
-Add plan
-On desktop:
-On mobile:
-
-Login
-On desktop:
-On mobile:
-
-Logout
-On desktop:
-On mobile:
-
-Register
-On desktop:
-On mobile:
+Lighthouse on Google Developer Tools
+Link: https://developer.chrome.com/docs/lighthouse/overview/
+Screengrab: ![alt text](media/ffw_LIGHTHOUSE_test.png)
 
 <Debugger>
 
-PythonTutor and Javascript Tutor, as used in tutorials
-These were incredibly useful tools that allowed the user to visualise execution-steps through the logic of the code step by step
-Aids in identifying and isolating issues with the logic.
-
-<b>Testing User Stories from User Experience (UX) Section</b>
-
-In an effort to comply with agile methodology, I set up a kanban board and connected it with the project on Github. I labelled the user stories added according to MOSCOW prioritisation. I included acceptance criteria and tasks.
-
-![alt text](./media/user_stories_ffw.png)
+PythonTutor and Javascript Tutor, as used in tutorials.
+These were incredibly useful tools that allowed the user to visualise execution-steps through the logic of the code step by step.
+Aids in identifying and isolating issues with the logic. Going forward I will use these more in projects but did not use them for this project.
 
 <b>Further Testing</b>
 
@@ -627,7 +579,7 @@ Friends and family members were asked to review the site and documentation to po
                     <td>Yes</td>
                 </tr>
                 <tr>
-                    <td>Images work:</td>
+                    <td>Images work (on undeployed app):</td>
                 </tr>
                 <tr>
                     <td>Yes</td>
@@ -680,15 +632,12 @@ Friends and family members were asked to review the site and documentation to po
                 </tr>
             </table>   
 
-            Include images and screenshots...google developer tools
+    Screengrabs of different browsers:
+        Google:
+        Safaro:
+        Internet Explorer:
 
- <h2>LIGHTHOUSE</h2>
-I accessed the 'LIGHTHOUSE' testing tool via Developer Tools. Please see a screengrab of the successful lIGHTHOUSE testing below. I believe all %s are adequate:
-
-Lighthouse on Google Developer Tools
-Link: https://developer.chrome.com/docs/lighthouse/overview/
-Screengrab:
-
+ 
 <b>Known Bugs</b>
 -1.On some mobile devices the Work pushes the size of screen out more than any of the other content on the page.
 -2. Had issues in development due to database caching where app would not work on Google Chrome but would work on Safari.

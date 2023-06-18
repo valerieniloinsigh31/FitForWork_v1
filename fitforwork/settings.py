@@ -79,11 +79,11 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', #required by allauth
+                'django.template.context_processors.request', 
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', #context processor that enables access to no image file in media folder if a plan does not have an image
-                'bag.contexts.bag_contents', #context processer for bag-makes available throughout site w/o having to return multiple views
+                'django.template.context_processors.media', 
+                'bag.contexts.bag_contents', 
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -105,13 +105,13 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email' #tells allauth we want authentication using either usernames or emails
-ACCOUNT_EMAIL_REQUIRED = True #Email required to register for the site
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory' #Verifying email is mandatory
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True #Required to enter email twice on registration page
-ACCOUNT_USERNAME_MIN_LENGTH = 6 #Minimum username length of 6 characters
-LOGIN_URL = '/accounts/login/'  #Specify login url
-LOGIN_REDIRECT_URL = '/' #Specify login url to redirect back to after logging in
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email' 
+ACCOUNT_EMAIL_REQUIRED = True 
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True 
+ACCOUNT_USERNAME_MIN_LENGTH = 6 
+LOGIN_URL = '/accounts/login/'  
+LOGIN_REDIRECT_URL = '/' 
 
 
 WSGI_APPLICATION = 'fitforwork.wsgi.application'
@@ -172,12 +172,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-#Did not set up static root setting for collect static utility to work as would interfer with AWS setup. STATICFILES_DIRS
-#is a typle
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-#Where all uploaded media files will go. 
+
 
 if 'USE_AWS' in os.environ:
      # Cache control
@@ -187,8 +186,8 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'fitforwork' #bucket name as per AWS
-    AWS_S3_REGION_NAME = 'eu-west-1' #Region as per AWS
+    AWS_STORAGE_BUCKET_NAME = 'fitforwork' 
+    AWS_S3_REGION_NAME = 'eu-west-1' 
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
@@ -210,9 +209,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Stripe
 
-STRIPE_CURRENCY = 'eur' #usd used in walkthrough
+STRIPE_CURRENCY = 'eur' 
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')#get from environment as we don't want these on github
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET= os.getenv('STRIPE_WH_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
@@ -224,7 +223,7 @@ else: #for production
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER') #from environment
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS') #from environment
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER') #from environment
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER') 
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS') 
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
