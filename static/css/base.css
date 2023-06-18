@@ -18,7 +18,6 @@ body {
 
 
 /* from Bulma 
-Bulma is a framework similar to Bootstrap
 */
 .icon {
     align-items: center;
@@ -29,7 +28,7 @@ Bulma is a framework similar to Bootstrap
 }
 
 /*
-ensures font awesome icons stay perfectly centered and have a consistent size unless manually changed
+centering of font awesome icons
 */
 
 .logo-font {

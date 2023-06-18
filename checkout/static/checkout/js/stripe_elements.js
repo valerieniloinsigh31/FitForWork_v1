@@ -20,7 +20,7 @@ var style = {
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
-// Handle realtime validation errors on the card element
+
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
@@ -36,7 +36,7 @@ card.addEventListener('change', function (event) {
     }
 });
 
-// Handle form submit
+
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
@@ -47,7 +47,6 @@ form.addEventListener('submit', function(ev) {
     $('#loading-overlay').fadeToggle(100);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
-    // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
@@ -94,5 +93,5 @@ form.addEventListener('submit', function(ev) {
         });
     }).fail(function () { 
         location.reload(); 
-    })
+    });
 });

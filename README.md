@@ -435,33 +435,29 @@ Link: https://validator.w3.org/
 
 
 Screengrabs of HTML Templates tested:
-Base.html:
-plans.html:
-plan.details.html:
-profiles.html:
-subscribe.html:
-founder.html:
-technique.html:
-tiers.html:
-Checkout:
-Shopping bag:
-606 error:
+
+founder.html: ![alt text](media/founder.html_validation.png)
+privacy_policy.html: ![alt text](media/privacy_policy.html_validation.png)
+technique.html: ![alt text](media/techniques.html_validation.png)
+tiers.html: ![alt text](media/tiers.html_validation.png)
 
 <i>W3C CSS Validator - Results</i>
 
 Link: https://jigsaw.w3.org/css-validator/
 Screenshot of results:
 
-base.css:
-checkout.css:
-profile.css:
+base.css: ![alt text](media/base.css_validation.png)
+checkout.css: ![alt text](media/checkout.css_validation.png)
+profile.css: ![alt text](media/profiles.css_validation.png)
 
 <i>Javascript Validator - Results</i>
 
 Link: https://jshint.com/
 Screenshot of results:
 
-stripe_elements.js:
+stripe_elements.js: ![alt text](media/Stripe_JS_validation.png)
+
+countryfield.js: ![alt text](media/country_field.js_validation.png)
 
 
 <i>Python Validator - Results</i>
