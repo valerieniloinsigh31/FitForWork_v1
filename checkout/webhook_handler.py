@@ -62,9 +62,9 @@ class StripeWH_Handler:
         total = round(stripe_charge.amount / 100, 2) 
 
         
-        for field, value in billing_details.address.items(): 
-            if value == "":
-                billing_details.address[field] = None
+        #for field, value in billing_details.address.items(): 
+        #    if value == "":
+        #        billing_details.address[field] = None
 
        
         profile = None
