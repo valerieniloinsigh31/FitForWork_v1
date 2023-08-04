@@ -58,13 +58,13 @@ class StripeWH_Handler:
 )
 
         billing_details = stripe_charge.billing_details 
-        shipping_details = intent.shipping
+        #shipping_details = intent.shipping
         total = round(stripe_charge.amount / 100, 2) 
 
         
-        for field, value in shipping_details.address.items(): 
+        for field, value in billing_details.address.items(): 
             if value == "":
-                shipping_details.address[field] = None
+                billing_details.address[field] = None
 
        
         profile = None
@@ -72,13 +72,13 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_phone_number = shipping_details.phone
-                profile.default_country = shipping_details.address.country
-                profile.default_eircode = shipping_details.address.eircode
-                profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address_1 = shipping_details.address.line1
-                profile.default_street_address_2 = shipping_details.address.line2
-                profile.default_county = shipping_details.address.state
+                profile.default_phone_number = billing_details.phone
+                profile.default_country = billing_details.address.country
+                profile.default_eircode = billing_details.address.eircode
+                profile.default_town_or_city = billing_details.address.city
+                profile.default_street_address_1 = billing_details.address.line1
+                profile.default_street_address_2 = billing_details.address.line2
+                profile.default_county = billing_details.address.state
                 profile.save()
 
         order_exists = False
@@ -86,15 +86,15 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = OrderPlan.objects.get(
-                    full_name__iexact=shipping_details.name,
+                    full_name__iexact=billing_details.name,
                     email__iexact=billing_details.email,
-                    phone_number__iexact=shipping_details.phone,
-                    country__iexact=shipping_details.address.country,
-                    eircode__iexact=shipping_details.address.eircode,
-                    town_or_city__iexact=shipping_details.address.city,
-                    street_address_1__iexact=shipping_details.address.line1,
-                    street_address_2__iexact=shipping_details.address.line2,
-                    county__iexact=shipping_details.address.state,
+                    phone_number__iexact=billing_details.phone,
+                    country__iexact=billing_details.address.country,
+                    eircode__iexact=billing_details.address.eircode,
+                    town_or_city__iexact=billing_details.address.city,
+                    street_address_1__iexact=billing_details.address.line1,
+                    street_address_2__iexact=billing_details.address.line2,
+                    county__iexact=billing_details.address.state,
                     total=total,
                     original_bag=bag,
                     stripe_pid=pid,
@@ -113,16 +113,16 @@ class StripeWH_Handler:
             order = None
             try:
                 order = OrderPlan.objects.create(
-                    full_name=shipping_details.name,
+                    full_name=billing_details.name,
                     user_profile=profile,
                     email=billing_details.email,
-                    phone_number=shipping_details.phone,
-                    country=shipping_details.address.country,
-                    eircode=shipping_details.address.eircode,
-                    town_or_city=shipping_details.address.city,
-                    street_address_1=shipping_details.address.line1,
-                    street_address_2=shipping_details.address.line2,
-                    county=shipping_details.address.state,
+                    phone_number=billing_details.phone,
+                    country=billing_details.address.country,
+                    eircode=billing_details.address.eircode,
+                    town_or_city=billing_details.address.city,
+                    street_address_1=billing_details.address.line1,
+                    street_address_2=billing_details.address.line2,
+                    county=billing_details.address.state,
                     original_bag=bag,
                     stripe_pid=pid,
                 )
