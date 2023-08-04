@@ -129,10 +129,10 @@ class StripeWH_Handler:
                 for item_id, item_data in json.loads(bag).items(): 
                     plan = Plan.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
-                              order=order,
-                              plan=plan,
-                              quantity=item_data,
-                          )
+                            order=order,
+                            plan=plan,
+                            quantity=item_data,
+                    )
                     order_line_item.save()
             except Exception as e:
                     if order:
