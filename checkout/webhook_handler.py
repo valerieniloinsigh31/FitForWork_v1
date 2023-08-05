@@ -102,7 +102,7 @@ class StripeWH_Handler:
                 )
                 order_exists = True
                 break
-            except Order.DoesNotExist:
+            except OrderPlan.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
@@ -129,21 +129,12 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(bag).items():
                     plan = Plan.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
+                    order_line_item = OrderLineItem(
                             order=order,
-                            product=product,
+                            plan=plan,
                             quantity=item_data,
                         )
-                        order_line_item.save()
-                    else:
-                        for quantity in item_data[''].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                plan=plan,
-                                quantity=quantity,
-                            )
-                            order_line_item.save()
+                    order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
