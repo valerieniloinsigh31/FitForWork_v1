@@ -45,40 +45,41 @@ class StripeWH_Handler:
 
     def handle_payment_intent_succeeded(self, event):
         """
-        Handle the payment_intent_succeeded webhook event from Stripe
+        Handle the payment_intent.succeeded webhook from Stripe
         """
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
 
-
+# Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
         intent.latest_charge
 )
 
-        billing_details = stripe_charge.billing_details 
-        #shipping_details = intent.shipping
-        total = round(stripe_charge.amount / 100, 2) 
+        billing_details = stripe_charge.billing_details # updated
+        shipping_details = intent.shipping
+        total = round(stripe_charge.amount / 100, 2) # updated
 
-        
-        #for field, value in billing_details.address.items(): 
-        #    if value == "":
-        #        billing_details.address[field] = None
 
-       
+        # Clean data in the shipping details
+        for field, value in shipping_details.address.items():
+            if value == "":
+                shipping_details.address[field] = None
+
+        # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_phone_number = billing_details.phone
-                profile.default_country = billing_details.address.country
-                profile.default_eircode = billing_details.address.eircode
-                profile.default_town_or_city = billing_details.address.city
-                profile.default_street_address_1 = billing_details.address.line1
-                profile.default_street_address_2 = billing_details.address.line2
-                profile.default_county = billing_details.address.state
+                profile.default_phone_number = shipping_details.phone
+                profile.default_country = shipping_details.address.country
+                profile.default_eircode = shipping_details.address.eircode
+                profile.default_town_or_city = shipping_details.address.city
+                profile.default_street_address_1 = shipping_details.address.line1
+                profile.default_street_address_2 = shipping_details.address.line2
+                profile.default_county = shipping_details.address.county
                 profile.save()
 
         order_exists = False
@@ -86,22 +87,22 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = OrderPlan.objects.get(
-                    full_name__iexact=billing_details.name,
+                    full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
-                    phone_number__iexact=billing_details.phone,
-                    country__iexact=billing_details.address.country,
-                    eircode__iexact=billing_details.address.eircode,
-                    town_or_city__iexact=billing_details.address.city,
-                    street_address_1__iexact=billing_details.address.line1,
-                    street_address_2__iexact=billing_details.address.line2,
-                    county__iexact=billing_details.address.state,
+                    phone_number__iexact=shipping_details.phone,
+                    country__iexact=shipping_details.address.country,
+                    eircode__iexact=shipping_details.address.eircode,
+                    town_or_city__iexact=shipping_details.address.city,
+                    street_address_1__iexact=shipping_details.address.line1,
+                    street_address_2__iexact=shipping_details.address.line2,
+                    county__iexact=shipping_details.address.county,
                     total=total,
                     original_bag=bag,
                     stripe_pid=pid,
                 )
                 order_exists = True
                 break
-            except OrderPlan.DoesNotExist:
+            except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
@@ -113,33 +114,42 @@ class StripeWH_Handler:
             order = None
             try:
                 order = OrderPlan.objects.create(
-                    full_name=billing_details.name,
+                    full_name=shipping_details.name,
                     user_profile=profile,
                     email=billing_details.email,
-                    phone_number=billing_details.phone,
-                    country=billing_details.address.country,
-                    eircode=billing_details.address.eircode,
-                    town_or_city=billing_details.address.city,
-                    street_address_1=billing_details.address.line1,
-                    street_address_2=billing_details.address.line2,
-                    county=billing_details.address.state,
+                    phone_number=shipping_details.phone,
+                    country=shipping_details.address.country,
+                    eircode=shipping_details.address.eircode,
+                    town_or_city=shipping_details.address.city,
+                    street_address_1=shipping_details.address.line1,
+                    street_address_2=shipping_details.address.line2,
+                    county=shipping_details.address.county,
                     original_bag=bag,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(bag).items(): 
+                for item_id, item_data in json.loads(bag).items():
                     plan = Plan.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
                             order=order,
-                            plan=plan,
+                            product=product,
                             quantity=item_data,
-                    )
-                    order_line_item.save()
+                        )
+                        order_line_item.save()
+                    else:
+                        for quantity in item_data[''].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                plan=plan,
+                                quantity=quantity,
+                            )
+                            order_line_item.save()
             except Exception as e:
-                    if order:
-                        order.delete()
-                    return HttpResponse(
-                        content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                        status=500)
+                if order:
+                    order.delete()
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
