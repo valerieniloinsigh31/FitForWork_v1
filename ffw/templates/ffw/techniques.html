@@ -13,7 +13,7 @@
 <head>
     <title>Techniques explained</title>
 </head>
-<div class="techniques-explained" style="background-color: azure;">
+<div class="techniques-explained" style="background-color: azure; padding-top: 200px"">
  <hr>   
 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
     <a href="{% url 'ffw' %}" class="nav-link main-logo-link">
@@ -70,6 +70,9 @@
     Choose something that aligns with your strengths, passions and the needs of the world. 
     This is what gives life meaning.</p>
 </div>
+<footer>
+    {% include 'includes/subscribe.html' %}
+</footer> 
 </div>
 {% endblock %}
 </html>
