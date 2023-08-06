@@ -1,5 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div>
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
 <head>
     <script src="https://kit.fontawesome.com/7aab5ae5f2.js" crossorigin="anonymous"></script>
     <title>Founder</title>
@@ -47,5 +56,5 @@ this page.</p>
     {% include 'includes/subscribe.html' %}
 </footer>
 </body>
-</html>
+{% endblock %}
 
