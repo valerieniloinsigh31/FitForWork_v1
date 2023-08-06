@@ -6,7 +6,6 @@ html {
 
 body {
     background: url('/media/landing_page.jpg') no-repeat center center fixed;
-    opacity:0.5;
     background-size:cover;
     min-height: calc(100vh - 200px);
     color: #76a49d;
@@ -364,13 +363,6 @@ input[name='q']::placeholder {
     border-color: fuchsia;
     border-radius: 0;
 
-}
-
-/*Privacy Policy page*/
-
-.privacy-policy {
-color:#f8f9fa;
-opacity:1;
 }
 
 /* Footer */
