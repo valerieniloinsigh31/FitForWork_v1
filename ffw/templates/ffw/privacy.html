@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Insert NAVbar from landing page...should this be above the head?-->
+{% extends "base.html" %}
+{% load static %}
+    
+{% block page_header %}
+        <div class="container header-container">
+            <div class="row">
+                <div class="col"></div>
+            </div>
+        </div>
+{% endblock %}
 <head>
 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
     <a href="{% url 'ffw' %}" class="nav-link main-logo-link">
