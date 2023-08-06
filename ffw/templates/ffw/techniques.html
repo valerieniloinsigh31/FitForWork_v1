@@ -3,7 +3,7 @@
 <!--Insert NAVbar from landing page...should this be above the head?-->
 {% extends "base.html" %}
 {% load static %}
-        
+<body class="overlay">
 {% block page_header %}
 <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -75,10 +75,12 @@
         </div>
 </header>
 {% endblock %}
+
+{% block content %}
 <head>
     <title>Techniques explained</title>
 </head>
-<body>
+<body class="overlay">
 <div class="techniques-explained" style="background-color: azure;">
  <hr>   
 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -141,4 +143,5 @@
 </footer> 
 </div>
 </body>
+{% endblock %}
 </html>
