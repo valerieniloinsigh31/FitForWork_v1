@@ -280,6 +280,17 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        margin-bottom: auto;
+        width: 100%;
+        background-color: white;
+        color: black;
+        text-align: center;
+        height:100px;
+    }
 }
 
 /* Allauth form formatting */
