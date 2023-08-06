@@ -6,6 +6,7 @@ html {
 
 body {
     background: url('/media/landing_page.jpg') no-repeat center center fixed;
+    opacity:0.5;
     background-size:cover;
     min-height: calc(100vh - 200px);
     color: #76a49d;
