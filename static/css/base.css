@@ -380,6 +380,7 @@ input[name='q']::placeholder {
     color: black;
     text-align: center;
     height:310px;
+    flex-wrap: wrap;
 }
 
 .footer-header {
