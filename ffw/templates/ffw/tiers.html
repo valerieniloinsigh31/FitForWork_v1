@@ -1,9 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div>
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
 <head>
         <title>Tiers</title>
 </head>
-<body style="background-color: azure;">
+<main style="background-color: azure; padding-top: 200px">
         <script src="https://kit.fontawesome.com/7aab5ae5f2.js" crossorigin="anonymous"></script>
         <div class="tenor-gif-embed" data-postid="16739376" data-share-method="host" data-aspect-ratio="0.7125" data-width="10%">
             <a rel="external" target="_blank" href="https://tenor.com/view/%C3%A9de-chorar-valtatu%C3%AD-cry-sad-tears-gif-16739376">éde Chorar Valtatuí Cry GIF</a>from <a href="https://tenor.com/search/%C3%A9de+chorar+valtatu%C3%AD-gifs">éde Chorar Valtatuí GIFs</a>
@@ -46,5 +55,5 @@
         <footer>
             {% include 'includes/subscribe.html' %}
         </footer> 
-    </body>
-</html>
+</main>
+{% endblock %}
