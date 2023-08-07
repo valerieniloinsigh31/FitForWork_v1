@@ -448,3 +448,6 @@ input[name='q']::placeholder {
     opacity: 1;
     }
     
+.invisible { 
+    visibility:hidden!important;
+}
