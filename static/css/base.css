@@ -430,7 +430,7 @@ input[name='q']::placeholder {
     text-align:center;
     padding-top:24px;
     font-size:13px;
-    margin-bottom:0;
+    margin-bottom:10px;
     justify-content: center;
     opacity: 1;
     outline:black;
