@@ -283,6 +283,10 @@ input[name='q']::placeholder {
     .footer {
         width:600px;
     }
+
+    .founder-image {
+        max-width: 300px;
+    }
 }
 
 /* Allauth form formatting */
