@@ -424,9 +424,8 @@ input[name='q']::placeholder {
 
 }
 
-.footer .facebook-link {
+.facebook-link {
     text-align:center;
-    padding-top:24px;
     font-size:13px;
     margin-bottom:10px;
     justify-content: center;
