@@ -237,6 +237,20 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .footer {
+        height:310px;
+    }
+
+    .container {
+        padding-bottom:0;
+    }
+
+    .shop-now-button {
+        justify-content: center;
+        margin:bottom:50%;
+        margin-top:40%;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
