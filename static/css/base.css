@@ -376,7 +376,6 @@ input[name='q']::placeholder {
     background-color: white;
     color: black;
     text-align: center;
-    height:310px;
     flex-wrap: wrap;
 }
 
