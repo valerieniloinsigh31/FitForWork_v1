@@ -50,6 +50,7 @@ ensures logo only takes up as much space as the text requires
     background: fuchsia;
     color: white;
     min-width: 260px;
+    align-items:center;
 }
 
 .btn-black {
