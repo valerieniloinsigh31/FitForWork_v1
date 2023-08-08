@@ -248,7 +248,7 @@ input[name='q']::placeholder {
 
     .shop-now-button {
         justify-content: center;
-        margin:bottom:50%;
+        margin-bottom:50%;
         margin-top:40%;
     }
 }
