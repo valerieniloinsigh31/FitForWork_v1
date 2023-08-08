@@ -284,9 +284,9 @@ input[name='q']::placeholder {
         width:600px;
     }
 
-    #founder-image {
-        max-width: 300px;
-    }
+    #mc_embed_signup{ 
+         width:auto;
+        }
 }
 
 /* Allauth form formatting */
